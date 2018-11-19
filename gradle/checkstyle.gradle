@@ -1,0 +1,14 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = 8.10
+    configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+
+    // Per submodule
+    maxErrors = 5
+    maxWarnings = 10
+
+    showViolations = true
+}
+
+checkstyleTest.enabled = false
