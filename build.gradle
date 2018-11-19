@@ -1,6 +1,34 @@
 plugins {
+    id 'groovy'
     id 'checkstyle'
     id 'com.github.hierynomus.license' version '0.14.0' apply false
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+    id "net.ltgt.apt-eclipse" version "0.19"
+    id "net.ltgt.apt-idea" version "0.19"
 }
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://jcenter.bintray.com" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "io.micronaut:micronaut-bom:$micronautVersion"
+    }
+}
+
+dependencies {
+    annotationProcessor "io.micronaut:micronaut-inject-java"
+    annotationProcessor "io.micronaut:micronaut-security"
+    implementation "io.micronaut:micronaut-security-jwt"
+    implementation "io.micronaut:micronaut-inject"
+    testCompile "org.spockframework:spock-core:$spockVersion"
+}
+
 apply from: rootProject.file('gradle/checkstyle.gradle')
 apply from: rootProject.file('gradle/license.gradle')
