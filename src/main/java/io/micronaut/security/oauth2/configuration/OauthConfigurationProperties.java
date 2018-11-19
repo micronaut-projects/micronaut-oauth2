@@ -20,8 +20,8 @@ import io.micronaut.context.annotation.ConfigurationProperties;
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.security.config.SecurityConfigurationProperties;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 /**
  * {@link io.micronaut.context.annotation.ConfigurationProperties} implementation of {@link io.micronaut.security.oauth2.configuration}.
@@ -34,7 +34,7 @@ import javax.validation.constraints.NotNull;
 public class OauthConfigurationProperties implements OauthConfiguration {
     public static final String PREFFIX = SecurityConfigurationProperties.PREFIX + ".oauth2";
 
-    @NotNull
+    @Nonnull
     private String clientId;
 
     @Nullable
@@ -44,7 +44,7 @@ public class OauthConfigurationProperties implements OauthConfiguration {
      * Oauth 2 Application Client ID.
      * @param clientId The application's Client ID.
      */
-    public void setClientId(@NotNull String clientId) {
+    public void setClientId(@Nonnull String clientId) {
         this.clientId = clientId;
     }
 
@@ -60,7 +60,7 @@ public class OauthConfigurationProperties implements OauthConfiguration {
      *
      * @return the application's Client identifier
      */
-    @NotNull
+    @Nonnull
     @Override
     public String getClientId() {
         return clientId;

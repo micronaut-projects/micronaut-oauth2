@@ -19,21 +19,19 @@ package io.micronaut.security.oauth2.openid.endpoints.authorization;
 import javax.annotation.Nonnull;
 
 /**
- * Generates a state parameter.
+ * Resolves a LoginHint. Hint to the Authorization Server about the login identifier the End-User might use to log in.
  *
- * <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Auth Request state parameter</a>
- *
- * state: Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
+ * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken>ID Token login_hint description</a>
  *
  * @author Sergio del Amo
- * @version 1.1.0
+ * @since 1.1.0
  */
-public interface StateProvider {
+public interface LoginHintProvider {
 
     /**
      *
-      * @return A state parameter. A opaque value used to maintain state between the request and the callback.
+     * @return A login Hint. Hint to the Authorization Server about the login identifier the End-User might use to log in.
      */
     @Nonnull
-    String generateState();
+    String resolveLoginHint();
 }

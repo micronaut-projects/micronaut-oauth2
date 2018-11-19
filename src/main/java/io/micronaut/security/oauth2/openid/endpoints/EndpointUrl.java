@@ -14,24 +14,23 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints;
 
-import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
- * Generates a nonce. A String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
- *
- * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken>ID Token Nonce description</a>
+ * Interface to be implemented by OpenID endpoints' configuration
+ * to convey they are reachable at a URL.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface NonceProvider {
+public interface EndpointUrl {
 
     /**
      *
-     * @return A nonce. A String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
+     * @return Endpoint's url.
      */
-    @Nonnull
-    String generateNonce();
+    @Nullable
+    String getUrl();
 }

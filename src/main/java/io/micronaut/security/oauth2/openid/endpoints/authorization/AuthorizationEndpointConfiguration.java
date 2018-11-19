@@ -16,24 +16,17 @@
 
 package io.micronaut.security.oauth2.openid.endpoints.authorization;
 
-import javax.annotation.Nonnull;
+import io.micronaut.security.oauth2.openid.endpoints.EndpointUrl;
 
 /**
- * Generates a state parameter.
+ * Oauth 2.0. Authorization Request.
  *
- * <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Auth Request state parameter</a>
+ * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Authentication Request</a>
  *
- * state: Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
- *
+ * @since 1.1.0
  * @author Sergio del Amo
- * @version 1.1.0
  */
-public interface StateProvider {
+public interface AuthorizationEndpointConfiguration extends EndpointUrl  {
 
-    /**
-     *
-      * @return A state parameter. A opaque value used to maintain state between the request and the callback.
-     */
-    @Nonnull
-    String generateState();
+
 }
