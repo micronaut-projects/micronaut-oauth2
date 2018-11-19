@@ -27,6 +27,7 @@ dependencies {
     annotationProcessor "io.micronaut:micronaut-security"
     implementation "io.micronaut:micronaut-security-jwt"
     implementation "io.micronaut:micronaut-inject"
+    implementation "io.micronaut:micronaut-http-client"
     testCompile "org.spockframework:spock-core:$spockVersion"
 }
 
