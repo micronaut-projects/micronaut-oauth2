@@ -17,18 +17,20 @@
 package io.micronaut.security.oauth2.openid.endpoints.authorization;
 
 /**
- * Generates a nonce. A String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
+ * Generates a state parameter.
  *
- * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken>ID Token Nonce description</a>
+ * <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Auth Request state parameter</a>
+ *
+ * state: Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
  *
  * @author Sergio del Amo
- * @since 1.1.0
+ * @version 1.1.0
  */
-public interface AuthorizationNonceProvider {
+public interface StateProvider {
 
     /**
      *
-     * @return A nonce. A String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
+      * @return A state parameter. A opaque value used to maintain state between the request and the callback.
      */
-    String generateNonce();
+    String generateState();
 }
