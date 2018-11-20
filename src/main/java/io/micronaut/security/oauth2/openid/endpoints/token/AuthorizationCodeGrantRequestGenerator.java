@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.token;
+
+import io.micronaut.http.HttpRequest;
+import io.micronaut.security.oauth2.grants.AuthorizationCodeGrant;
 
 import javax.annotation.Nonnull;
 
 /**
- * Generates a state parameter.
+ * Generates a Token endpoint request for an Authorization code grant.
  *
- * <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Auth Request state parameter</a>
- *
- * state: Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
- *
- * @author Sergio del Amo
  * @since 1.1.0
+ * @author Sergio del Amo
  */
-public interface StateProvider {
+public interface AuthorizationCodeGrantRequestGenerator {
 
     /**
      *
-      * @return A state parameter. A opaque value used to maintain state between the request and the callback.
+     * @param code The code received with the authentication response.
+     * @return a HTTP Request to the Token Endpoint with Authorization Code Grant payload.
      */
     @Nonnull
-    String generateState();
+    HttpRequest<AuthorizationCodeGrant> generateRequest(@Nonnull String code);
 }

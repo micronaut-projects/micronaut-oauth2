@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.endsession;
 
 /**
- * Provides an authorization redirect URL.
- *
+ * Types of {@link EndSessionParameter}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
+public enum EndSessionParameterType {
+    STRING,
+    IDTOKEN,
+    CLIENT_ID,
+    CLIENT_SECRET
 }

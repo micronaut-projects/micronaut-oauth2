@@ -14,20 +14,10 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
-
 /**
- * Provides an authorization redirect URL.
- *
+ * Revocation Endpoint related classes.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
-}
+package io.micronaut.security.oauth2.openid.endpoints.revocation;

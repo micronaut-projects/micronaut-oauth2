@@ -1,0 +1,3 @@
+micronaut:
+  cloud:
+    platform: 'BARE_METAL'

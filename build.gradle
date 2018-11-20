@@ -5,6 +5,7 @@ plugins {
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
     id "net.ltgt.apt-eclipse" version "0.19"
     id "net.ltgt.apt-idea" version "0.19"
+    id "org.kordamp.gradle.stats" version "0.2.2"
 }
 
 sourceCompatibility = '1.8'
@@ -14,6 +15,7 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencyManagement {
@@ -33,3 +35,8 @@ dependencies {
 
 apply from: rootProject.file('gradle/checkstyle.gradle')
 apply from: rootProject.file('gradle/license.gradle')
+apply from: rootProject.file('gradle/testVerbose.gradle')
+
+tasks.withType(Test) {
+    systemProperty "micronaut.cloud.platform", 'BARE_METAL'
+}

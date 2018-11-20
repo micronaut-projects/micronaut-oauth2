@@ -14,20 +14,16 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.userinfo;
+
+import io.micronaut.security.oauth2.openid.endpoints.EndpointUrl;
 
 /**
- * Provides an authorization redirect URL.
+ * Configuration for OpenID connect UserInfo Endpoint.
  *
- *
+ * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">UserInfo Endpoint</a>
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
+public interface UserInfoEndpointConfiguration extends EndpointUrl {
 }

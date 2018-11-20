@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.revocation;
+
+import io.micronaut.security.oauth2.openid.endpoints.EndpointUrl;
 
 /**
- * Provides an authorization redirect URL.
+ * Oauth 2.0. Introspection endpoint configuration.
  *
+ * @see <a href="https://tools.ietf.org/html/rfc7009">Oauth 2.0 Token Revocation</a>
  *
- * @author Sergio del Amo
  * @since 1.1.0
+ * @author Sergio del Amo
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
+public interface RevocationEndpointConfiguration extends EndpointUrl {
 }

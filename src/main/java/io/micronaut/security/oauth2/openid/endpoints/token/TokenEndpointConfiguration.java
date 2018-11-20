@@ -14,44 +14,41 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.errors;
+package io.micronaut.security.oauth2.openid.endpoints.token;
+
+import io.micronaut.security.oauth2.openid.endpoints.EndpointUrl;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
+ * TokenEndpoint Configuration.
+ *
+ * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint">Token Endpoint</a>
+ *
+ * @since 1.1.0
  * @author Sergio del Amo
- * @version 1.1.0
  */
-public enum Error {
-
-    INVALID_REQUEST("invalid_request"),
-    INVALID_CLIENT("invalid_client"),
-    INVALID_GRANT("invalid_grant"),
-    UNAUTHORIZED_CLIENT("unauthorized_client"),
-    UNSUPPORTED_GRANT_TYPE("unsupported_grant_type"),
-    INVALID_SCOPE("invalid_scope");
-
-    private String error;
+public interface TokenEndpointConfiguration extends EndpointUrl {
 
     /**
      *
-     * @param error Error code
+     * @return Oauth 2.0 Grant type
      */
-    Error(String error) {
-        this.error = error;
-    }
+    @Nonnull
+    String getGrantType();
 
     /**
      *
-     * @return An error code.
+     * @return Client Authentication method.
      */
-    public String getError() {
-        return error;
-    }
+    @Nullable
+    String getAuthMethod();
 
     /**
      *
-     * @param error the error code
+     * @return Redirection URI to which the response will be sent.
      */
-    public void setError(String error) {
-        this.error = error;
-    }
+    @Nullable
+    String getRedirectUri();
 }

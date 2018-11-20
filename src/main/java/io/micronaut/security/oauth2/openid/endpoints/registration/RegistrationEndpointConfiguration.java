@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.registration;
+
+import io.micronaut.security.oauth2.openid.endpoints.EndpointUrl;
 
 /**
- * Provides an authorization redirect URL.
+ * Registration endpoint configuration.
  *
+ * @see <a href="https://tools.ietf.org/html/draft-ietf-oauth-dyn-reg-17#section-3">Client Registration Endpoint</a>
  *
- * @author Sergio del Amo
  * @since 1.1.0
+ * @author Sergio del Amo
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
+public interface RegistrationEndpointConfiguration extends EndpointUrl {
 }

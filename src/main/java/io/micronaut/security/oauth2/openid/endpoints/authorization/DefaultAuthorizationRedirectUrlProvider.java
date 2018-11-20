@@ -31,7 +31,7 @@ import java.util.Optional;
  * Default implementation of {@link io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlProvider}.
  *
  * @author Sergio del Amo
- * @version 1.1.0
+ * @since 1.1.0
  */
 @Singleton
 @Requires(beans = {AuthenticationRequestProvider.class, OpenIdProviderMetadata.class})

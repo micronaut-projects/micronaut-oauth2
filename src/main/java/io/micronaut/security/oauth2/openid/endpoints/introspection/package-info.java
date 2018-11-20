@@ -14,20 +14,11 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
-
 /**
- * Provides an authorization redirect URL.
- *
+ * Introspection Endpoint related classes.
+ * @see <a href="https://tools.ietf.org/html/rfc7662#section-2">Introsepction Endpoint [RFC662]</a>
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationRedirectUrlProvider {
-
-    /**
-     *
-     * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
-     */
-    String getAuthorizationRedirectUrl();
-}
+package io.micronaut.security.oauth2.openid.endpoints.introspection;

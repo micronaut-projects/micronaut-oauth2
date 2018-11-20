@@ -14,26 +14,22 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.openid.endpoints.endsession;
 
-import javax.annotation.Nonnull;
+import io.micronaut.http.HttpRequest;
 
 /**
- * Generates a state parameter.
- *
- * <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Auth Request state parameter</a>
- *
- * state: Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
+ * Provides an URL to end session with the OpenID provider.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface StateProvider {
+public interface EndSessionUrlProvider {
 
     /**
      *
-      * @return A state parameter. A opaque value used to maintain state between the request and the callback.
+     * @param request HTTP Request.
+     * @return The OpenID provider end session URL.
      */
-    @Nonnull
-    String generateState();
+    String findLogoutUrl(HttpRequest<?> request);
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.errors;
+package io.micronaut.security.oauth2.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * @see <a href="https://tools.ietf.org/html/rfc6749#section-5.2">RFC 6749 - Error Response</a>
  *
  * @author Sergio del Amo
- * @version 1.1.0
+ * @since 1.1.0
  */
 public class ErrorResponse {
 

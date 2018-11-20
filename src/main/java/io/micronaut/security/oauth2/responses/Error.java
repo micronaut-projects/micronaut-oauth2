@@ -14,38 +14,44 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.responses;
 
 /**
- * OpenID connect prompt parameter.
- *
- * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">OpenID connect / Authentication Request</a>
- *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public enum Prompt {
+public enum Error {
 
-    NONE("none"),
-    LOGIN("login"),
-    CONSENT("consent"),
-    SELECT_ACCOUNT("select_account");
+    INVALID_REQUEST("invalid_request"),
+    INVALID_CLIENT("invalid_client"),
+    INVALID_GRANT("invalid_grant"),
+    UNAUTHORIZED_CLIENT("unauthorized_client"),
+    UNSUPPORTED_GRANT_TYPE("unsupported_grant_type"),
+    INVALID_SCOPE("invalid_scope");
 
-    private String prompt;
+    private String error;
 
     /**
-     * Instantiates the OpenID connect Prompt parameter.
-     * @param prompt Prompt parameter.
+     *
+     * @param error Error code
      */
-    Prompt(String prompt) {
-        this.prompt = prompt;
+    Error(String error) {
+        this.error = error;
     }
 
     /**
      *
-     * @return OpenID connect Prompt parameter
+     * @return An error code.
      */
-    public String getPrompt() {
-        return prompt;
+    public String getError() {
+        return error;
+    }
+
+    /**
+     *
+     * @param error the error code
+     */
+    public void setError(String error) {
+        this.error = error;
     }
 }

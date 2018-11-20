@@ -16,26 +16,30 @@
 
 package io.micronaut.security.oauth2.openid.configuration;
 
+import io.micronaut.context.annotation.Bean;
+import io.micronaut.context.annotation.Factory;
 import io.micronaut.context.annotation.Requires;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.client.annotation.Client;
-import io.micronaut.security.oauth2.configuration.OauthConfigurationProperties;
+
+import javax.inject.Singleton;
 
 /**
- * Creates a HTTP Declarative client to communicate with an OpenID connect Discovery endpoint.
- * The discovery endpoint is declared by the property micronaut.security.oauth2.openid-configuration
+ * Creates a bean {@link OpenIdConfiguration} by fetching the remote configuration of an identity provider.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@Requires(property = OauthConfigurationProperties.PREFFIX + ".openid-configuration")
-@Client("${micronaut.security.oauth2.openid-configuration}")
-public interface OpenIdConfigurationClient {
+@Requires(beans = {OpenIdConfigurationClient.class})
+@Factory
+public class OpenIdConfigurationFactory {
 
     /**
      *
-     * @return the OpenID Provider Metadata
+     * @param openIdConfigurationClient Open ID configuration Client
+     * @return An {@link OpenIdConfiguration} bean.
      */
-    @Get
-    OpenIdConfiguration fetchConfiguration();
+    @Bean
+    @Singleton
+    public OpenIdConfiguration openIdConfiguration(OpenIdConfigurationClient openIdConfigurationClient) {
+        return openIdConfigurationClient.fetchConfiguration();
+    }
 }

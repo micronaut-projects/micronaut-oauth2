@@ -16,7 +16,7 @@
 
 package io.micronaut.security.oauth2.openid.endpoints.authorization;
 
-import io.micronaut.security.oauth2.errors.ErrorResponse;
+import io.micronaut.security.oauth2.responses.ErrorResponse;
 
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * Oauth 2.0 authorization response.
  *
  * @author Sergio del Amo
- * @version 1.1.0
+ * @since 1.1.0
  */
 public class AuthorizationResponse extends ErrorResponse {
 
