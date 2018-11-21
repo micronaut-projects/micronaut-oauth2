@@ -31,7 +31,9 @@ dependencies {
     implementation "io.micronaut:micronaut-inject"
     implementation "io.micronaut:micronaut-http-client"
     testCompile "org.spockframework:spock-core:$spockVersion"
+    testCompile "com.stehno.ersatz:ersatz:$ersatzVersion"
 }
+
 
 apply from: rootProject.file('gradle/checkstyle.gradle')
 apply from: rootProject.file('gradle/license.gradle')
