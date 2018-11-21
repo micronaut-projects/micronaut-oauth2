@@ -38,7 +38,7 @@ import java.util.Optional;
  * @since 1.1.0
  */
 @Singleton
-@Requires(beans = {TokenResolver.class, OauthConfiguration.class, EndSessionEndpointConfiguration.class})
+@Requires(beans = {TokenResolver.class, OpenIdEndpoints.class, OauthConfiguration.class, EndSessionEndpointConfiguration.class})
 public class DefaultEndSessionUrlProvider implements EndSessionUrlProvider {
     private static final char OPENCURLYBRACE = '{';
     private static final char COMMA = ',';
@@ -67,8 +67,8 @@ public class DefaultEndSessionUrlProvider implements EndSessionUrlProvider {
      */
     public DefaultEndSessionUrlProvider(@Nonnull TokenResolver tokenResolver,
                                         @Nonnull OauthConfiguration oauthConfiguration,
-                                        OpenIdEndpoints openIdEndpoints,
-                                        EndSessionEndpointConfiguration endSessionEndpointConfiguration) {
+                                        @Nonnull OpenIdEndpoints openIdEndpoints,
+                                        @Nonnull EndSessionEndpointConfiguration endSessionEndpointConfiguration) {
         this.tokenResolver = tokenResolver;
         this.oauthConfiguration = oauthConfiguration;
         this.openIdEndpoints = openIdEndpoints;
@@ -76,7 +76,7 @@ public class DefaultEndSessionUrlProvider implements EndSessionUrlProvider {
     }
 
     @Override
-    public String findLogoutUrl(HttpRequest<?> request) {
+    public String resolveLogoutUrl(HttpRequest<?> request) {
         String baseUrl = openIdEndpoints.getEndSession();
         String template = instantiateTemplate(baseUrl);
         UriTemplate uriTemplate = new UriTemplate(template);

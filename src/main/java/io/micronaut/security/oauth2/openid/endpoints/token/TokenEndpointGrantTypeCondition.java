@@ -21,7 +21,6 @@ import io.micronaut.context.condition.Condition;
 import io.micronaut.context.condition.ConditionContext;
 import io.micronaut.context.exceptions.NoSuchBeanException;
 import io.micronaut.security.oauth2.grants.GrantType;
-import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata;
 
 /**
  * Conditions which verifies {@link TokenEndpointConfiguration#getGrantType()} is a particular grant type.
@@ -29,7 +28,7 @@ import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-abstract public class TokenEndpointGrantTypeCondition implements Condition {
+public abstract class TokenEndpointGrantTypeCondition implements Condition {
 
      @Override
      public boolean matches(ConditionContext context) {
@@ -49,5 +48,5 @@ abstract public class TokenEndpointGrantTypeCondition implements Condition {
      *
      * @return The Oauth 2.0 Grant type.
      */
-    abstract GrantType checkedGrantType();
+    protected abstract GrantType checkedGrantType();
 }

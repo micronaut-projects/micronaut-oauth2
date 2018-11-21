@@ -31,5 +31,5 @@ public interface EndSessionUrlProvider {
      * @param request HTTP Request.
      * @return The OpenID provider end session URL.
      */
-    String findLogoutUrl(HttpRequest<?> request);
+    String resolveLogoutUrl(HttpRequest<?> request);
 }

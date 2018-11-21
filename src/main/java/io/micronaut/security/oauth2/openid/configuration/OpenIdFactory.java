@@ -19,6 +19,7 @@ package io.micronaut.security.oauth2.openid.configuration;
 import io.micronaut.context.annotation.Bean;
 import io.micronaut.context.annotation.Factory;
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.security.oauth2.openid.endpoints.OpenIdEndpoints;
 import io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfiguration;
 import io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfiguration;
 import io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfiguration;
@@ -125,6 +126,19 @@ public class OpenIdFactory {
                 revocationEndpointConfiguration,
                 tokenEndpointConfiguration,
                 userInfoEndpointConfiguration);
+    }
+
+    /**
+     *
+     * @param openIdProviderMetadata Open ID Provider metadata
+     * @param openIdProviderMetadataSession Open ID Provider Metadata Session
+     * @return a bean of type {@link OpenIdEndpoints}
+     */
+    @Bean
+    @Singleton
+    public OpenIdEndpoints openIdEndpoints(OpenIdProviderMetadata openIdProviderMetadata,
+                                           OpenIdProviderMetadataSession openIdProviderMetadataSession) {
+        return new OpenIdEndpointsAdapter(openIdProviderMetadata, openIdProviderMetadataSession);
     }
 
 //    /**

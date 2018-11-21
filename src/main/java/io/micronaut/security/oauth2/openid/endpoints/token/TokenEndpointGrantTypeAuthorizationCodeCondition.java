@@ -26,7 +26,7 @@ import io.micronaut.security.oauth2.grants.GrantType;
  */
 public class TokenEndpointGrantTypeAuthorizationCodeCondition extends TokenEndpointGrantTypeCondition {
     @Override
-    GrantType checkedGrantType() {
+    protected GrantType checkedGrantType() {
         return GrantType.AUTHORIZATION_CODE;
     }
 }
