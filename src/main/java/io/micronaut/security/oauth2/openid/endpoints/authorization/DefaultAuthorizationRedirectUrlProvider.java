@@ -37,11 +37,11 @@ import java.util.Optional;
 @Requires(beans = {AuthenticationRequestProvider.class, OpenIdProviderMetadata.class})
 public class DefaultAuthorizationRedirectUrlProvider implements AuthorizationRedirectUrlProvider {
 
-    private static final char SPACE = ' ';
-    private static final char OPENCURLYBRACE = '{';
-    private static final char COMMA = ',';
-    private static final char CLOSECURLYBRACE = '}';
-    private static final char QUESTIONMARK = '?';
+    private static final String SPACE = " ";
+    private static final String OPENCURLYBRACE = "{";
+    private static final String COMMA = ",";
+    private static final String CLOSECURLYBRACE = "}";
+    private static final String QUESTIONMARK = "?";
 
     private static final Logger LOG = LoggerFactory.getLogger(DefaultAuthorizationRedirectUrlProvider.class);
 
@@ -67,7 +67,7 @@ public class DefaultAuthorizationRedirectUrlProvider implements AuthorizationRed
      * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
      */
     @Override
-    public String getAuthorizationRedirectUrl() {
+    public String resolveAuthorizationRedirectUrl() {
         AuthenticationRequest authenticationRequest = authenticationRequestProvider.generateAuthenticationRequest();
         Map<String, Object> arguments = instantiateParameters(authenticationRequest);
         String baseUrl = this.openIdProviderMetadata.getAuthorizationEndpoint();
@@ -164,7 +164,9 @@ public class DefaultAuthorizationRedirectUrlProvider implements AuthorizationRed
      */
     protected void populateState(@Nonnull AuthenticationRequest authenticationRequest,
                                  @Nonnull Map<String, Object> parameters) {
-        parameters.put(AuthenticationRequest.PARAMETER_STATE, authenticationRequest.getState());
+        if (authenticationRequest.getState() != null) {
+            parameters.put(AuthenticationRequest.PARAMETER_STATE, authenticationRequest.getState());
+        }
     }
 
     /**

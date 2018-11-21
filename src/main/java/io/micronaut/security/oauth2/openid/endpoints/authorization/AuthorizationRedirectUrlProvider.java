@@ -29,5 +29,5 @@ public interface AuthorizationRedirectUrlProvider {
      *
      * @return A URL to redirect the user to the OpenID Provider authorization endpoint.
      */
-    String getAuthorizationRedirectUrl();
+    String resolveAuthorizationRedirectUrl();
 }
