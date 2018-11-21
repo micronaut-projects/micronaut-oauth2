@@ -34,9 +34,9 @@ import java.util.Objects;
  * @author Sergio del Amo
  */
 @Requires(beans = {OpenIdProviderMetadata.class, TokenEndpointConfiguration.class, OauthConfiguration.class})
-@Requires(property = TokenEndpointConfigurationProperties.PREFFIX + ".token.grant-type", value = "authorization_code")
-@Requires(property = TokenEndpointConfigurationProperties.PREFFIX + ".token.grant-type", value = "redirect-uri")
+@Requires(property = TokenEndpointConfigurationProperties.PREFFIX + ".redirect-uri")
 @Requires(condition = TokenEndpointNotNullCondition.class)
+@Requires(condition = TokenEndpointGrantTypeAuthorizationCodeCondition.class)
 @Singleton
 public class DefaultAuthorizationCodeGrantRequestGenerator implements AuthorizationCodeGrantRequestGenerator {
 
