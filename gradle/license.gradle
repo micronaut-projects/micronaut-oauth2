@@ -3,7 +3,7 @@ apply plugin: 'com.github.hierynomus.license'
 license {
     header = rootProject.file('config/HEADER')
     strictCheck = true
-    ignoreFailures = true
+    ignoreFailures = false
     mapping {
         kt     = 'SLASHSTAR_STYLE'
         java   = 'SLASHSTAR_STYLE'
