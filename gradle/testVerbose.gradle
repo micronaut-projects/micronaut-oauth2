@@ -1,9 +1,9 @@
 tasks.withType(Test) {
     afterTest { desc, result ->
-        logger.quiet " -- Executed test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+        //logger.quiet " -- Executed test ${desc.name} [${desc.className}] with result: ${result.resultType}"
     }
     testLogging {
-        events "passed", "skipped", "failed", "standardOut"
+        events "passed", "skipped", "failed"//, "standardOut"
         showExceptions true
         exceptionFormat "full"
         showCauses true
@@ -11,7 +11,7 @@ tasks.withType(Test) {
 
         // set options for log level DEBUG and INFO
         debug {
-            events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+            events "passed", "skipped", "failed"//, "started", "standardOut", "standardError"
             exceptionFormat "full"
         }
         info.events = debug.events

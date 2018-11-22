@@ -3,14 +3,12 @@ apply plugin: 'com.github.hierynomus.license'
 license {
     header = rootProject.file('config/HEADER')
     strictCheck = true
-    ignoreFailures = false
     mapping {
         kt     = 'SLASHSTAR_STYLE'
         java   = 'SLASHSTAR_STYLE'
         groovy = 'SLASHSTAR_STYLE'
     }
     ext.year = '2017-2018'
-
     exclude '**/*.txt'
     exclude '**/*.html'
     exclude '**/*.xml'
@@ -19,4 +17,13 @@ license {
     exclude '**/*.png'
     exclude '**/*.jpeg'
     exclude '**/*.jpg'
+    exclude '**/*Spec.groovy'
+}
+
+licenseMain {
+    ignoreFailures = false
+}
+
+licenseTest {
+    ignoreFailures = true
 }
