@@ -17,41 +17,46 @@
 package io.micronaut.security.oauth2.responses;
 
 /**
+ * ErrorCode Response parameters defined in Section 4.1.2.1 of OAuth 2.0.
+ *
+ * Oauth 2.0
+ * @see <a href="https://tools.ietf.org/html/rfc6749#section-4.1.2">ErrorCode Response</a>
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public enum Error {
+public enum ErrorCode {
 
     INVALID_REQUEST("invalid_request"),
-    INVALID_CLIENT("invalid_client"),
-    INVALID_GRANT("invalid_grant"),
     UNAUTHORIZED_CLIENT("unauthorized_client"),
-    UNSUPPORTED_GRANT_TYPE("unsupported_grant_type"),
-    INVALID_SCOPE("invalid_scope");
+    ACCESS_DENIED("access_denied"),
+    UNSUPPORTED_RESPONSE_TYPE("unsupported_response_type"),
+    INVALID_SCOPE("invalid_scope"),
+    SERVER_ERROR("server_error"),
+    TEMPORARILY_UNAVAILABLE("temporarily_unavailable");
 
-    private String error;
+    private String errorCode;
 
     /**
      *
-     * @param error Error code
+     * @param errorCode ErrorCode code
      */
-    Error(String error) {
-        this.error = error;
+    ErrorCode(String errorCode) {
+        this.errorCode = errorCode;
     }
 
     /**
      *
-     * @return An error code.
+     * @return An errorCode code.
      */
-    public String getError() {
-        return error;
+    public String getErrorCode() {
+        return errorCode;
     }
 
     /**
      *
-     * @param error the error code
+     * @param errorCode the errorCode code
      */
-    public void setError(String error) {
-        this.error = error;
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
     }
 }

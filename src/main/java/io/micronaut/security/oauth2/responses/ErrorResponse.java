@@ -16,98 +16,49 @@
 
 package io.micronaut.security.oauth2.responses;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
  * Oauth 2.0 Error Response.
  *
- * @see <a href="https://tools.ietf.org/html/rfc6749#section-5.2">RFC 6749 - Error Response</a>
+ * @see <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthError">Authentication Error Response</a>
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public class ErrorResponse {
+public interface ErrorResponse {
 
-    @Nonnull
-    private Error error;
-
-    @Nullable
-    @JsonProperty("error_description")
-    private String errorDescription;
-
-    @Nullable
-    @JsonProperty("error_uri")
-    private String errorUri;
-
-    /**
-     * Constructor.
-     */
-    public ErrorResponse() {
-
-    }
+    String JSON_KEY_ERROR = "error";
+    String JSON_KEY_STATE = "state";
+    String JSON_KEY_ERROR_DESCRIPTION = "error_description";
+    String JSON_KEY_ERROR_URI = "error_uri";
 
     /**
      *
      * @return The error code
      */
     @Nonnull
-    public Error getError() {
-        return error;
-    }
+    String getError();
 
     /**
      *
-     * @param error The error code.
-     */
-    public void setError(Error error) {
-        this.error = error;
-    }
-
-    /**
-     *
-     * @return Human-readable ASCII [USASCII] text providing additional information, used to assist the client developer in
-     *  understanding the error that occurred.
+     * @return Human-readable ASCII [USASCII] text providing additional information, used to assist the client developer in understanding the errorCode that occurred.
      */
     @Nullable
-    public String getErrorDescription() {
-        return errorDescription;
-    }
-
+    String getErrorDescription();
 
     /**
-     *
-      * @param errorDescription Human-readable ASCII [USASCII] text providing additional information about the error.
-     */
-    public void setErrorDescription(@Nullable String errorDescription) {
-        this.errorDescription = errorDescription;
-    }
-
-    /**
-     *
-     * @return URI identifying a human-readable web page with information about the error
+     * Although the state is required if the Authorization Request included the state parameter. it is set to nullable because it is possible to send authorization requests without including a state.
+     * @return OAuth 2.0 state value.
      */
     @Nullable
-    public String getErrorUri() {
-        return errorUri;
-    }
+    String getState();
 
     /**
      *
-     * @param errorUri URI identifying a human-readable web page with information about the error.
+     * @return URI identifying a human-readable web page with information about the errorCode
      */
-    public void setErrorUri(@Nullable String errorUri) {
-        this.errorUri = errorUri;
-    }
-
-    @Override
-    public String toString() {
-        return "ErrorResponse{" +
-                "error='" + error + '\'' +
-                ", errorDescription='" + errorDescription + '\'' +
-                ", errorUri='" + errorUri + '\'' +
-                '}';
-    }
+    @Nullable
+    String getErrorUri();
 }
