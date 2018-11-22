@@ -1,29 +1,61 @@
 package io.micronaut.security.oauth2.endpoints
 
 import io.micronaut.context.ApplicationContext
+import io.micronaut.context.annotation.Requires
 import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.exceptions.HttpClientResponseException
 import io.micronaut.runtime.server.EmbeddedServer
+import io.micronaut.security.oauth2.NullImplOfOpenIdProviderMetadata
+import io.micronaut.security.oauth2.configuration.OauthConfiguration
+import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata
+import io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator
+import io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
+import spock.lang.Unroll
+
+import javax.inject.Singleton
 
 class AuthorizationCodeControllerPathSpec extends Specification {
+    static final SPEC_NAME_PROPERTY = 'spec.name'
 
     @Shared
     @AutoCleanup
     EmbeddedServer embeddedServer = ApplicationContext.run(EmbeddedServer, [
+            (SPEC_NAME_PROPERTY): getClass().simpleName,
             'micronaut.security.enabled': true,
+            'micronaut.security.oauth2.client-id': 'XXX',
+            'micronaut.security.oauth2.token.redirect-uri': 'http://localhost:8080',
             'micronaut.security.endpoints.authcode.controller-path': '/cb',
             'micronaut.security.endpoints.authcode.action-path': '/',
+
     ], Environment.TEST)
 
     @Shared
     @AutoCleanup
     RxHttpClient client = embeddedServer.applicationContext.createBean(RxHttpClient, embeddedServer.getURL())
+
+    @Unroll
+    void "#clazz bean is available"() {
+        when:
+        embeddedServer.applicationContext.getBean(clazz)
+
+        then:
+        noExceptionThrown()
+
+        where:
+        clazz << [
+                OauthConfiguration,
+                OpenIdProviderMetadata,
+                TokenEndpointConfiguration,
+                AuthorizationCodeGrantRequestGenerator,
+        ]
+    }
+
 
     void "AuthorizationCodeController is no longer accessible at /authcode/cb"() {
         when:
@@ -46,5 +78,14 @@ class AuthorizationCodeControllerPathSpec extends Specification {
 
         then:
         noExceptionThrown()
+    }
+
+    @Requires(property = 'spec.name', value = 'AuthorizationCodeControllerPathSpec')
+    @Singleton
+    static class MockOpenIdProviderMetadata extends NullImplOfOpenIdProviderMetadata {
+        @Override
+        String getTokenEndpoint() {
+            return 'http://localhost:8080'
+        }
     }
 }

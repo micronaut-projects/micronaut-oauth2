@@ -27,10 +27,17 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.security.annotation.Secured;
+import io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler;
 import io.micronaut.security.oauth2.handlers.ErrorResponseHandler;
 import io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRequestResponseTypeCodeCondition;
+import io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator;
 import io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointGrantTypeAuthorizationCodeCondition;
+import io.micronaut.security.oauth2.responses.AuthorizationResponse;
+import io.micronaut.security.oauth2.responses.AuthorizationResponseDetector;
+import io.micronaut.security.oauth2.responses.AuthorizationResponseHttpParamsAdapter;
+import io.micronaut.security.oauth2.responses.AuthorizationResponseMapAdapter;
 import io.micronaut.security.oauth2.responses.ErrorResponse;
+import io.micronaut.security.oauth2.responses.ErrorResponseDetector;
 import io.micronaut.security.oauth2.responses.ErrorResponseHttpParamsAdapter;
 import io.micronaut.security.oauth2.responses.ErrorResponseMapAdapter;
 import io.micronaut.security.rules.SecurityRule;
@@ -48,17 +55,22 @@ import java.util.Map;
 @Requires(property = AuthorizationCodeControllerConfigurationProperties.PREFIX + ".enabled", notEquals = StringUtils.FALSE)
 @Requires(condition = AuthorizationRequestResponseTypeCodeCondition.class)
 @Requires(condition = TokenEndpointGrantTypeAuthorizationCodeCondition.class)
+@Requires(beans = {ErrorResponseHandler.class, AuthorizationResponseHandler.class})
 @Controller("${" + AuthorizationCodeControllerConfigurationProperties.PREFIX + ".controller-path:/authcode}")
 public class AuthorizationCodeController {
 
     private final ErrorResponseHandler errorResponseHandler;
+    private final AuthorizationResponseHandler authorizationResponseHandler;
 
     /**
      *
      * @param errorResponseHandler Error Response Handler.
+     * @param authorizationResponseHandler Authorization Response Handler.
      */
-    public AuthorizationCodeController(ErrorResponseHandler errorResponseHandler) {
+    public AuthorizationCodeController(ErrorResponseHandler errorResponseHandler,
+                                       AuthorizationResponseHandler authorizationResponseHandler) {
         this.errorResponseHandler = errorResponseHandler;
+        this.authorizationResponseHandler = authorizationResponseHandler;
     }
 
     /**
@@ -69,9 +81,14 @@ public class AuthorizationCodeController {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Post("${" + AuthorizationCodeControllerConfigurationProperties.PREFIX + ".action-path:/cb}")
     public Single<HttpResponse> cbPost(@Body Map formFields) {
-        if (isErrorResponse(formFields)) {
+
+        if (ErrorResponseDetector.isErrorResponse(formFields)) {
             ErrorResponse errorResponse = new ErrorResponseMapAdapter(formFields);
             return errorResponseHandler.handle(errorResponse);
+
+        } else if (AuthorizationResponseDetector.isAuthorizationResponse(formFields)) {
+            AuthorizationResponse authorizationResponse = new AuthorizationResponseMapAdapter(formFields);
+            return authorizationResponseHandler.handle(authorizationResponse);
         }
 
         return Single.just(HttpResponse.ok());
@@ -84,33 +101,17 @@ public class AuthorizationCodeController {
      */
     @Get("${" + AuthorizationCodeControllerConfigurationProperties.PREFIX + ".action-path:/cb}")
     public Single<HttpResponse> cbGet(HttpParameters parameters) {
-        if (isErrorResponse(parameters)) {
+
+        if (ErrorResponseDetector.isErrorResponse(parameters)) {
             ErrorResponse errorResponse = new ErrorResponseHttpParamsAdapter(parameters);
             return errorResponseHandler.handle(errorResponse);
+
+        } else if (AuthorizationResponseDetector.isAuthorizationResponse(parameters)) {
+            AuthorizationResponse authorizationResponse = new AuthorizationResponseHttpParamsAdapter(parameters);
+            return authorizationResponseHandler.handle(authorizationResponse);
         }
 
         return Single.just(HttpResponse.ok());
     }
 
-    /**
-     *
-     * @param parameters Http parameters
-     * @return true if the response is consider an error.
-     */
-    protected boolean isErrorResponse(HttpParameters parameters) {
-        return parameters.get("error", String.class).isPresent();
-    }
-
-    /**
-     *
-     * @param formFields A Map encapsulating the form url encoded payload.
-     * @return true if the response is consider an error.
-     */
-    protected boolean isErrorResponse(Map formFields) {
-        Object value = formFields.get(ErrorResponse.JSON_KEY_ERROR);
-        if (value instanceof String) {
-            return true;
-        }
-        return false;
-    }
 }

@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.authorization;
+package io.micronaut.security.oauth2.responses;
 
-import io.micronaut.security.oauth2.responses.Oauth2ErrorResponse;
-
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
@@ -26,18 +25,18 @@ import javax.annotation.Nullable;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public class AuthorizationResponse extends Oauth2ErrorResponse {
+public class Oauth2AuthorizationResponse implements AuthorizationResponse {
 
     @Nullable
     private String state;
 
-    @Nullable
+    @Nonnull
     private String code;
 
     /**
      * Construct authorization response object.
      */
-    public AuthorizationResponse() {
+    public Oauth2AuthorizationResponse() {
         super();
     }
 
@@ -62,7 +61,7 @@ public class AuthorizationResponse extends Oauth2ErrorResponse {
      *
      * @return An authorization code which the client will later exchange for an access token.
      */
-    @Nullable
+    @Nonnull
     public String getCode() {
         return code;
     }
@@ -71,7 +70,7 @@ public class AuthorizationResponse extends Oauth2ErrorResponse {
      * Set an authorization code.
      * @param code authorization code.
      */
-    public void setCode(@Nullable String code) {
+    public void setCode(@Nonnull String code) {
         this.code = code;
     }
 }

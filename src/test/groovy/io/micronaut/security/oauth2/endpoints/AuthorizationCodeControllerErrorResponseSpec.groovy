@@ -1,30 +1,38 @@
 package io.micronaut.security.oauth2.endpoints
 
 import io.micronaut.context.ApplicationContext
+import io.micronaut.context.annotation.Requires
 import io.micronaut.context.env.Environment
 import io.micronaut.core.type.Argument
 import io.micronaut.http.HttpRequest
-import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.MediaType
 import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.exceptions.HttpClientResponseException
 import io.micronaut.runtime.server.EmbeddedServer
+import io.micronaut.security.oauth2.NullImplOfOpenIdProviderMetadata
 import io.micronaut.security.oauth2.responses.Oauth2ErrorResponse
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
+
+import javax.inject.Singleton
 
 class AuthorizationCodeControllerErrorResponseSpec extends Specification {
 
     static final SPEC_NAME_PROPERTY = 'spec.name'
 
     @Shared
-    @AutoCleanup
-    EmbeddedServer embeddedServer = ApplicationContext.run(EmbeddedServer, [
+    Map<String, Object> config = [
             (SPEC_NAME_PROPERTY): getClass().simpleName,
             'micronaut.security.enabled': true,
-    ], Environment.TEST)
+            'micronaut.security.oauth2.client-id': 'XXX',
+            'micronaut.security.oauth2.token.redirect-uri': 'http://localhost:8080',
+    ]
+
+    @Shared
+    @AutoCleanup
+    EmbeddedServer embeddedServer = ApplicationContext.run(EmbeddedServer, config, Environment.TEST)
 
     @Shared
     @AutoCleanup
@@ -81,6 +89,15 @@ class AuthorizationCodeControllerErrorResponseSpec extends Specification {
         errorResponse.getState() == 'af0ifjsldkj'
         errorResponse.getErrorDescription() == 'Unsupported response_type value'
         errorResponse.getErrorUri() == null
+    }
+
+    @Requires(property = 'spec.name', value = 'AuthorizationCodeControllerErrorResponseSpec')
+    @Singleton
+    static class MockOpenIdProviderMetadata extends NullImplOfOpenIdProviderMetadata {
+        @Override
+        String getTokenEndpoint() {
+            return 'http://localhost:8080'
+        }
     }
 
 }
