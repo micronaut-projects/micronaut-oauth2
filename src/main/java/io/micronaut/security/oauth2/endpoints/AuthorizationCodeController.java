@@ -30,12 +30,11 @@ import io.micronaut.security.annotation.Secured;
 import io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler;
 import io.micronaut.security.oauth2.handlers.ErrorResponseHandler;
 import io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRequestResponseTypeCodeCondition;
-import io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator;
 import io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointGrantTypeAuthorizationCodeCondition;
-import io.micronaut.security.oauth2.responses.AuthorizationResponse;
+import io.micronaut.security.oauth2.responses.AuthenticationResponse;
 import io.micronaut.security.oauth2.responses.AuthorizationResponseDetector;
-import io.micronaut.security.oauth2.responses.AuthorizationResponseHttpParamsAdapter;
-import io.micronaut.security.oauth2.responses.AuthorizationResponseMapAdapter;
+import io.micronaut.security.oauth2.responses.AuthenticationResponseHttpParamsAdapter;
+import io.micronaut.security.oauth2.responses.AuthenticationResponseMapAdapter;
 import io.micronaut.security.oauth2.responses.ErrorResponse;
 import io.micronaut.security.oauth2.responses.ErrorResponseDetector;
 import io.micronaut.security.oauth2.responses.ErrorResponseHttpParamsAdapter;
@@ -87,8 +86,8 @@ public class AuthorizationCodeController {
             return errorResponseHandler.handle(errorResponse);
 
         } else if (AuthorizationResponseDetector.isAuthorizationResponse(formFields)) {
-            AuthorizationResponse authorizationResponse = new AuthorizationResponseMapAdapter(formFields);
-            return authorizationResponseHandler.handle(authorizationResponse);
+            AuthenticationResponse authenticationResponse = new AuthenticationResponseMapAdapter(formFields);
+            return authorizationResponseHandler.handle(authenticationResponse);
         }
 
         return Single.just(HttpResponse.ok());
@@ -107,8 +106,8 @@ public class AuthorizationCodeController {
             return errorResponseHandler.handle(errorResponse);
 
         } else if (AuthorizationResponseDetector.isAuthorizationResponse(parameters)) {
-            AuthorizationResponse authorizationResponse = new AuthorizationResponseHttpParamsAdapter(parameters);
-            return authorizationResponseHandler.handle(authorizationResponse);
+            AuthenticationResponse authenticationResponse = new AuthenticationResponseHttpParamsAdapter(parameters);
+            return authorizationResponseHandler.handle(authenticationResponse);
         }
 
         return Single.just(HttpResponse.ok());

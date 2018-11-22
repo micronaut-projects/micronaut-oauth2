@@ -30,10 +30,10 @@ import java.util.List;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@ConfigurationProperties(EndSessionEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(EndSessionEndpointConfigurationProperties.PREFIX)
 public class EndSessionEndpointConfigurationProperties implements EndSessionEndpointConfiguration {
 
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".end-session";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".end-session";
 
     @Nullable
     private String url;

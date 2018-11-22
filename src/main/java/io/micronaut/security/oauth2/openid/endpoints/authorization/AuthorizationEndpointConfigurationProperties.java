@@ -31,10 +31,10 @@ import java.util.List;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@ConfigurationProperties(AuthorizationEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(AuthorizationEndpointConfigurationProperties.PREFIX)
 public class AuthorizationEndpointConfigurationProperties implements AuthorizationEndpointConfiguration, AuthorizationEndpointRequestConfiguration {
 
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".authorization";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".authorization";
 
     /**
      * Default response type.

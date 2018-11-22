@@ -27,10 +27,10 @@ import javax.annotation.Nullable;
  * @since 1.1.0
  * @author Sergio del Amo
  */
-@ConfigurationProperties(IntrospectionEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(IntrospectionEndpointConfigurationProperties.PREFIX)
 public class IntrospectionEndpointConfigurationProperties implements IntrospectionEndpointConfiguration {
     @SuppressWarnings("WeakerAccess")
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".introspection";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".introspection";
 
     private String url;
 

@@ -27,9 +27,9 @@ import javax.annotation.Nullable;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@ConfigurationProperties(UserInfoEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(UserInfoEndpointConfigurationProperties.PREFIX)
 public class UserInfoEndpointConfigurationProperties implements UserInfoEndpointConfiguration {
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".user-info";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".user-info";
 
     @Nullable
     private String url;

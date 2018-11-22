@@ -27,6 +27,7 @@ import io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointCo
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Creates an {@link OpenIdProviderMetadata} by merging together an existing {@link OpenIdProviderMetadata}, probably from a
@@ -37,8 +38,11 @@ import java.util.List;
  */
 public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
 
-    @Nonnull
+    @Nullable
     private OpenIdProviderMetadata openIdProviderMetadata;
+
+    @Nonnull
+    private OpenIdProviderConfiguration openIdProviderConfiguration;
 
     @Nonnull
     private AuthorizationEndpointConfiguration authorizationEndpointConfiguration;
@@ -61,6 +65,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
     /**
      *
      * @param openIdProviderMetadata Open ID provider metadata
+     * @param openIdProviderConfiguration Open ID Provider configuration
      * @param authorizationEndpointConfiguration Authorization endpoint configuration.
      * @param introspectionEndpointConfiguration Introspection endpoint configuration.
      * @param registrationEndpointConfiguration Registration endpoint configuration.
@@ -68,7 +73,8 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @param tokenEndpointConfiguration Token endpoint configuration.
      * @param userInfoEndpointConfiguration User info endpoint configuration.
      */
-    public OpenIdProviderMetadataAdapter(@Nonnull OpenIdProviderMetadata openIdProviderMetadata,
+    public OpenIdProviderMetadataAdapter(@Nullable OpenIdProviderMetadata openIdProviderMetadata,
+                                         @Nonnull OpenIdProviderConfiguration openIdProviderConfiguration,
                                          @Nonnull AuthorizationEndpointConfiguration authorizationEndpointConfiguration,
                                          @Nonnull IntrospectionEndpointConfiguration introspectionEndpointConfiguration,
                                          @Nonnull RegistrationEndpointConfiguration registrationEndpointConfiguration,
@@ -76,6 +82,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
                                          @Nonnull TokenEndpointConfiguration tokenEndpointConfiguration,
                                          @Nonnull UserInfoEndpointConfiguration userInfoEndpointConfiguration) {
         this.openIdProviderMetadata = openIdProviderMetadata;
+        this.openIdProviderConfiguration = openIdProviderConfiguration;
         this.authorizationEndpointConfiguration = authorizationEndpointConfiguration;
         this.introspectionEndpointConfiguration = introspectionEndpointConfiguration;
         this.registrationEndpointConfiguration = registrationEndpointConfiguration;
@@ -87,7 +94,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
     @Nonnull
     @Override
     public String getIssuer() {
-        return openIdProviderMetadata.getIssuer();
+        return Objects.requireNonNull(openIdProviderMetadata != null ? openIdProviderMetadata.getIssuer() : openIdProviderConfiguration.getIssuer());
     }
 
     @Nonnull
@@ -111,7 +118,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
     @Nonnull
     @Override
     public String getJwksUri() {
-        return openIdProviderMetadata.getJwksUri();
+        return Objects.requireNonNull(openIdProviderMetadata != null ? openIdProviderMetadata.getJwksUri() : openIdProviderConfiguration.getJwksUri());
     }
 
     @Nullable
@@ -123,193 +130,193 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
     @Nullable
     @Override
     public List<String> getScopesSupported() {
-        return openIdProviderMetadata.getScopesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getScopesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getResponseTypesSupported() {
-        return openIdProviderMetadata.getResponseTypesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getResponseTypesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getResponseModesSupported() {
-        return openIdProviderMetadata.getResponseModesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getResponseModesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getGrantTypesSupported() {
-        return openIdProviderMetadata.getGrantTypesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getGrantTypesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getAcrValuesSupported() {
-        return openIdProviderMetadata.getAcrValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getAcrValuesSupported() : null;
     }
 
     @Nonnull
     @Override
     public List<String> getSubjectTypesSupported() {
-        return openIdProviderMetadata.getSubjectTypesSupported();
+        return Objects.requireNonNull(openIdProviderMetadata != null ? openIdProviderMetadata.getSubjectTypesSupported() : openIdProviderConfiguration.getSubjectTypesSupported());
     }
 
     @Nonnull
     @Override
     public List<String> getIdTokenSigningAlgValuesSupported() {
-        return openIdProviderMetadata.getIdTokenSigningAlgValuesSupported();
+        return Objects.requireNonNull(openIdProviderMetadata != null ? openIdProviderMetadata.getIdTokenSigningAlgValuesSupported() : openIdProviderConfiguration.getIdTokenEncryptionEncValuesSupported());
     }
 
     @Nullable
     @Override
     public List<String> getIdTokenEncryptionEncValuesSupported() {
-        return openIdProviderMetadata.getIdTokenEncryptionEncValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getIdTokenEncryptionEncValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getUserInfoEncryptionAlgValuesSupported() {
-        return openIdProviderMetadata.getUserInfoEncryptionAlgValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getUserInfoEncryptionAlgValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getUserinfoEncryptionEncValuesSupported() {
-        return openIdProviderMetadata.getUserinfoEncryptionEncValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getUserinfoEncryptionEncValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getRequestObjectSigningAlgValuesSupported() {
-        return openIdProviderMetadata.getRequestObjectSigningAlgValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequestObjectSigningAlgValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getRequestObjectEncryptionAlgValuesSupported() {
-        return openIdProviderMetadata.getRequestObjectEncryptionAlgValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequestObjectEncryptionAlgValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getRequestObjectEncryptionEncValuesSupported() {
-        return openIdProviderMetadata.getRequestObjectEncryptionEncValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequestObjectEncryptionEncValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getTokenEndpointAuthMethodsSupported() {
-        return openIdProviderMetadata.getTokenEndpointAuthMethodsSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getTokenEndpointAuthMethodsSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getTokenEndpointAuthSigningAlgValuesSupported() {
-        return openIdProviderMetadata.getTokenEndpointAuthSigningAlgValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getTokenEndpointAuthSigningAlgValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getDisplayValuesSupported() {
-        return openIdProviderMetadata.getDisplayValuesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getDisplayValuesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getClaimTypesSupported() {
-        return openIdProviderMetadata.getClaimTypesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getClaimTypesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getClaimsSupported() {
-        return openIdProviderMetadata.getClaimsSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getClaimsSupported() : null;
     }
 
     @Nullable
     @Override
     public String getServiceDocumentation() {
-        return openIdProviderMetadata.getServiceDocumentation();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getServiceDocumentation() : null;
     }
 
     @Nullable
     @Override
     public List<String> getClaimsLocalesSupported() {
-        return openIdProviderMetadata.getClaimsLocalesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getClaimsLocalesSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getUriLocalesSupported() {
-        return openIdProviderMetadata.getUriLocalesSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getUriLocalesSupported() : null;
     }
 
     @Nullable
     @Override
     public Boolean getClaimsParameterSupported() {
-        return openIdProviderMetadata.getClaimsParameterSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getClaimsParameterSupported() : null;
     }
 
     @Nullable
     @Override
     public Boolean getRequestParameterSupported() {
-        return openIdProviderMetadata.getRequestParameterSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequestParameterSupported() : null;
     }
 
     @Nullable
     @Override
     public Boolean getRequestUriParameterSupported() {
-        return openIdProviderMetadata.getRequestUriParameterSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequestUriParameterSupported() : null;
     }
 
     @Nullable
     @Override
     public Boolean getRequireRequestUriRegistration() {
-        return openIdProviderMetadata.getRequireRequestUriRegistration();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRequireRequestUriRegistration() : null;
     }
 
     @Nullable
     @Override
     public String getOpPolicyUri() {
-        return openIdProviderMetadata.getOpPolicyUri();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getOpPolicyUri() : null;
     }
 
     @Nullable
     @Override
     public String getOpTosUri() {
-        return openIdProviderMetadata.getOpTosUri();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getOpTosUri() : null;
     }
 
     @Nullable
     @Override
     public List<String> getCodeChallengeMethodsSupported() {
-        return openIdProviderMetadata.getCodeChallengeMethodsSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getCodeChallengeMethodsSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getIntrospectionEndpointAuthMethodsSupported() {
-        return openIdProviderMetadata.getIntrospectionEndpointAuthMethodsSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getIntrospectionEndpointAuthMethodsSupported() : null;
     }
 
     @Nullable
     @Override
     public List<String> getRevocationEndpointAuthMethodsSupported() {
-        return openIdProviderMetadata.getRevocationEndpointAuthMethodsSupported();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRevocationEndpointAuthMethodsSupported() : null;
     }
 
     @Nullable
     @Override
     public String getIntrospectionEndpoint() {
-        return openIdProviderMetadata.getIntrospectionEndpoint();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getIntrospectionEndpoint() : null;
     }
 
     @Nullable
     @Override
     public String getRevocationEndpoint() {
-        return openIdProviderMetadata.getRevocationEndpoint();
+        return openIdProviderMetadata != null ? openIdProviderMetadata.getRevocationEndpoint() : null;
     }
 
     /**
@@ -317,7 +324,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved userinfo endpoint url
      */
     protected String getUserinfoEndpointUrl() {
-        return resolveUrl(userInfoEndpointConfiguration, openIdProviderMetadata.getUserinfoEndpoint());
+        return resolveUrl(userInfoEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getUserinfoEndpoint() : null);
     }
 
     /**
@@ -325,7 +332,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved token endpoint url
      */
     protected String getTokenEndpointUrl() {
-        return resolveUrl(tokenEndpointConfiguration, openIdProviderMetadata.getTokenEndpoint());
+        return resolveUrl(tokenEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getTokenEndpoint() : null);
     }
 
     /**
@@ -333,7 +340,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved revocation endpoint url
      */
     protected String getRevocationEndpointUrl() {
-        return resolveUrl(revocationEndpointConfiguration, openIdProviderMetadata.getRevocationEndpoint());
+        return resolveUrl(revocationEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getRevocationEndpoint() : null);
     }
 
     /**
@@ -341,7 +348,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved registration endpoint url
      */
     protected String getRegistrationEndpointUrl() {
-        return resolveUrl(registrationEndpointConfiguration, openIdProviderMetadata.getRegistrationEndpoint());
+        return resolveUrl(registrationEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getRegistrationEndpoint() : null);
     }
 
     /**
@@ -349,7 +356,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved introspection endpoint url
      */
     protected String getIntrospectionEndpointUrl() {
-        return resolveUrl(introspectionEndpointConfiguration, openIdProviderMetadata.getIntrospectionEndpoint());
+        return resolveUrl(introspectionEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getIntrospectionEndpoint() : null);
     }
 
     /**
@@ -357,7 +364,7 @@ public class OpenIdProviderMetadataAdapter implements OpenIdProviderMetadata {
      * @return resolved authorization endpoint url
      */
     protected String getAuthorizationEndpointUrl() {
-        return resolveUrl(authorizationEndpointConfiguration, openIdProviderMetadata.getAuthorizationEndpoint());
+        return resolveUrl(authorizationEndpointConfiguration, openIdProviderMetadata != null ? openIdProviderMetadata.getAuthorizationEndpoint() : null);
     }
 
     private String resolveUrl(EndpointUrl endpointUrl, String url) {

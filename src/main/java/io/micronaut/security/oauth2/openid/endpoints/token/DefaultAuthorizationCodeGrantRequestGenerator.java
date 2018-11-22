@@ -34,7 +34,7 @@ import java.util.Objects;
  * @author Sergio del Amo
  */
 @Requires(beans = {OpenIdProviderMetadata.class, TokenEndpointConfiguration.class, OauthConfiguration.class})
-@Requires(property = TokenEndpointConfigurationProperties.PREFFIX + ".redirect-uri")
+@Requires(property = TokenEndpointConfigurationProperties.PREFIX + ".redirect-uri")
 @Requires(condition = TokenEndpointNotNullCondition.class)
 @Requires(condition = TokenEndpointGrantTypeAuthorizationCodeCondition.class)
 @Singleton

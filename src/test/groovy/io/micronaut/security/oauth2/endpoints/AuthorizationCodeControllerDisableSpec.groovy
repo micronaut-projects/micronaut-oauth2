@@ -1,24 +1,26 @@
 package io.micronaut.security.oauth2.endpoints
 
 import io.micronaut.context.ApplicationContext
-import io.micronaut.context.annotation.Requires
 import io.micronaut.context.env.Environment
 import io.micronaut.context.exceptions.NoSuchBeanException
-import io.micronaut.security.oauth2.NullImplOfOpenIdProviderMetadata
+import io.micronaut.security.oauth2.configuration.OauthConfiguration
+import io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler
+import io.micronaut.security.oauth2.handlers.ErrorResponseHandler
+import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata
+import io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration
 import spock.lang.Shared
 import spock.lang.Specification
-
-import javax.inject.Singleton
 
 class AuthorizationCodeControllerDisableSpec extends Specification {
 
     static final String SPEC_NAME = 'spec.name'
     @Shared
     Map<String, Object> config = [
-            (SPEC_NAME): getClass().simpleName,
-            'micronaut.security.enabled': true,
-            'micronaut.security.oauth2.client-id': 'XXX',
+            (SPEC_NAME)                                   : getClass().simpleName,
+            'micronaut.security.enabled'                  : true,
+            'micronaut.security.oauth2.client-id'         : 'XXX',
             'micronaut.security.oauth2.token.redirect-uri': 'http://localhost:8080',
+            'micronaut.security.oauth2.token.url'         : 'http://localhost:8080',
     ]
 
     void "AuthorizationCodeController can be disabled with micronaut.security.endpoints.authcode.enabled=false"() {
@@ -46,7 +48,37 @@ class AuthorizationCodeControllerDisableSpec extends Specification {
         ApplicationContext context = ApplicationContext.run(conf, Environment.TEST)
 
         when:
+        context.getBean(ErrorResponseHandler)
+
+        then:
+        noExceptionThrown()
+
+        when:
+        context.getBean(AuthorizationResponseHandler)
+
+        then:
+        noExceptionThrown()
+
+        when:
         context.getBean(AuthorizationCodeController)
+
+        then:
+        noExceptionThrown()
+
+        when:
+        context.getBean(OpenIdProviderMetadata)
+
+        then:
+        noExceptionThrown()
+
+        when:
+        context.getBean(TokenEndpointConfiguration)
+
+        then:
+        noExceptionThrown()
+
+        when:
+        context.getBean(OauthConfiguration)
 
         then:
         noExceptionThrown()
@@ -85,14 +117,5 @@ class AuthorizationCodeControllerDisableSpec extends Specification {
 
         cleanup:
         context.close()
-    }
-
-    @Requires(property = 'spec.name', value = 'AuthorizationCodeControllerDisableSpec')
-    @Singleton
-    static class MockOpenIdProviderMetadata extends NullImplOfOpenIdProviderMetadata {
-        @Override
-        String getTokenEndpoint() {
-            return 'http://localhost:8080'
-        }
     }
 }

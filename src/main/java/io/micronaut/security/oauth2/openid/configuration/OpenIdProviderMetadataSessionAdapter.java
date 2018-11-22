@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  */
 public class OpenIdProviderMetadataSessionAdapter implements OpenIdProviderMetadataSession {
 
-    @Nonnull
+    @Nullable
     private final OpenIdProviderMetadataSession openIdProviderMetadataSession;
 
     @Nonnull
@@ -42,7 +42,7 @@ public class OpenIdProviderMetadataSessionAdapter implements OpenIdProviderMetad
      * @param openIdProviderMetadataSession Open Id Provider Metadata Session.
      * @param endSessionEndpointConfiguration End-Session Endpoint Configuration
      */
-    public OpenIdProviderMetadataSessionAdapter(@Nonnull OpenIdProviderMetadataSession openIdProviderMetadataSession,
+    public OpenIdProviderMetadataSessionAdapter(@Nullable OpenIdProviderMetadataSession openIdProviderMetadataSession,
                                                 @Nonnull EndSessionEndpointConfiguration endSessionEndpointConfiguration) {
         this.openIdProviderMetadataSession = openIdProviderMetadataSession;
         this.endSessionEndpointConfiguration = endSessionEndpointConfiguration;
@@ -51,14 +51,14 @@ public class OpenIdProviderMetadataSessionAdapter implements OpenIdProviderMetad
     @Nullable
     @Override
     public String getCheckSessionIframe() {
-        return openIdProviderMetadataSession.getCheckSessionIframe();
+        return openIdProviderMetadataSession != null ? openIdProviderMetadataSession.getCheckSessionIframe() : null;
 
     }
 
     @Nullable
     @Override
     public String getEndSessionEndpoint() {
-        return resolveUrl(endSessionEndpointConfiguration, openIdProviderMetadataSession.getEndSessionEndpoint());
+        return resolveUrl(endSessionEndpointConfiguration, openIdProviderMetadataSession != null ? openIdProviderMetadataSession.getEndSessionEndpoint() : null);
     }
 
     @Nullable

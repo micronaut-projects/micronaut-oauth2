@@ -20,29 +20,57 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
- * Oauth 2.0 Authorization Response.
+ * Oauth 2.0 authorization response.
  *
- * @see <a href="https://tools.ietf.org/html/rfc6749#section-4.1.2">Authorization Response</a>
- *
- * @since 1.1.0
  * @author Sergio del Amo
+ * @since 1.1.0
  */
-public interface AuthorizationResponse {
+public class Oauth2AuthenticationResponse implements AuthenticationResponse {
 
-    String KEY_CODE = "code";
-    String KEY_STATE = "state";
+    @Nullable
+    private String state;
+
+    @Nonnull
+    private String code;
+
+    /**
+     * Construct authorization response object.
+     */
+    public Oauth2AuthenticationResponse() {
+        super();
+    }
 
     /**
      * If the initial request contained a state parameter, the response must also include the exact value from the request. The client will be using this to associate this response with the initial request.
      * @return state parameter.
      */
     @Nullable
-    String getState();
+    public String getState() {
+        return state;
+    }
+
+    /**
+     *
+     * @param state Set state.
+     */
+    public void setState(@Nullable String state) {
+        this.state = state;
+    }
 
     /**
      *
      * @return An authorization code which the client will later exchange for an access token.
      */
     @Nonnull
-    String getCode();
+    public String getCode() {
+        return code;
+    }
+
+    /**
+     * Set an authorization code.
+     * @param code authorization code.
+     */
+    public void setCode(@Nonnull String code) {
+        this.code = code;
+    }
 }

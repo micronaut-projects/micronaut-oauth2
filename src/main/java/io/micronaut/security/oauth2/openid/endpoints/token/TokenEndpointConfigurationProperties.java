@@ -29,10 +29,10 @@ import javax.annotation.Nullable;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@ConfigurationProperties(TokenEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(TokenEndpointConfigurationProperties.PREFIX)
 public class TokenEndpointConfigurationProperties implements TokenEndpointConfiguration {
 
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".token";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".token";
 
     /**
      * Default AUTH METHOD.

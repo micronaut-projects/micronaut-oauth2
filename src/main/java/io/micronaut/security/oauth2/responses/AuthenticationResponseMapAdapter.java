@@ -16,39 +16,48 @@
 
 package io.micronaut.security.oauth2.responses;
 
-import io.micronaut.http.HttpParameters;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Map;
 import java.util.Objects;
 
 /**
- * Adapts from {@link HttpParameters} to {@link AuthorizationResponse}.
+ * Adapts from a Map to {@link AuthenticationResponse}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public class AuthorizationResponseHttpParamsAdapter implements AuthorizationResponse {
+public class AuthenticationResponseMapAdapter implements AuthenticationResponse {
 
-    private final HttpParameters httpParameters;
+    private final Map formFields;
 
     /**
-     * Constructs an adapter from {@link HttpParameters} to {@link ErrorResponse}.
-     * @param httpParameters Http Parameters
+     * Constructs an adapter from a Map to {@link AuthenticationResponse}.
+     * @param formFields A Map encapsulating the form url encoded payload.
      */
-    public AuthorizationResponseHttpParamsAdapter(HttpParameters httpParameters) {
-        this.httpParameters = httpParameters;
+    public AuthenticationResponseMapAdapter(Map formFields) {
+        this.formFields = formFields;
     }
 
     @Nullable
     @Override
     public String getState() {
-        return httpParameters.get(AuthorizationResponse.KEY_STATE);
+        return getStringValue(AuthenticationResponse.KEY_STATE);
     }
 
     @Nonnull
     @Override
     public String getCode() {
-        return Objects.requireNonNull(httpParameters.get(AuthorizationResponse.KEY_CODE));
+        return Objects.requireNonNull(getStringValue(AuthenticationResponse.KEY_CODE));
+    }
+
+    private String getStringValue(String keyname) {
+        if (formFields != null && formFields.containsKey(keyname)) {
+            Object value = formFields.get(keyname);
+            if (value instanceof String) {
+                return (String) value;
+            }
+        }
+        return null;
     }
 }

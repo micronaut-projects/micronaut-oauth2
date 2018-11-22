@@ -27,11 +27,11 @@ import javax.annotation.Nullable;
  * @since 1.1.0
  * @author Sergio del Amo
  */
-@ConfigurationProperties(RegistrationEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(RegistrationEndpointConfigurationProperties.PREFIX)
 public class RegistrationEndpointConfigurationProperties implements RegistrationEndpointConfiguration {
 
     @SuppressWarnings("WeakerAccess")
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".registration";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".registration";
 
     private String url;
 

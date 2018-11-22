@@ -1,14 +1,12 @@
 package io.micronaut.security.oauth2.endpoints
 
 import io.micronaut.context.ApplicationContext
-import io.micronaut.context.annotation.Requires
 import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.exceptions.HttpClientResponseException
 import io.micronaut.runtime.server.EmbeddedServer
-import io.micronaut.security.oauth2.NullImplOfOpenIdProviderMetadata
 import io.micronaut.security.oauth2.configuration.OauthConfiguration
 import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata
 import io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator
@@ -17,8 +15,6 @@ import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Unroll
-
-import javax.inject.Singleton
 
 class AuthorizationCodeControllerPathSpec extends Specification {
     static final SPEC_NAME_PROPERTY = 'spec.name'
@@ -30,8 +26,10 @@ class AuthorizationCodeControllerPathSpec extends Specification {
             'micronaut.security.enabled': true,
             'micronaut.security.oauth2.client-id': 'XXX',
             'micronaut.security.oauth2.token.redirect-uri': 'http://localhost:8080',
+            'micronaut.security.oauth2.token.url': 'http://localhost:8080',
             'micronaut.security.endpoints.authcode.controller-path': '/cb',
             'micronaut.security.endpoints.authcode.action-path': '/',
+
 
     ], Environment.TEST)
 
@@ -53,6 +51,7 @@ class AuthorizationCodeControllerPathSpec extends Specification {
                 OpenIdProviderMetadata,
                 TokenEndpointConfiguration,
                 AuthorizationCodeGrantRequestGenerator,
+                AuthorizationCodeController
         ]
     }
 
@@ -80,12 +79,4 @@ class AuthorizationCodeControllerPathSpec extends Specification {
         noExceptionThrown()
     }
 
-    @Requires(property = 'spec.name', value = 'AuthorizationCodeControllerPathSpec')
-    @Singleton
-    static class MockOpenIdProviderMetadata extends NullImplOfOpenIdProviderMetadata {
-        @Override
-        String getTokenEndpoint() {
-            return 'http://localhost:8080'
-        }
-    }
 }

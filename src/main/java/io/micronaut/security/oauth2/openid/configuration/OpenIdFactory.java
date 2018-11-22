@@ -29,6 +29,7 @@ import io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfigur
 import io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfiguration;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.inject.Singleton;
 
 /**
@@ -38,7 +39,7 @@ import javax.inject.Singleton;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@Requires(beans = {OpenIdConfiguration.class,
+@Requires(beans = {OpenIdProviderConfiguration.class,
         AuthorizationEndpointConfiguration.class,
         EndSessionEndpointConfiguration.class,
         IntrospectionEndpointConfiguration.class,
@@ -49,8 +50,11 @@ import javax.inject.Singleton;
 @Factory
 public class OpenIdFactory {
 
-    @Nonnull
+    @Nullable
     private final OpenIdConfiguration openIdConfiguration;
+
+    @Nonnull
+    private final OpenIdProviderConfiguration openIdProviderConfiguration;
 
     @Nonnull
     private final EndSessionEndpointConfiguration endSessionEndpointConfiguration;
@@ -75,6 +79,7 @@ public class OpenIdFactory {
 
     /**
      * @param openIdConfiguration OpenID configuration
+     * @param openIdProviderConfiguration Open ID Provider configuration
      * @param authorizationEndpointConfiguration Authorization endpoint configuration
      * @param endSessionEndpointConfiguration End-session endpoint configuration
      * @param introspectionEndpointConfiguration Introspection endpoint configuration
@@ -83,7 +88,8 @@ public class OpenIdFactory {
      * @param tokenEndpointConfiguration Token endpoint configuration
      * @param userInfoEndpointConfiguration User Info endpoint configuration
      */
-    public OpenIdFactory(OpenIdConfiguration openIdConfiguration,
+    public OpenIdFactory(@Nullable OpenIdConfiguration openIdConfiguration,
+                         OpenIdProviderConfiguration openIdProviderConfiguration,
                          AuthorizationEndpointConfiguration authorizationEndpointConfiguration,
                          EndSessionEndpointConfiguration endSessionEndpointConfiguration,
                          IntrospectionEndpointConfiguration introspectionEndpointConfiguration,
@@ -93,6 +99,7 @@ public class OpenIdFactory {
                          UserInfoEndpointConfiguration userInfoEndpointConfiguration
     ) {
         this.openIdConfiguration = openIdConfiguration;
+        this.openIdProviderConfiguration = openIdProviderConfiguration;
         this.authorizationEndpointConfiguration = authorizationEndpointConfiguration;
         this.endSessionEndpointConfiguration = endSessionEndpointConfiguration;
         this.introspectionEndpointConfiguration = introspectionEndpointConfiguration;
@@ -120,6 +127,7 @@ public class OpenIdFactory {
     @Singleton
     public OpenIdProviderMetadata openIdProviderMetadata() {
         return new OpenIdProviderMetadataAdapter(openIdConfiguration,
+                openIdProviderConfiguration,
                 authorizationEndpointConfiguration,
                 introspectionEndpointConfiguration,
                 registrationEndpointConfiguration,

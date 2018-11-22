@@ -28,7 +28,7 @@ import io.micronaut.security.oauth2.configuration.OauthConfigurationProperties;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@Requires(property = OauthConfigurationProperties.PREFFIX + ".openid-configuration")
+@Requires(property = OauthConfigurationProperties.PREFIX + ".openid-configuration")
 @Client("${micronaut.security.oauth2.openid-configuration}")
 public interface OpenIdConfigurationClient {
 

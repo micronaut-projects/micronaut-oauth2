@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * Represent the answer of an authorization server in response to a valid and authorized access token request.
  *
- * @see <a href="https://tools.ietf.org/html/rfc6749#section-4.1.4>RFC 6749 Access Token Response</a>
+ * @see <a href="https://tools.ietf.org/html/rfc6749#section-5.1>RFC 6749 Access Token Successful Response</a>
  *
  * @author Sergio del Amo
  * @since 1.1.0
@@ -50,9 +50,6 @@ public class AccessTokenResponse {
 
     @Nullable
     private String scope;
-
-    @JsonProperty("id_token")
-    private String idToken;
 
     /**
      * Instantiates Access Token Response.

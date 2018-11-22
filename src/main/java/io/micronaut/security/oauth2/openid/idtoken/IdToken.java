@@ -37,7 +37,7 @@ import java.util.Map;
  */
 public interface IdToken {
 
-    String PREFFIX = SecurityConfigurationProperties.PREFIX + ".idtoken";
+    String PREFIX = SecurityConfigurationProperties.PREFIX + ".idtoken";
 
     String CLAIMS_NAME = "name";
     String CLAIMS_GIVEN_NAME = "given_name";

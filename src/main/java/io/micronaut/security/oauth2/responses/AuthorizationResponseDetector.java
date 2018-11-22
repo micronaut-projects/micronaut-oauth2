@@ -21,7 +21,7 @@ import io.micronaut.http.HttpParameters;
 import java.util.Map;
 
 /**
- * Utility to verify if a particular object encapsulates an {@link AuthorizationResponse}.
+ * Utility to verify if a particular object encapsulates an {@link AuthenticationResponse}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
@@ -31,7 +31,7 @@ public class AuthorizationResponseDetector {
     /**
      *
      * @param object Object being evaluated as a Authorization response
-     * @return true if the object encapsulates an {@link AuthorizationResponse}.
+     * @return true if the object encapsulates an {@link AuthenticationResponse}.
      */
     public static boolean isAuthorizationResponse(Object object) {
         if (object instanceof HttpParameters) {
@@ -57,7 +57,7 @@ public class AuthorizationResponseDetector {
      * @return true if the response is consider an error.
      */
     public static boolean isMapAnAuthorizationResponse(Map formFields) {
-        Object value = formFields.get(AuthorizationResponse.KEY_CODE);
+        Object value = formFields.get(AuthenticationResponse.KEY_CODE);
         if (value instanceof String) {
             return true;
         }

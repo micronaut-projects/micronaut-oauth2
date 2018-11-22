@@ -24,15 +24,15 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
- * {@link io.micronaut.context.annotation.ConfigurationProperties} implementation of {@link io.micronaut.security.oauth2.configuration}.
+ * {@link io.micronaut.context.annotation.ConfigurationProperties} implementation of {@link io.micronaut.security.oauth2.configuration.OauthConfiguration}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@Requires(property = OauthConfigurationProperties.PREFFIX + ".client-id")
-@ConfigurationProperties(OauthConfigurationProperties.PREFFIX)
+@Requires(property = OauthConfigurationProperties.PREFIX + ".client-id")
+@ConfigurationProperties(OauthConfigurationProperties.PREFIX)
 public class OauthConfigurationProperties implements OauthConfiguration {
-    public static final String PREFFIX = SecurityConfigurationProperties.PREFIX + ".oauth2";
+    public static final String PREFIX = SecurityConfigurationProperties.PREFIX + ".oauth2";
 
     @Nonnull
     private String clientId;

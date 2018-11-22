@@ -27,9 +27,9 @@ import javax.annotation.Nullable;
  * @since 1.1.0
  * @author Sergio del Amo
  */
-@ConfigurationProperties(RevocationEndpointConfigurationProperties.PREFFIX)
+@ConfigurationProperties(RevocationEndpointConfigurationProperties.PREFIX)
 public class RevocationEndpointConfigurationProperties implements RevocationEndpointConfiguration {
-    public static final String PREFFIX = OauthConfigurationProperties.PREFFIX + ".revocation";
+    public static final String PREFIX = OauthConfigurationProperties.PREFIX + ".revocation";
 
     @Nullable
     private String url;

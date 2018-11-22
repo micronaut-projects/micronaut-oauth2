@@ -16,14 +16,13 @@
 
 package io.micronaut.security.oauth2.handlers;
 
-import io.micronaut.context.annotation.Requires;
-import io.micronaut.context.annotation.Secondary;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.client.RxHttpClient;
 import io.micronaut.security.oauth2.grants.AuthorizationCodeGrant;
 import io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator;
-import io.micronaut.security.oauth2.responses.AuthorizationResponse;
+import io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse;
+import io.micronaut.security.oauth2.responses.AuthenticationResponse;
 import io.reactivex.Flowable;
 import io.reactivex.Single;
 import org.slf4j.Logger;
@@ -31,7 +30,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
 import java.net.MalformedURLException;
-import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -40,34 +38,39 @@ import java.util.Optional;
  * @author Sergio del Amo
  * @since 1.1.0
  */
-@Secondary
+//@Requires(beans = {AuthorizationCodeGrantRequestGenerator.class}) //TODO fails uncommenting this
 @Singleton
-@Requires(beans = {AuthorizationCodeGrantRequestGenerator.class})
 public class DefaultAuthorizationResponseHandler implements AuthorizationResponseHandler {
 
     private static final Logger LOG = LoggerFactory.getLogger(DefaultAuthorizationResponseHandler.class);
 
     private final AuthorizationCodeGrantRequestGenerator authorizationCodeGrantRequestGenerator;
+    private final IdTokenAccessTokenResponseHandler idTokenAccessTokenResponseHandler;
 
     /**
      * Creates a DefaultAuthorizationResponseHandler.
      * @param authorizationCodeGrantRequestGenerator Authorization Code Grant Request Generator
+     * @param idTokenAccessTokenResponseHandler ID Token Access Token response handler
      */
-    public DefaultAuthorizationResponseHandler(AuthorizationCodeGrantRequestGenerator authorizationCodeGrantRequestGenerator) {
+    public DefaultAuthorizationResponseHandler(AuthorizationCodeGrantRequestGenerator authorizationCodeGrantRequestGenerator,
+                                               IdTokenAccessTokenResponseHandler idTokenAccessTokenResponseHandler) {
         this.authorizationCodeGrantRequestGenerator = authorizationCodeGrantRequestGenerator;
+        this.idTokenAccessTokenResponseHandler = idTokenAccessTokenResponseHandler;
     }
 
     @Override
-    public Single<HttpResponse> handle(AuthorizationResponse authorizationResponse) {
+    public Single<HttpResponse> handle(AuthenticationResponse authenticationResponse) {
 
-        HttpRequest<AuthorizationCodeGrant> request = authorizationCodeGrantRequestGenerator.generateRequest(authorizationResponse.getCode());
+        HttpRequest<AuthorizationCodeGrant> request = authorizationCodeGrantRequestGenerator.generateRequest(authenticationResponse.getCode());
         try {
             RxHttpClient rxHttpClient = RxHttpClient.create(request.getUri().toURL());
-            Flowable<HttpResponse<Map>> flowable = rxHttpClient.exchange(request, Map.class);
+            Flowable<HttpResponse<IdTokenAccessTokenResponse>> flowable = rxHttpClient.exchange(request, IdTokenAccessTokenResponse.class);
             return flowable.map(response -> {
-                Optional<Map> mapOptional = response.getBody();
-                HttpResponse rsp = HttpResponse.ok();
-                return rsp;
+                Optional<IdTokenAccessTokenResponse> idTokenAccessTokenResponse = response.getBody();
+                if (idTokenAccessTokenResponse.isPresent()) {
+                    return idTokenAccessTokenResponseHandler.handle(idTokenAccessTokenResponse.get());
+                }
+                return HttpResponse.serverError();
             }).firstOrError();
 
 

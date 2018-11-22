@@ -14,24 +14,20 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.handlers;
-
-import io.micronaut.http.HttpResponse;
-import io.micronaut.security.oauth2.responses.AuthenticationResponse;
-import io.reactivex.Single;
+package io.micronaut.security.oauth2.openid.idtoken;
 
 /**
- * Handles Oauth 2.0 Authorization responses.
+ * Validates a ID Token Access Response.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationResponseHandler {
+public interface IdTokenAccessTokenResponseValidator {
 
     /**
      *
-     * @param authenticationResponse Authorization response
-     * @return A Http Response
+     * @param idTokenAccessTokenResponse ID Token Access Token response
+     * @return true if the ID Token access response is considered valid
      */
-    Single<HttpResponse> handle(AuthenticationResponse authenticationResponse);
+    boolean validate(IdTokenAccessTokenResponse idTokenAccessTokenResponse);
 }

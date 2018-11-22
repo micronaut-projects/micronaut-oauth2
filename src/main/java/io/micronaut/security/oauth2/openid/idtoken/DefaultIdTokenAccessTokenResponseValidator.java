@@ -14,24 +14,22 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.handlers;
+package io.micronaut.security.oauth2.openid.idtoken;
 
-import io.micronaut.http.HttpResponse;
-import io.micronaut.security.oauth2.responses.AuthenticationResponse;
-import io.reactivex.Single;
+import javax.inject.Singleton;
 
 /**
- * Handles Oauth 2.0 Authorization responses.
+ * Default implementation of {@link IdTokenAccessTokenResponseValidator}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationResponseHandler {
+//TODO do real implementation
+@Singleton
+public class DefaultIdTokenAccessTokenResponseValidator implements IdTokenAccessTokenResponseValidator {
 
-    /**
-     *
-     * @param authenticationResponse Authorization response
-     * @return A Http Response
-     */
-    Single<HttpResponse> handle(AuthenticationResponse authenticationResponse);
+    @Override
+    public boolean validate(IdTokenAccessTokenResponse idTokenAccessTokenResponse) {
+        return true;
+    }
 }

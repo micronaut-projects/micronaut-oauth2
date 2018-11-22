@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.micronaut.security.oauth2.openid.endpoints.token;
+package io.micronaut.security.oauth2.openid.idtoken;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.security.oauth2.responses.AccessTokenResponse;

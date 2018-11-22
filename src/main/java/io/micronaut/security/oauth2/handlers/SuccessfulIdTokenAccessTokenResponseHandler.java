@@ -17,21 +17,20 @@
 package io.micronaut.security.oauth2.handlers;
 
 import io.micronaut.http.HttpResponse;
-import io.micronaut.security.oauth2.responses.AuthenticationResponse;
-import io.reactivex.Single;
+import io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse;
 
 /**
- * Handles Oauth 2.0 Authorization responses.
+ * Handle a valid {@link IdTokenAccessTokenResponse}.
  *
  * @author Sergio del Amo
  * @since 1.1.0
  */
-public interface AuthorizationResponseHandler {
+public interface SuccessfulIdTokenAccessTokenResponseHandler {
 
     /**
      *
-     * @param authenticationResponse Authorization response
+     * @param idTokenAccessTokenResponse An ID Token Access Token response.
      * @return A Http Response
      */
-    Single<HttpResponse> handle(AuthenticationResponse authenticationResponse);
+    HttpResponse handle(IdTokenAccessTokenResponse idTokenAccessTokenResponse);
 }
