@@ -17,6 +17,7 @@
 package io.micronaut.security.oauth2.openid.endpoints.authorization;
 
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.http.uri.UriBuilder;
 import io.micronaut.http.uri.UriTemplate;
 import io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata;
 import org.slf4j.Logger;
@@ -79,17 +80,20 @@ public class DefaultAuthorizationRedirectUrlProvider implements AuthorizationRed
     }
 
     /**
-     * //TODO Replace this once this is merged: https://github.com/micronaut-projects/micronaut-core/pull/931 .
      * @param baseUrl Base Url
      * @param queryParams Query Parameters
      * @return The Expanded URI
      */
     protected String expandedUri(@Nonnull String baseUrl,
                                  @Nonnull Map<String, Object> queryParams) {
-        Optional<String> optionalUrlArguments = queryParams.keySet().stream().reduce((a, b) -> a + COMMA + b);
-        String template = baseUrl + (optionalUrlArguments.map(s -> OPENCURLYBRACE + QUESTIONMARK + s + CLOSECURLYBRACE).orElse(""));
-        UriTemplate uriTemplate = new UriTemplate(template);
-        return uriTemplate.expand(queryParams);
+        UriBuilder builder = UriBuilder.of(baseUrl);
+        for (String k : queryParams.keySet()) {
+            Object val = queryParams.get(k);
+            if(val != null) {
+                builder.queryParam(k, val);
+            }
+        }
+        return builder.toString();
     }
 
     /**
