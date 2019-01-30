@@ -1,17 +1,11 @@
-# Micronaut GRPC
+# Micronaut Oauth 2
 
-This project includes integration between [Micronaut](http://micronaut.io) and [GRPC](https://grpc.io).
+This project includes integration between [Micronaut](http://micronaut.io) and Oauth 2.
 
 ## Documentation
 
-This project is not yet released.
-
-See the [Snapshot Documentation](https://micronaut-projects.github.io/micronaut-grpc/snapshot/guide/index.html) for more information.
+[Snapshot Documentation](https://micronaut-projects.github.io/micronaut-oauth2/snapshot/guide/index.html) for more information.
 
 To generate the docs use: 
 
 `./gradlew docs --no-daemon`
-
-## Examples
-
-Examples for Java, Kotlin and Groovy can be found in the [examples](https://github.com/micronaut-projects/micronaut-grpc/tree/master/examples) directory.
