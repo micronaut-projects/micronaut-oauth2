@@ -1,3 +1,3 @@
-This project eases OpenID connect integration with Micronaut.
+This project eases Oauth 2.0 integration with Micronaut.
 
 dependency:micronaut-oauth2[groupId="io.micronaut.configuration"]
