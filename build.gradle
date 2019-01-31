@@ -20,12 +20,13 @@ plugins {
 }
 
 repositories {
-    mavenLocal()
+    // mavenLocal()
+    mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
     maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
 }
-
 version project.projectVersion
+
 
 ext {
     distInstallDir = file("$buildDir/dist-tmp")
@@ -37,24 +38,34 @@ ext {
 subprojects { Project subproject ->
 
     version project.projectVersion
-	group "io.micronaut.configuration"
+    group "io.micronaut.configuration"
     ext {
         isConfiguration = subproject.projectDir.parentFile.name == 'configurations'
         isBuildSnapshot = version.toString().endsWith("-SNAPSHOT")
     }
 
+
     repositories {
         mavenLocal()
-        maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://repo.grails.org/grails/core" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
-    
+
     apply plugin:"groovy"
     apply plugin:"java"
+    apply plugin: "io.spring.dependency-management"
+
+    dependencyManagement {
+        imports {
+            mavenBom "io.micronaut:micronaut-bom:$micronautVersion"
+        }
+    }
+
 
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
     apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-core/01e2b1ef1255b584e9e5c1965d334e1190e2ade5/gradle/publishing.gradle"
+
 
     jar {
         manifest {
@@ -79,6 +90,7 @@ subprojects { Project subproject ->
 
         reports.html.enabled = !System.getenv("TRAVIS")
         reports.junitXml.enabled = !System.getenv("TRAVIS")
+
     }
 
     configurations {
@@ -89,9 +101,6 @@ subprojects { Project subproject ->
                 if(group == 'org.codehaus.groovy') {
                     details.useVersion(groovyVersion)
                 }
-//                if(group == 'org.ow2.asm') {
-//                    details.useVersion(asmVersion)
-//                }
             }
         }
     }
@@ -117,7 +126,35 @@ subprojects { Project subproject ->
     }
 
     task allDeps(type: DependencyReportTask) {}
-}
 
+    apply plugin: 'checkstyle'
+
+    checkstyle {
+        toolVersion = 8.10
+        configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+
+        // Per submodule
+        maxErrors = 3
+        maxWarnings = 10
+
+        showViolations = true
+    }
+
+    checkstyleTest.enabled = false
+
+    apply from: rootProject.file('gradle/testVerbose.gradle')
+}
+apply from: rootProject.file('gradle/docs.gradle')
 //apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-docs/v${micronautDocsVersion}/gradle/docs.gradle"
 
+allprojects {
+    apply plugin: 'idea'
+
+    idea {
+        module {
+            outputDir file('build/classes/java/main')
+            testOutputDir file('build/classes/groovy/test')
+        }
+    }
+    apply from: rootProject.file('gradle/license.gradle')
+}

@@ -1,2 +1,21 @@
 introduction:
   title: Introduction
+openid:
+  title: Open ID Connect  
+client-id-client-secret:
+  title: Client ID & Client Secret
+service-discovery:
+  title: Service Discovery    
+  service-discovery-okta: Service Discovery OKTA
+  service-discovery-cognito: Service Discovery AWS Cognito 
+  service-discovery-auth0: Service Discovery Auth0
+  service-discovery-keycloack: Service Discovery Keycloack 
+flows:
+  title: 'Flows'
+  authorization-code-grant-type:
+    title: OpenID Connect Authorization code Flow
+    id-token-validator: ID Token Validator
+  logout:
+    title: Logout
+    logouturl: Logout URL
+  password-grant-type: Password Grant Type    
