@@ -71,7 +71,7 @@ if [[ $EXIT_STATUS -eq 0 ]]; then
         git config --global credential.helper "store --file=~/.git-credentials"
         echo "https://$GH_TOKEN:@github.com" > ~/.git-credentials
 
-        ./gradlew --console=plain --no-daemon docs  || EXIT_STATUS=$?
+        ./gradlew -x javaDocAtReplacement --console=plain --no-daemon docs || EXIT_STATUS=$?
 
         if [ $EXIT_STATUS -ne 0 ]; then
             exit $EXIT_STATUS
