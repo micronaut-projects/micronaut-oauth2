@@ -1,3 +1,0 @@
-include 'oauth2'
-
-rootProject.name = 'micronaut-security-oauth2'

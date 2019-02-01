@@ -1,5 +1,0 @@
-The easiest way to integrate a micronaut application with an Open ID Connect server is to use the `.well-know/openid-configuration endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.
-
-The endpoint returns a spec-defiend set of fields. Micronaut uses the configuration returned to configure itself.
-
-Please, chek with your provider to locate the location of teh well-know configuration endpoint. Next, we show examples for common providers:
