@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Micronaut Oauth2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/custom.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
+    <link rel="stylesheet" href="../css/highlight/agate.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/guide.js"></script>
+    <script src="../js/multi-language-sample.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="../css/multi-language-sample.css"/>
+    <script src="../js/docs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+    <script type="text/javascript">
+        function addJsClass(el) {
+            var classes = document.body.className.split(" ");
+            classes.push("js");
+            document.body.className = classes.join(" ");
+        }
+    </script>
+
+</head>
+
+<body class="body" id="docs" onload="addJsClass();" onhashchange="highlightMenu()">
+
+<div id="table-of-content-nav-link" class="desktop">
+    <a title="Collapse/Open Table of contents" title="Hide Table of Contents" href="javascript:hideTableOfContents();" class="button">[ + ]</a>
+</div>
+
+<div id="main">
+    <div id="navigation" class="no-print">
+        <div class="navTitle">
+            <span id="logo"><a href="http://micronaut.io" title="Go to Micronaut Website"><img src="../img/micronaut-logo-white.svg" alt="Micronaut"/></a></span>
+        </div>
+        <div class="navLinks">
+            <ul>
+                    <li>
+                        <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)" class="desktop">
+                            <a href="../guide/index.html" class="button">Table of contents</a>
+                            <div id="nav-summary-childs" style="display:none;">
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#openid"><strong>2</strong><span>Open ID Connect</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#client-id-client-secret"><strong>3</strong><span>Client ID &amp; Client Secret</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#service-discovery"><strong>4</strong><span>Service Discovery</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#flows"><strong>5</strong><span>Flows</span></a></div>
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                <li id="table-of-content-nav-link-mobile" class="mobile">
+                    <a title="Scroll to Table of contents" href="javascript:scrollToTop();" class="button">Toc</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Configuration Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Conf</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    
+    <div id="table-of-content">
+        <div class="toc-content">
+
+        <h2>Table of Contents</h2>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-introduction"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-openid"><a href="#openid"><strong>2</strong><span>Open ID Connect</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-client-id-client-secret"><a href="#client-id-client-secret"><strong>3</strong><span>Client ID &amp; Client Secret</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-service-discovery"><a href="#service-discovery"><strong>4</strong><span>Service Discovery</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-okta"><a href="#service-discovery-okta"><strong>4.1</strong><span>Service Discovery OKTA</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-cognito"><a href="#service-discovery-cognito"><strong>4.2</strong><span>Service Discovery AWS Cognito</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-auth0"><a href="#service-discovery-auth0"><strong>4.3</strong><span>Service Discovery Auth0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-keycloack"><a href="#service-discovery-keycloack"><strong>4.4</strong><span>Service Discovery Keycloack</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-flows"><a href="#flows"><strong>5</strong><span>Flows</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-authorization-code-grant-type"><a href="#authorization-code-grant-type"><strong>5.1</strong><span>OpenID Connect Authorization code Flow</span></a></div>
+        
+        <div class="toc-item" style="margin-left:20px" id="toc-item-id-token-validator"><a href="#id-token-validator"><strong>5.1.1</strong><span>ID Token Validator</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-logout"><a href="#logout"><strong>5.2</strong><span>Logout</span></a></div>
+        
+        <div class="toc-item" style="margin-left:20px" id="toc-item-logouturl"><a href="#logouturl"><strong>5.2.1</strong><span>Logout URL</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-password-grant-type"><a href="#password-grant-type"><strong>5.3</strong><span>Password Grant Type</span></a></div>
+        
+        </div>
+    </div>
+    
+    <div class="docs-content">
+    <div class="project">
+        <h1>Micronaut Oauth2</h1>
+        <p></p>
+        <p>Integration between Micronaut, Oauth2 and OpenID Connect</p>
+        <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
+    </div>
+    
+
+<h1 id="introduction">1 Introduction</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/introduction.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>This project eases Oauth 2.0 integration with Micronaut.</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-oauth2'</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-oauth2&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+
+
+<h1 id="openid">2 Open ID Connect</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/openid.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="https://openid.net/connect/">OpenID Connect 1.0</a> is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>If you are new to OpenID Connect, watch <a href="https://www.youtube.com/watch?v=996OiexHze0">Oauth 2.0 and OpenID Connect</a>.</p>
+</div>
+
+
+<h1 id="client-id-client-secret">3 Client ID & Client Secret</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/client-id-client-secret.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>Micronaut integration with authentication &amp; authorization platforms such as <a href="https://developer.okta.com">Okta</a>, <a href="https://auth0.com">Auth0</a>, <a href="https://aws.amazon.com/cognito">AWS Cognito</a>, <a href="https://www.keycloak.org">Keycloack</a>, etc.</p>
+</div>
+<div class="paragraph">
+<p>Once you create an application client with a provider you will get a Client ID and Secret.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/aws-cognito-appclient.png" alt="aws cognito appclient">
+</div>
+</div>
+<div class="paragraph">
+<p>The previous image shows how to get an client id and client secret with AWS Cognito. Please, note you can obtain similar credentials with other providers.</p>
+</div>
+<div class="paragraph">
+<p>Once, you get the <code>client_id</code> and <code>client_secret</code></p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create two environment variables <code>OAUTH_CLIENT_SECRET</code>, <code>OAUTH_CLIENT_ID</code> with the credentials you obtained from the provider.</p>
+</div>
+
+
+<h1 id="service-discovery">4 Service Discovery</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The easiest way to integrate a micronaut application with an Open ID Connect server is to use the `.well-know/openid-configuration endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
+</div>
+<div class="paragraph">
+<p>The endpoint returns a spec-defiend set of fields. Micronaut uses the configuration returned to configure itself.</p>
+</div>
+<div class="paragraph">
+<p>Please, chek with your provider to locate the location of teh well-know configuration endpoint. Next, we show examples for common providers:</p>
+</div>
+
+
+<h2 id="service-discovery-okta">4.1 Service Discovery OKTA</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-okta.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'
+      openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/openid-configuration'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to setup the <code>OKTA_DOMAIN</code> and <code>OKTA_AUTHSERVERID</code> environment variables.</p>
+</div>
+<div class="paragraph">
+<p>Those may be something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export OKTA_DOMAIN=https://dev-XXXXX.oktapreview.com
+export OKTA_AUTHSERVERID=default</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check <a href="https://developer.okta.com/docs/api/resources/oidc#well-knownopenid-configuration">OKTA .well-known/openid-configuration documentation</a>.</p>
+</div>
+
+
+<h2 id="service-discovery-cognito">4.2 Service Discovery AWS Cognito</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-cognito.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>To configure the well-know configuration endpoint with AWS Cognito you can setup:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'
+      openid-configuration: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}/.well-known/openid-configuration'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please, note you will need to define environment varaibles for <code>AWS_REGION</code> and <code>COGNITO_POOL_ID</code>.</p>
+</div>
+
+
+<h2 id="service-discovery-auth0">4.3 Service Discovery Auth0</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-auth0.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'
+      openid-configuration: '${AUTH0_DOMAINNAME}/.well-known/openid-configuration'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to define the environment variable <code>AUTH0_DOMAINNAME</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can obtain the auth0 domain from the application dashboard:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/auth0-domain.png" alt="auth0 domain">
+</div>
+</div>
+<div class="paragraph">
+<p>Check <a href="https://auth0.com/docs/protocols/oidc/openid-connect-discovery">Auth0 OpenID connect discovery documentation</a>.</p>
+</div>
+
+
+<h2 id="service-discovery-keycloack">4.4 Service Discovery Keycloack</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-keycloack.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'
+      openid-configuration: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to define the environment variable <code>KEYCLOACK_DOMAIN</code> and <code>KEYCLOAK_REALM</code> for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export KEYCLOACK_DOMAIN=http://localhost:8080
+export KEYCLOAK_REALM=master</code></pre>
+</div>
+</div>
+
+
+<h1 id="flows">5 Flows</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+
+
+
+<h2 id="authorization-code-grant-type">5.1 OpenID Connect Authorization code Flow</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The following configuration illustrates a possible set up to use authorization code flow with Micronaut and a third-party OpenID Configuration authorization server.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+    security:
+        enabled: true <i class="conum" data-value="1"></i><b>(1)</b>
+        oauth2:
+          client-secret: '${OAUTH_CLIENT_SECRET}'  <i class="conum" data-value="2"></i><b>(2)</b>
+          client-id: '${OAUTH_CLIENT_ID}' <i class="conum" data-value="3"></i><b>(3)</b>
+          openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/ openid-configuration' <i class="conum" data-value="4"></i><b>(4)</b>
+        token:
+            jwt:
+                enabled: true <i class="conum" data-value="5"></i><b>(5)</b>
+                cookie:
+                    enabled: true <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Enable security</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Client Secret. Your authorization server provider provides this value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Client ID. Your authorization server provider provides this value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>well-know openid-configuration</code> endpoint url. Allows micronaut to discover the configuration of the Open ID Configuration server.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Often, ID Token will be respond as JWT tokens. You will need to enable <a href="https://docs.micronaut.io/latest/guide/index.html#jwt">Micronaut&#8217;s JWT support</a> to validate it.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Once, validated you may want to save the JWT IDToken in a cookie. To read in subsequent requests, enable <a href="https://docs.micronaut.io/latest/guide/index.html#cookieToken">Cookie Token Reader</a>.</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/diagramm.png" alt="diagramm">
+</div>
+</div>
+
+
+<h2 id="id-token-validator">5.1.1 ID Token Validator</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/id-token-validator.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>Assuming the ID Token is a JWT token, the <a href="../api/io/micronaut/:io/micronaut/security/oauth2/openid/idtoken/DefaultIdTokenAccessTokenResponseValidator.html">DefaultIdTokenAccessTokenResponseValidator</a> validates the JWT Claims against every bean of type <a href="../api/io/micronaut/:io/micronaut/security/token/jwt/validator/GenericJwtClaimsValidator.html">GenericJwtClaimsValidator</a> and <a href="../api/io/micronaut/:io/micronaut/security/oauth2/openid/idtoken/validation/IdTokenClaimsValidator.html">IdTokenClaimsValidator</a>.</p>
+</div>
+<div class="paragraph">
+<p>Some <a href="../api/io/micronaut/:io/micronaut/security/token/jwt/validator/GenericJwtClaimsValidator.html">GenericJwtClaimsValidator</a> are already registered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/:io/micronaut/security/token/jwt/validator/ExpirationJwtClaimsValidator.html">ExpirationJwtClaimsValidator</a></p>
+</li>
+<li>
+<p><a href="../api/io/micronaut/:io/micronaut/security/token/jwt/validator/SubjectNotNullJwtClaimsValidator.html">SubjectNotNullJwtClaimsValidator</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some <a href="../api/io/micronaut/:io/micronaut/security/oauth2/openid/idtoken/validation/IdTokenClaimsValidator.html">IdTokenClaimsValidator</a> are already registered:
+and:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/:io/micronaut/security/oauth2/openid/idtoken/validation/AudienceJwtClaimsValidator.html">AudienceJwtClaimsValidator</a></p>
+</li>
+<li>
+<p><a href="../api/io/micronaut/:io/micronaut/security/oauth2/openid/idtoken/validation/IssuerJwtClaimsValidator.html">IssuerJwtClaimsValidator</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please, validate your IDToken as described in the <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation">ID Token Validation</a> section.</p>
+</div>
+<div class="paragraph">
+<p>Remember to enable JWT support <code>micronaut.security.token.jwt.enabled=true</code>.</p>
+</div>
+
+
+<h2 id="logout">5.2 Logout</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/logout.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>A logout process may look like the one displayed in the next image:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/logout-diagramm.png" alt="logout diagramm">
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to enable the <a href="https://docs.micronaut.io/latest/guide/index.html#logout">Logout Controller</a> and accept GET requests.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+    security:
+        ...
+        ..
+        .
+        endpoints:
+            logout:
+                enabled: true <i class="conum" data-value="1"></i><b>(1)</b>
+                get-allowed: true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Enable <a href="https://docs.micronaut.io/latest/guide/index.html#logout">Logout Controller</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Accept HTTP GET requests to the logout controller endpoint.</td>
+</tr>
+</table>
+</div>
+
+
+<h2 id="logouturl">5.2.1 Logout URL</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/logout/logouturl.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>If you are using <a href="https://docs.micronaut.io/latest/guide/index.html#views">Server side view rendering</a> support in Micronaut, the <a href="../api/io/micronaut/:security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessor.html">EndsessionViewModelProcessor</a> injects into the model the logout url of the authorization server correctly configured.</p>
+</div>
+<a id="io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html">EndsessionViewModelProcessorConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link EndsessionViewModelProcessor} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.end-session-url-key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Model key name. Default value ({@value #DEFAULT_ENDSESSIONURLKEY}).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Next code snippets shows a Velocity view which contains a link to logout.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-velocity hljs" data-lang="velocity">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Logout/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href="${endsessionurl}"&gt;Logout&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+
+
+<h2 id="password-grant-type">5.3 Password Grant Type</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/password-grant-type.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>The Password grant is one of the simplest OAuth grants and involves only one step: the application presents a traditional username and password login form to collect the user&#8217;s credentials and makes a POST request to the server to exchange the password for an access token</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>For example, the next image illustrates a Basic auth authentication which does a remote grant type pasword authentication:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/grant-type-password.png" alt="grant type password">
+</div>
+</div>
+<div class="paragraph">
+<p>You can enable an implementation of <a href="https://docs.micronaut.io/latest/guide/index.html#authenticationProviders">Authentication Provider</a> to authenticate using Grant type password.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  security:
+    oauth2:
+      client-secret: '${OAUTH_CLIENT_SECRET}'
+      client-id: '${OAUTH_CLIENT_ID}'
+      grant-type-password:
+        enabled: true</code></pre>
+</div>
+</div>
+<a id="io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties" href="#io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html">GrantTypePasswordRequestProviderConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link GrantTypePasswordRequestProvider} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.content-type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../api/io/micronaut/http/MediaType.html">MediaType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Content-Type used to communicate with the token endpoint.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.scopes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAuth 2.0 scopes.</p></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
