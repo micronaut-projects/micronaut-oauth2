@@ -53,9 +53,9 @@
             </div>
 <div class="sect2">
 <h3 id="_oauth2_config_properties">Oauth2 Config Properties</h3>
-<a id="io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties" href="#io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html">GrantTypePasswordRequestProviderConfigurationProperties</a></caption>
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpointConfigurationProperties.html">RegistrationEndpointConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -70,26 +70,16 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link GrantTypePasswordRequestProvider} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.content-type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../api/io/micronaut/http/MediaType.html">MediaType</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Content-Type used to communicate with the token endpoint.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.scopes</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OAuth 2.0 scopes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.registration.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registration endpoint&#8217;s url</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.configuration.OauthConfigurationProperties" href="#io.micronaut.security.oauth2.configuration.OauthConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfigurationProperties" href="#io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html">OauthConfigurationProperties</a></caption>
+<caption class="title">Table 2. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html">JwksSignatureFactoryConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -104,21 +94,104 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.client-id</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oauth 2 Application Client ID.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-signature-factory.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables {@link JwksSignatureFactory}. Default value ({@value #DEFAULT_ENABLED}).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.client-secret</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-signature-factory.key-type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.nimbusds.jose.jwk.KeyType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KeyType for this JWKS signature configuration. Default Value (RSA).</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<a id="io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html">EndsessionViewModelProcessorConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link EndsessionViewModelProcessor} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.end-session-url-key</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oauth 2 Application Client Secret.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Model key name. Default value ({@value #DEFAULT_ENDSESSIONURLKEY}).</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<a id="io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfigurationProperties" href="#io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html">OpenIdProviderConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.scopes-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of the OAuth 2.0 [RFC6749] scope values that this server supports.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.response-types-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of the OAuth 2.0 response_type values that this Open ID Provider supports.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.subject-types-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of the Subject Identifier types that this OP supports.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.id-token-encryption-enc-values-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of the JWE encryption algorithms (enc values) supported by the OP for the ID Token to encode the Claims in a JWT.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.request-object-signing-alg-values-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of the JWS signing algorithms (alg values) supported by the OP for Request Objects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-uri</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the JWKS uri.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.issuer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL using the https scheme with no query or fragment component that the Open ID Provider asserts as its Issuer Identifier.</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
 <a id="io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html">AuthorizationEndpointConfigurationProperties</a></caption>
+<caption class="title">Table 5. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html">AuthorizationEndpointConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -185,33 +258,9 @@
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfigurationProperties">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpointConfigurationProperties.html">UserInfoEndpointConfigurationProperties</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.user-info.url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL of the Open ID Provider&#8217;s UserInfo Endpoint. This URL MUST use the https scheme and MAY contain port, path, and query parameter components.</p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
 <a id="io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 5. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html">TokenEndpointConfigurationProperties</a></caption>
+<caption class="title">Table 6. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html">TokenEndpointConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -253,9 +302,9 @@
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfigurationProperties" href="#io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties" href="#io.micronaut.security.oauth2.grants.password.GrantTypePasswordRequestProviderConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 6. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html">OpenIdProviderConfigurationProperties</a></caption>
+<caption class="title">Table 7. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html">GrantTypePasswordRequestProviderConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -270,46 +319,26 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.scopes-supported</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link GrantTypePasswordRequestProvider} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.content-type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../api/io/micronaut/http/MediaType.html">MediaType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Content-Type used to communicate with the token endpoint.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.grant-type-password.scopes</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of the OAuth 2.0 [RFC6749] scope values that this server supports.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.response-types-supported</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of the OAuth 2.0 response_type values that this Open ID Provider supports.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.subject-types-supported</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of the Subject Identifier types that this OP supports.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.id-token-encryption-enc-values-supported</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of the JWE encryption algorithms (enc values) supported by the OP for the ID Token to encode the Claims in a JWT.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.request-object-signing-alg-values-supported</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of the JWS signing algorithms (alg values) supported by the OP for Request Objects.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-uri</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the JWKS uri.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.issuer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL using the https scheme with no query or fragment component that the Open ID Provider asserts as its Issuer Identifier.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAuth 2.0 scopes.</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfigurationProperties" href="#io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 7. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html">JwksSignatureFactoryConfigurationProperties</a></caption>
+<caption class="title">Table 8. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpointConfigurationProperties.html">IntrospectionEndpointConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -324,21 +353,64 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-signature-factory.enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enables {@link JwksSignatureFactory}. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.introspection.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Introspection endpoint&#8217;s url.</p></td>
 </tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<a id="io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 9. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpointConfigurationProperties.html">RevocationEndpointConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.jwks-signature-factory.key-type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">com.nimbusds.jose.jwk.KeyType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KeyType for this JWKS signature configuration. Default Value (RSA).</p></td>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.revocation.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Revocation Endpoint&#8217;s url.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<a id="io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 10. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpointConfigurationProperties.html">UserInfoEndpointConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.user-info.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of the Open ID Provider&#8217;s UserInfo Endpoint. This URL MUST use the https scheme and MAY contain port, path, and query parameter components.</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
 <a id="io.micronaut.security.oauth2.endpoints.AuthorizationCodeControllerConfigurationProperties" href="#io.micronaut.security.oauth2.endpoints.AuthorizationCodeControllerConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 8. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html">AuthorizationCodeControllerConfigurationProperties</a></caption>
+<caption class="title">Table 11. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html">AuthorizationCodeControllerConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -360,7 +432,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.endpoints.authcode.controller-path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">if the callback endpoint is /authcode/cb controller path will be /authcode .
+<td class="tableblock halign-left valign-top"><p class="tableblock">if the callback endpoint is /authcode/cb controller path will be /authcode.
  Default value ({@value #DEFAULT_CONTROLLERPATH}).</p></td>
 </tr>
 <tr>
@@ -373,7 +445,7 @@
 <div style="page-break-after: always;"></div>
 <a id="io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 9. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html">EndSessionEndpointConfigurationProperties</a></caption>
+<caption class="title">Table 12. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html">EndSessionEndpointConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -400,9 +472,38 @@
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
+<a id="io.micronaut.security.oauth2.configuration.OauthConfigurationProperties" href="#io.micronaut.security.oauth2.configuration.OauthConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 13. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html">OauthConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.client-id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oauth 2 Application Client ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.client-secret</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oauth 2 Application Client Secret.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
 <a id="io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties" href="#io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 10. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></caption>
+<caption class="title">Table 14. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -455,107 +556,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.enabled</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enables <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html">CookieSuccessfulIdTokenAccessTokenResponseHandler</a>. Default value ({@value #DEFAULT_ENABLED}).</p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 11. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html">EndsessionViewModelProcessorConfigurationProperties</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link EndsessionViewModelProcessor} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.end-session-url-key</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Model key name. Default value ({@value #DEFAULT_ENDSESSIONURLKEY}).</p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfigurationProperties">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 12. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpointConfigurationProperties.html">IntrospectionEndpointConfigurationProperties</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.introspection.url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Introspection endpoint&#8217;s url.</p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfigurationProperties">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 13. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpointConfigurationProperties.html">RegistrationEndpointConfigurationProperties</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.registration.url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">registration endpoint&#8217;s url</p></td>
-</tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfigurationProperties">&#128279;</a>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 14. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpointConfigurationProperties.html">RevocationEndpointConfigurationProperties</a></caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.revocation.url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Revocation Endpoint&#8217;s url.</p></td>
 </tr>
 </tbody>
 </table>
