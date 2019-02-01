@@ -16,7 +16,6 @@ buildscript {
 
 plugins {
     id 'com.github.hierynomus.license' version '0.14.0' apply false
-    id "org.kordamp.gradle.stats" version "0.2.2"
 }
 
 repositories {
@@ -143,8 +142,7 @@ subprojects { Project subproject ->
 
     apply from: rootProject.file('gradle/testVerbose.gradle')
 }
-apply from: rootProject.file('gradle/docs.gradle')
-//apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-docs/v${micronautDocsVersion}/gradle/docs.gradle"
+apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-docs/v${micronautDocsVersion}/gradle/docs.gradle"
 
 allprojects {
     apply plugin: 'idea'
