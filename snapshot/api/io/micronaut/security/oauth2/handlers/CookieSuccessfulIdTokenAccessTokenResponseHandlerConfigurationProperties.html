@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>io.micronaut.core.util.Toggleable, <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></dd>
+<dd>io.micronaut.core.util.Toggleable, io.micronaut.http.cookie.CookieConfiguration, <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></dd>
 </dl>
 <hr>
 <br>
@@ -208,9 +208,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookieDomain--">getCookieDomain</a></span>()</code>
-<div class="block">Gets the domain name of this Cookie.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookieDomain--">getCookieDomain</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.time.temporal.TemporalAmount&gt;</code></td>
@@ -222,9 +220,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookiePath--">getCookiePath</a></span>()</code>
-<div class="block">The path of the cookie.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookiePath--">getCookiePath</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -232,9 +228,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.Boolean&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#isCookieHttpOnly--">isCookieHttpOnly</a></span>()</code>
-<div class="block">Checks to see if this Cookie can only be accessed via HTTP.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#isCookieHttpOnly--">isCookieHttpOnly</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.Boolean&gt;</code></td>
@@ -473,9 +467,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 public&nbsp;java.lang.String&nbsp;getCookieName()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieName--">getCookieName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The name of the cookie</dd>
+<dd><code>getCookieName</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 </dl>
 </li>
 </ul>
@@ -486,11 +478,9 @@ public&nbsp;java.lang.String&nbsp;getCookieName()</pre>
 <li class="blockList">
 <h4>getCookieDomain</h4>
 <pre>public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookieDomain()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieDomain--">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></span></div>
-<div class="block">Gets the domain name of this Cookie.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieDomain--">getCookieDomain</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code>getCookieDomain</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the domain name of this Cookie</dd>
 </dl>
@@ -504,11 +494,9 @@ public&nbsp;java.lang.String&nbsp;getCookieName()</pre>
 <h4>getCookiePath</h4>
 <pre>@Nullable
 public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookiePath--">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></span></div>
-<div class="block">The path of the cookie. The cookie is visible to all paths below the request path on the server.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookiePath--">getCookiePath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code>getCookiePath</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The path of the cookie.</dd>
 </dl>
@@ -521,11 +509,9 @@ public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre
 <li class="blockList">
 <h4>isCookieHttpOnly</h4>
 <pre>public&nbsp;java.util.Optional&lt;java.lang.Boolean&gt;&nbsp;isCookieHttpOnly()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#isCookieHttpOnly--">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></span></div>
-<div class="block">Checks to see if this Cookie can only be accessed via HTTP.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#isCookieHttpOnly--">isCookieHttpOnly</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code>isCookieHttpOnly</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Whether the Cookie can only be accessed via HTTP.</dd>
 </dl>
@@ -540,7 +526,7 @@ public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre
 <pre>public&nbsp;java.util.Optional&lt;java.lang.Boolean&gt;&nbsp;isCookieSecure()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#isCookieSecure--">isCookieSecure</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code>isCookieSecure</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>True if the cookie is secure</dd>
 </dl>
@@ -555,7 +541,7 @@ public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre
 <pre>public&nbsp;java.util.Optional&lt;java.time.temporal.TemporalAmount&gt;&nbsp;getCookieMaxAge()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieMaxAge--">getCookieMaxAge</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code>getCookieMaxAge</code>&nbsp;in interface&nbsp;<code>io.micronaut.http.cookie.CookieConfiguration</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The max age to use for the cookie</dd>
 </dl>

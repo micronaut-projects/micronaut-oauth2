@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -182,13 +182,21 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#getUrl--">getUrl</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#getRedirectUri--">getRedirectUri</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#getUrl--">getUrl</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#setParameters-java.util.List-">setParameters</a></span>(java.util.List&lt;<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionParameter</a>&gt;&nbsp;parameters)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#setRedirectUri-java.lang.String-">setRedirectUri</a></span>(java.lang.String&nbsp;redirectUri)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#setUrl-java.lang.String-">setUrl</a></span>(java.lang.String&nbsp;url)</code>&nbsp;</td>
 </tr>
@@ -265,6 +273,35 @@ public&nbsp;java.util.List&lt;<a href="../../../../../../../io/micronaut/securit
 <dd><code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getParameters--">getParameters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>End-session endpoint parameters.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRedirectUri--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRedirectUri</h4>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getRedirectUri--">getRedirectUri</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Redirection URI where the user is sent once the remote authorization server ends the session.</dd>
+</dl>
+</li>
+</ul>
+<a name="setRedirectUri-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRedirectUri</h4>
+<pre>public&nbsp;void&nbsp;setRedirectUri(java.lang.String&nbsp;redirectUri)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>redirectUri</code> - Redirection URI to which the response will be sent.</dd>
 </dl>
 </li>
 </ul>

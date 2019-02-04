@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
+var methods = {"i0":6,"i1":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -138,6 +138,10 @@ extends <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionParameter</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getParameters--">getParameters</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getRedirectUri--">getRedirectUri</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.io.micronaut.security.oauth2.openid.endpoints.EndpointUrl">
@@ -163,7 +167,7 @@ extends <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <a name="getParameters--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getParameters</h4>
 <pre>@Nonnull
@@ -171,6 +175,20 @@ java.util.List&lt;<a href="../../../../../../../io/micronaut/security/oauth2/ope
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>End-session endpoint parameters.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRedirectUri--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getRedirectUri</h4>
+<pre>@Nullable
+java.lang.String&nbsp;getRedirectUri()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Redirection URI where the user is sent once the remote authorization server ends the session.</dd>
 </dl>
 </li>
 </ul>

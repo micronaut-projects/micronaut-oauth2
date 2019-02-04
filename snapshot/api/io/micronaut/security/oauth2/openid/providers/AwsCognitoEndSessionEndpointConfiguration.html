@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>@Requires(property="micronaut.security.oauth2.domain-name") @Requires(property="micronaut.security.oauth2.end-session.aws-cognito.enabled",notEquals="false") @Requires(condition=<a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">AwsCognitoOpenidConfigurationCondition.class</a>)
+<pre>@Requires(property="micronaut.security.oauth2.domain-name") @Requires(property="micronaut.security.oauth2.end-session.aws-cognito.enabled",notEquals="false") @Requires(condition=<a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">AwsCognitoOpenidConfigurationCondition.class</a>) @Requires(beans={io.micronaut.runtime.server.EmbeddedServer.class,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfigurationProperties.class</a>})
  @Primary
  @Singleton
 public class <span class="typeNameLabel">AwsCognitoEndSessionEndpointConfiguration</span>
@@ -144,9 +144,10 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html#AwsCognitoEndSessionEndpointConfiguration-io.micronaut.runtime.server.EmbeddedServer-java.lang.String-java.lang.String-">AwsCognitoEndSessionEndpointConfiguration</a></span>(io.micronaut.runtime.server.EmbeddedServer&nbsp;embeddedServer,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html#AwsCognitoEndSessionEndpointConfiguration-io.micronaut.runtime.server.EmbeddedServer-java.lang.String-java.lang.String-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfigurationProperties-">AwsCognitoEndSessionEndpointConfiguration</a></span>(io.micronaut.runtime.server.EmbeddedServer&nbsp;embeddedServer,
                                          java.lang.String&nbsp;domainName,
-                                         java.lang.String&nbsp;logoutPath)</code>&nbsp;</td>
+                                         java.lang.String&nbsp;logoutPath,
+                                         <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfigurationProperties</a>&nbsp;endSessionEndpointConfigurationProperties)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -168,6 +169,10 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html#getParameters--">getParameters</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html#getRedirectUri--">getRedirectUri</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html#getUrl--">getUrl</a></span>()</code>&nbsp;</td>
 </tr>
@@ -193,7 +198,7 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="AwsCognitoEndSessionEndpointConfiguration-io.micronaut.runtime.server.EmbeddedServer-java.lang.String-java.lang.String-">
+<a name="AwsCognitoEndSessionEndpointConfiguration-io.micronaut.runtime.server.EmbeddedServer-java.lang.String-java.lang.String-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfigurationProperties-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -203,12 +208,14 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
                                                  @Value(value="${micronaut.security.oauth2.domain-name}")
                                                  java.lang.String&nbsp;domainName,
                                                  @Value(value="${micronaut.security.endpoints.logout.path:/logout}")
-                                                 java.lang.String&nbsp;logoutPath)</pre>
+                                                 java.lang.String&nbsp;logoutPath,
+                                                 <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfigurationProperties</a>&nbsp;endSessionEndpointConfigurationProperties)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>embeddedServer</code> - Embedded Server</dd>
 <dd><code>domainName</code> - AWS Cognito User's pool domain Name</dd>
 <dd><code>logoutPath</code> - <code>LogoutController</code> path.</dd>
+<dd><code>endSessionEndpointConfigurationProperties</code> - Default <code>ConfigurationProperties</code> implementation of <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionEndpointConfiguration</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -233,6 +240,22 @@ public&nbsp;java.util.List&lt;<a href="../../../../../../io/micronaut/security/o
 <dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getParameters--">getParameters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>End-session endpoint parameters.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRedirectUri--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRedirectUri</h4>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getRedirectUri--">getRedirectUri</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Redirection URI where the user is sent once the remote authorization server ends the session.</dd>
 </dl>
 </li>
 </ul>

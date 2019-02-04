@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
+var methods = {"i0":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd>io.micronaut.core.util.Toggleable</dd>
+<dd>io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Toggleable</dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -108,7 +108,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</span>
-extends io.micronaut.core.util.Toggleable</pre>
+extends io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Toggleable</pre>
 <div class="block">Configuration for <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><code>CookieSuccessfulIdTokenAccessTokenResponseHandler</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -135,40 +135,17 @@ extends io.micronaut.core.util.Toggleable</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieDomain--">getCookieDomain</a></span>()</code>
-<div class="block">Gets the domain name of this Cookie.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.time.temporal.TemporalAmount&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieMaxAge--">getCookieMaxAge</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookieName--">getCookieName</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getCookiePath--">getCookiePath</a></span>()</code>
-<div class="block">The path of the cookie.</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getLoginSuccessTargetUrl--">getLoginSuccessTargetUrl</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.lang.Boolean&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#isCookieHttpOnly--">isCookieHttpOnly</a></span>()</code>
-<div class="block">Checks to see if this Cookie can only be accessed via HTTP.</div>
-</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.lang.Boolean&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#isCookieSecure--">isCookieSecure</a></span>()</code>&nbsp;</td>
-</tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.io.micronaut.http.cookie.CookieConfiguration">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;io.micronaut.http.cookie.CookieConfiguration</h3>
+<code>getCookieDomain, getCookieMaxAge, getCookieName, getCookiePath, isCookieHttpOnly, isCookieSecure</code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.io.micronaut.core.util.Toggleable">
 <!--   -->
@@ -193,91 +170,13 @@ extends io.micronaut.core.util.Toggleable</pre>
 <a name="getLoginSuccessTargetUrl--">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>getLoginSuccessTargetUrl</h4>
 <pre>java.lang.String&nbsp;getLoginSuccessTargetUrl()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>String to be parsed into a URI which represents where the user is redirected to after a successful login.</dd>
-</dl>
-</li>
-</ul>
-<a name="getCookieName--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getCookieName</h4>
-<pre>@Nonnull
-java.lang.String&nbsp;getCookieName()</pre>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The name of the cookie</dd>
-</dl>
-</li>
-</ul>
-<a name="getCookieDomain--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getCookieDomain</h4>
-<pre>java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookieDomain()</pre>
-<div class="block">Gets the domain name of this Cookie.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the domain name of this Cookie</dd>
-</dl>
-</li>
-</ul>
-<a name="getCookiePath--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getCookiePath</h4>
-<pre>java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre>
-<div class="block">The path of the cookie. The cookie is visible to all paths below the request path on the server.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The cookie path</dd>
-</dl>
-</li>
-</ul>
-<a name="isCookieHttpOnly--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isCookieHttpOnly</h4>
-<pre>java.util.Optional&lt;java.lang.Boolean&gt;&nbsp;isCookieHttpOnly()</pre>
-<div class="block">Checks to see if this Cookie can only be accessed via HTTP.</div>
-</li>
-</ul>
-<a name="isCookieSecure--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isCookieSecure</h4>
-<pre>java.util.Optional&lt;java.lang.Boolean&gt;&nbsp;isCookieSecure()</pre>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>True if the cookie is secure</dd>
-</dl>
-</li>
-</ul>
-<a name="getCookieMaxAge--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>getCookieMaxAge</h4>
-<pre>java.util.Optional&lt;java.time.temporal.TemporalAmount&gt;&nbsp;getCookieMaxAge()</pre>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The max age to use for the cookie</dd>
 </dl>
 </li>
 </ul>
