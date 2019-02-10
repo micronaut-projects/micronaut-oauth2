@@ -1,4 +1,4 @@
-To configure the well-know configuration endpoint with AWS Cognito you can setup:
+To configure the `.well-know/openid-configuration` endpoint with AWS Cognito you can setup:
 
 [source, yaml]
 .src/main/resources/application.yml

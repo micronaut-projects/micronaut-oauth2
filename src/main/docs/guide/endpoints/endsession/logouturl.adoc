@@ -1,4 +1,4 @@
-If you are using https://docs.micronaut.io/latest/guide/index.html#views[Server side view rendering] support in Micronaut, the api::security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessor[] injects into the model the logout url of the authorization server correctly configured.
+If you are using https://docs.micronaut.io/latest/guide/index.html#views[Server side view rendering] support in Micronaut, the api:security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessor[] injects into the model the logout url of the authorization server correctly configured.
 
 include::{includedir}configurationProperties/io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties.adoc[]
 

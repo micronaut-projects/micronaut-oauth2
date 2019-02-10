@@ -21,7 +21,7 @@ micronaut:
 <2> Client Secret. Your authorization server provider provides this value.
 <3> Client ID. Your authorization server provider provides this value.
 <4> `well-know openid-configuration` endpoint url. Allows micronaut to discover the configuration of the Open ID Configuration server.
-<5> Often, ID Token will be respond as JWT tokens. You will need to enable https://docs.micronaut.io/latest/guide/index.html#jwt[Micronaut's JWT support] to validate it.
+<5> Often, ID Token will be responded as JWT tokens. You will need to enable https://docs.micronaut.io/latest/guide/index.html#jwt[Micronaut's JWT support] to validate it.
 <6> Once, validated you may want to save the JWT IDToken in a cookie. To read in subsequent requests, enable https://docs.micronaut.io/latest/guide/index.html#cookieToken[Cookie Token Reader].
 
 

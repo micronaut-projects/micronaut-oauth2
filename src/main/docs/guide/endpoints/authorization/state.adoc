@@ -1,0 +1,9 @@
+The default implementation does not provide an https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest[Authentication Request state parameter].
+
+____
+Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.
+____
+
+However, you can provide a api:io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider[StateProvider bean] and it will be included in the authentication request.
+
+To validate the state received in the response provide an implementation of api:io.micronaut.security.oauth2.openid.endpoints.authorization.StateValidator[StateValidator bean].
