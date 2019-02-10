@@ -31,6 +31,7 @@ flows:
     title: OpenID Connect Authorization code Flow
     authorization-code-controller: Authorization Code Controller
     id-token-validator: ID Token Validator
+    failure-handler: Failure Handler
     successful-handler: Successful ID Token Handler
     cookie-successful-handler: Cookie Successful ID Token Handler
   password-grant-type: Password Grant Type    
