@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>5.1 Authorization Endpoint 1.0.0.BUILD-SNAPSHOT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
+    <script type="text/javascript">
+function addJsClass() {
+    var classes = document.body.className.split(" ");
+    classes.push("js");
+    document.body.className = classes.join(" ");
+}
+    </script>
+</head>
+
+<body class="body" onload="addJsClass();">
+<div id="navigation">
+    <div class="navTitle">
+        
+        Micronaut Oauth2
+    </div>
+    <div class="navLinks">
+        <ul>
+            <li>
+                <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
+                    <a href="../../guide/index.html" class="button">Table of contents</a>
+
+                    <div id="nav-summary-childs" style="display:none;">
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/installation.html"><strong>1</strong><span>Installation</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/oauth2.html"><strong>2</strong><span>Oauth 2</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/openid.html"><strong>3</strong><span>Open ID Connect</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/endpoints.html"><strong>5</strong><span>Endpoints</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/flows.html"><strong>7</strong><span>Flows</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li class="separator selected">
+                <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<table id="colset" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td id="col1">
+            <div id="main" class="corner-all">
+
+                
+                    <div class="toc-item prev-left"><a href="../../guide/service-discovery.html">&lt;&lt; <strong>4</strong><span>Service Discovery</span></a></div>
+                
+
+                <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
+
+                
+                    <div class="toc-item next-right"><a href="../../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span> >></a></div>
+                
+
+
+                <div class="project">
+                    <h1>5.1 Authorization Endpoint</h1>
+
+                    <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
+                </div>
+
+                
+                <div id="table-of-content">
+                    <h2>Table of Contents</h2>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#state"><strong>5.1</strong><span>State</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#idTokenHint"><strong>5.2</strong><span>IDToken Hint</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#loginHint"><strong>5.3</strong><span>Login Hint</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#nonce"><strong>5.4</strong><span>Nonce</span></a>
+                    </div>
+                    
+                </div>
+                
+
+                
+
+<h2 id="authorization">5.1 Authorization Endpoint</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>If you use the Service discovery endpoint some of the configuration values required to communicate with the Authorization endpoint will be inferred from the service discovery endpoint response. For example, you will not need to configure the authorization endpoint&#8217;s url since that information is typically returned by service discovery endpoint. However, if the default values do not suffice, you can configure the communication with the authorization endpoint:</p>
+</div>
+<a id="io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html">AuthorizationEndpointConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the authorization endpoint&#8217;s url.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.redirect-uri</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redirection URI to which the response will be sent. Default value (<a href="http://localhost:8080/auth/code" class="bare">http://localhost:8080/auth/code</a>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.scopes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets Oauth 2.0 scopes. Default value (['openid']).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.response-type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set OAuth 2.0 Response Type. Default value ({@value #DEFAULT_RESPONSETYPE}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.response-mode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informs the Authorization Server of the mechanism to be used for returning parameters from the Authorization Endpoint. Default value ({@value #DEFAULT_RESPONSEMODE}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.display</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/Display.html">Display</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ASCII string value that specifies how the Authorization Server displays the authentication and consent user interface pages to the End-User. Default value (null).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.prompt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/Prompt.html">Prompt</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Space delimited, case sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for reauthentication and consent. Default value (null).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.max-age</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum Authentication Age. Default value (null).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.ui-locales</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">End-User&#8217;s preferred languages and scripts for the user interface. Default value (null).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.authorization.acr-values</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requested Authentication Context Class Reference values. Default value (null).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The authorization request is built by default with <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html">DefaultAuthenticationRequestProvider</a>. Remember you can always <a href="https://docs.micronaut.io/latest/guide/index.html#replaces">replace that bean</a> and provide your own implementation of <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html">AuthenticationRequestProvider</a>.</p>
+</div>
+
+
+<h2 id="state">5.1.1 State</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/state.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The default implementation does not provide an <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">Authentication Request state parameter</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>However, you can provide a <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html">StateProvider bean</a> and it will be included in the authentication request.</p>
+</div>
+<div class="paragraph">
+<p>To validate the state received in the response provide an implementation of <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html">StateValidator bean</a>.</p>
+</div>
+
+
+<h2 id="idTokenHint">5.1.2 IDToken Hint</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/idTokenHint.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The default implementation does not provide an <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">ID Token hint</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A Token previously issued by the Authorization Server being passed as a hint about the End-User&#8217;s current or past authenticated session with the Client.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>However, you can provide a <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/IdTokenHintProvider.html">IdTokenHintProvider bean</a> and it will be included in the authentication request.</p>
+</div>
+
+
+<h2 id="loginHint">5.1.3 Login Hint</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/loginHint.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The default implementation does not provide an <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">login hint</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Hint to the Authorization Server about the login identifier the End-User might use to log in.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>However, you can provide a <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/LoginHintProvider.html">LoginHintProvider bean</a> and it will be included in the authentication request.</p>
+</div>
+
+
+<h2 id="nonce">5.1.4 Nonce</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/nonce.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The default implementation does not provide an <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">Nonce parameter</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A String value used to associate a Client session with an ID Token, and to mitigate replay attacks.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>However, you can provide a <a href="../api/io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html">NonceProvider bean</a> and it will be included in the authentication request.</p>
+</div>
+
+
+                <div style="clear:both;margin-top:15px;"></div>
+                
+                    <div class="toc-item prev-left"><a href="../../guide/service-discovery.html">&lt;&lt; <strong>4</strong><span>Service Discovery</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span> >></a></div>
+                
+                <div style="clear:both"></div>
+            </div>
+        </td>
+        <td id="col2">
+            <div class="local clearfix">
+                <div class="local-title">
+                    <a href="../../guide/index.html" target="mainFrame">Quick Reference</a>
+                    <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
+                </div>
+                <div class="menu">
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="footer">
+    
+    
+</div>
+
+<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

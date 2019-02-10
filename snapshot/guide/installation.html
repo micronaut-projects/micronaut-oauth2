@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>3 Open ID Connect 1.0.0.BUILD-SNAPSHOT</title>
+    <title>1 Installation 1.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -68,18 +68,16 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/oauth2.html">&lt;&lt; <strong>2</strong><span>Oauth 2</span></a></div>
-                
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/oauth2.html"><strong>2</strong><span>Oauth 2</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>3 Open ID Connect</h1>
+                    <h1>1 Installation</h1>
 
                     <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -88,32 +86,46 @@ function addJsClass() {
 
                 
 
-<h1 id="openid">3 Open ID Connect</h1>
+<h1 id="installation">1 Installation</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/openid.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/installation.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p><a href="https://openid.net/connect/">OpenID Connect 1.0</a> is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</p>
-</div>
-</blockquote>
+<p>This project eases Oauth 2.0 integration with Micronaut.</p>
 </div>
 <div class="paragraph">
-<p>If you are new to OpenID Connect, watch <a href="https://www.youtube.com/watch?v=996OiexHze0">Oauth 2.0 and OpenID Connect</a>.</p>
+<p>        <div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-oauth2:1.0.0.BUILD-SNAPSHOT'</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-oauth2&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0.BUILD-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>To use the <code>BUILD-SNAPSHOT</code> version of this library, check the <a href="https://docs.micronaut.io/latest/guide/index.html#usingsnapshots">documentation to use snapshots</a>.</p>
+</div>
+<div class="paragraph">
+<p>Code can be found at the <a href="https://github.com/micronaut-projects/micronaut-oauth2">micronaut-oauth2</a> repository.</p>
 </div>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/oauth2.html">&lt;&lt; <strong>2</strong><span>Oauth 2</span></a></div>
-                
-                    <div class="toc-item next-right"><a href="../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/oauth2.html"><strong>2</strong><span>Oauth 2</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>

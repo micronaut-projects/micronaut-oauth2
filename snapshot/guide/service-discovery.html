@@ -29,19 +29,25 @@ function addJsClass() {
 
                     <div id="nav-summary-childs" style="display:none;">
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/introduction.html"><strong>1</strong><span>Introduction</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>1</strong><span>Installation</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/openid.html"><strong>2</strong><span>Open ID Connect</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/oauth2.html"><strong>2</strong><span>Oauth 2</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/client-id-client-secret.html"><strong>3</strong><span>Client ID &amp; Client Secret</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/openid.html"><strong>3</strong><span>Open ID Connect</span></a>
                         </div>
                         
                         <div class="toc-item" style="margin-left:0"><a href="../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/flows.html"><strong>5</strong><span>Flows</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/endpoints.html"><strong>5</strong><span>Endpoints</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/flows.html"><strong>7</strong><span>Flows</span></a>
                         </div>
                         
                     </div>
@@ -62,13 +68,13 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/client-id-client-secret.html">&lt;&lt; <strong>3</strong><span>Client ID &amp; Client Secret</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/openid.html">&lt;&lt; <strong>3</strong><span>Open ID Connect</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/flows.html"><strong>5</strong><span>Flows</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/endpoints.html"><strong>5</strong><span>Endpoints</span> >></a></div>
                 
 
 
@@ -82,16 +88,16 @@ function addJsClass() {
                 <div id="table-of-content">
                     <h2>Table of Contents</h2>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-okta"><strong>4.1</strong><span>Service Discovery OKTA</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-okta"><strong>4.1</strong><span>Service Discovery with OKTA</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-cognito"><strong>4.2</strong><span>Service Discovery AWS Cognito</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-cognito"><strong>4.2</strong><span>Service Discovery with AWS Cognito</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-auth0"><strong>4.3</strong><span>Service Discovery Auth0</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-auth0"><strong>4.3</strong><span>Service Discovery with Auth0</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-keycloack"><strong>4.4</strong><span>Service Discovery Keycloack</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#service-discovery-keycloak"><strong>4.4</strong><span>Service Discovery with Keycloak</span></a>
                     </div>
                     
                 </div>
@@ -109,17 +115,17 @@ function addJsClass() {
 
 
 <div class="paragraph">
-<p>The easiest way to integrate a micronaut application with an Open ID Connect server is to use the `.well-know/openid-configuration endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
+<p>The easiest way to integrate a Micronaut application with an Open ID Connect server is to use the <code>.well-know/openid-configuration</code> endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
 </div>
 <div class="paragraph">
-<p>The endpoint returns a spec-defiend set of fields. Micronaut uses the configuration returned to configure itself.</p>
+<p>The endpoint returns a specified set of fields. Micronaut uses the configuration returned to configure itself accordingly.</p>
 </div>
 <div class="paragraph">
-<p>Please, chek with your provider to locate the location of teh well-know configuration endpoint. Next, we show examples for common providers:</p>
+<p>Please, chek with your provider to locate the location of the <code>.well-know/openid-configuration</code>  configuration endpoint. Next, we show examples for common providers:</p>
 </div>
 
 
-<h2 id="service-discovery-okta">4.1 Service Discovery OKTA</h2>
+<h2 id="service-discovery-okta">4.1 Service Discovery with OKTA</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-okta.adoc"'>
@@ -156,7 +162,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-cognito">4.2 Service Discovery AWS Cognito</h2>
+<h2 id="service-discovery-cognito">4.2 Service Discovery with AWS Cognito</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-cognito.adoc"'>
@@ -166,7 +172,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 
 
 <div class="paragraph">
-<p>To configure the well-know configuration endpoint with AWS Cognito you can setup:</p>
+<p>To configure the <code>.well-know/openid-configuration</code> endpoint with AWS Cognito you can setup:</p>
 </div>
 <div class="listingblock">
 <div class="title">src/main/resources/application.yml</div>
@@ -184,7 +190,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-auth0">4.3 Service Discovery Auth0</h2>
+<h2 id="service-discovery-auth0">4.3 Service Discovery with Auth0</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-auth0.adoc"'>
@@ -220,10 +226,10 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-keycloack">4.4 Service Discovery Keycloack</h2>
+<h2 id="service-discovery-keycloak">4.4 Service Discovery with Keycloak</h2>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-keycloack.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-keycloak.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -253,9 +259,9 @@ export KEYCLOAK_REALM=master</code></pre>
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/client-id-client-secret.html">&lt;&lt; <strong>3</strong><span>Client ID &amp; Client Secret</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/openid.html">&lt;&lt; <strong>3</strong><span>Open ID Connect</span></a></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/flows.html"><strong>5</strong><span>Flows</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/endpoints.html"><strong>5</strong><span>Endpoints</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>

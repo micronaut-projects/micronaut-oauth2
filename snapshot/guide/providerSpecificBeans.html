@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>3 Open ID Connect 1.0.0.BUILD-SNAPSHOT</title>
+    <title>6 Provider Specific Beans 1.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -68,18 +68,18 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/oauth2.html">&lt;&lt; <strong>2</strong><span>Oauth 2</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/endpoints.html">&lt;&lt; <strong>5</strong><span>Endpoints</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/flows.html"><strong>7</strong><span>Flows</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>3 Open ID Connect</h1>
+                    <h1>6 Provider Specific Beans</h1>
 
                     <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -88,32 +88,80 @@ function addJsClass() {
 
                 
 
-<h1 id="openid">3 Open ID Connect</h1>
+<h1 id="providerSpecificBeans">6 Provider Specific Beans</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/openid.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/providerSpecificBeans.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
-<div class="quoteblock">
-<blockquote>
+<div class="sect2">
+<h3 id="_cognito">Cognito</h3>
 <div class="paragraph">
-<p><a href="https://openid.net/connect/">OpenID Connect 1.0</a> is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</p>
+<p>If the term <code>cognito</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
 </div>
-</blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/security/oauth2/openid/providers/AwsCognitoAuthMethodProvider.html">AwsCognitoAuthMethodProvider</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>If you are new to OpenID Connect, watch <a href="https://www.youtube.com/watch?v=996OiexHze0">Oauth 2.0 and OpenID Connect</a>.</p>
+<p>If you want to disable that bean you can set <code>micronaut.security.oauth2.token.auth-method-provider.cognito</code> to <code>false</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/security/oauth2/openid/providers/AwsCognitoEndSessionEndpointConfiguration.html">AwsCognitoEndSessionEndpointConfiguration</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you want to disable that bean you can set <code>micronaut.security.oauth2..end-session.aws-cognito.enabled</code> to <code>false</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_okta">Okta</h3>
+<div class="paragraph">
+<p>If the term <code>okta</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/security/oauth2/openid/providers/OktaEndSessionEndpointConfiguration.html">OktaEndSessionEndpointConfiguration</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you want to disable that bean you can set <code>micronaut.security.oauth2.end-session.okta.enabled</code> to <code>false</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_auth0">Auth0</h3>
+<div class="paragraph">
+<p>If the term <code>auth0</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../api/io/micronaut/security/oauth2/openid/providers/Auth0EndSessionEndpointConfiguration.html">Auth0EndSessionEndpointConfiguration</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you want to disable that bean you can set <code>micronaut.security.oauth2.end-session.auth0.enabled</code> to <code>false</code></p>
+</div>
 </div>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/oauth2.html">&lt;&lt; <strong>2</strong><span>Oauth 2</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/endpoints.html">&lt;&lt; <strong>5</strong><span>Endpoints</span></a></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/service-discovery.html"><strong>4</strong><span>Service Discovery</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/flows.html"><strong>7</strong><span>Flows</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>

@@ -131,7 +131,7 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html#resolveAuthorizationRedirectUrl--">resolveAuthorizationRedirectUrl</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html#resolveAuthorizationRedirectUrl-io.micronaut.http.HttpRequest-">resolveAuthorizationRedirectUrl</a></span>(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -148,14 +148,16 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="resolveAuthorizationRedirectUrl--">
+<a name="resolveAuthorizationRedirectUrl-io.micronaut.http.HttpRequest-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>resolveAuthorizationRedirectUrl</h4>
-<pre>java.lang.String&nbsp;resolveAuthorizationRedirectUrl()</pre>
+<pre>java.lang.String&nbsp;resolveAuthorizationRedirectUrl(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</pre>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>request</code> - the Original request prior redirect.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A URL to redirect the user to the OpenID Provider authorization endpoint.</dd>
 </dl>

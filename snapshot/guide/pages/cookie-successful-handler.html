@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>5.3.2 Logout URL 1.0.0.BUILD-SNAPSHOT</title>
+    <title>7.1.4 Cookie Successful ID Token Handler 1.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -68,18 +68,16 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../../guide/service-discovery.html">&lt;&lt; <strong>4</strong><span>Service Discovery</span></a></div>
+                    <div class="toc-item prev-left"><a href="../../guide/providerSpecificBeans.html">&lt;&lt; <strong>6</strong><span>Provider Specific Beans</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span> >></a></div>
-                
 
 
                 <div class="project">
-                    <h1>5.3.2 Logout URL</h1>
+                    <h1>7.1.4 Cookie Successful ID Token Handler</h1>
 
                     <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -88,21 +86,21 @@ function addJsClass() {
 
                 
 
-<h2 id="logouturl">5.3.2 Logout URL</h2>
+<h2 id="cookie-successful-handler">7.1.4 Cookie Successful ID Token Handler</h2>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/endsession/logouturl.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/cookie-successful-handler.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
 <div class="paragraph">
-<p>If you are using <a href="https://docs.micronaut.io/latest/guide/index.html#views">Server side view rendering</a> support in Micronaut, the <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessor.html">EndsessionViewModelProcessor</a> injects into the model the logout url of the authorization server correctly configured.</p>
+<p>By default, <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html">CookieSuccessfulIdTokenAccessTokenResponseHandler</a> is provided which can be configured with:</p>
 </div>
-<a id="io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties" href="#io.micronaut.security.oauth2.openid.endpoints.endsession.EndsessionViewModelProcessorConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties" href="#io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html">EndsessionViewModelProcessorConfigurationProperties</a></caption>
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -117,40 +115,52 @@ function addJsClass() {
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the {@link EndsessionViewModelProcessor} is enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cookie Name. Default value (JWT).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.end-session.view-model-processor.end-session-url-key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-domain</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Model key name. Default value ({@value #DEFAULT_ENDSESSIONURLKEY}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the domain name of this Cookie. Default value (JWT).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the path of the cookie. Default value ({@value #DEFAULT_COOKIEPATH}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.login-success-target-url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the login success target URL. Default value ({@value #DEFAULT_LOGINSUCCESSTARGETURL}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-http-only</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the Cookie can only be accessed via HTTP. Default value ({@value #DEFAULT_HTTPONLY}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-secure</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the cookie is secured. Default value ({@value #DEFAULT_SECURE}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-max-age</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.time.temporal.TemporalAmount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the maximum age of the cookie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables <a href="../api/io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html">CookieSuccessfulIdTokenAccessTokenResponseHandler</a>. Default value ({@value #DEFAULT_ENABLED}).</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Next code snippets shows a Velocity view which contains a link to logout.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-velocity hljs" data-lang="velocity">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Logout/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;a href="${endsessionurl}"&gt;Logout&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
-</div>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../../guide/service-discovery.html">&lt;&lt; <strong>4</strong><span>Service Discovery</span></a></div>
-                
-                    <div class="toc-item next-right"><a href="../../guide/providerSpecificBeans.html"><strong>6</strong><span>Provider Specific Beans</span> >></a></div>
+                    <div class="toc-item prev-left"><a href="../../guide/providerSpecificBeans.html">&lt;&lt; <strong>6</strong><span>Provider Specific Beans</span></a></div>
                 
                 <div style="clear:both"></div>
             </div>

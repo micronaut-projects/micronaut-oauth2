@@ -210,7 +210,9 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html#setAuthMethod-java.lang.String-">setAuthMethod</a></span>(java.lang.String&nbsp;authMethod)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html#setAuthMethod-java.lang.String-">setAuthMethod</a></span>(java.lang.String&nbsp;authMethod)</code>
+<div class="block">Client Authentication method.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -220,7 +222,9 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html#setGrantType-java.lang.String-">setGrantType</a></span>(java.lang.String&nbsp;grantType)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfigurationProperties.html#setGrantType-java.lang.String-">setGrantType</a></span>(java.lang.String&nbsp;grantType)</code>
+<div class="block">Oauth 2.0.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -371,6 +375,7 @@ public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
 <h4>setGrantType</h4>
 <pre>public&nbsp;void&nbsp;setGrantType(@Nonnull
                          java.lang.String&nbsp;grantType)</pre>
+<div class="block">Oauth 2.0. Grant Type. Default value (authorization_code).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>grantType</code> - Oauth 2.0 Grant Type</dd>
@@ -385,6 +390,7 @@ public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
 <h4>setAuthMethod</h4>
 <pre>public&nbsp;void&nbsp;setAuthMethod(@Nullable
                           java.lang.String&nbsp;authMethod)</pre>
+<div class="block">Client Authentication method. By default no value is specified. In that case, the value returned by <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/AuthMethodProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token"><code>AuthMethodProvider</code></a>, if such a bean exists, is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>authMethod</code> - Client Authentication method.</dd>
@@ -459,7 +465,7 @@ public&nbsp;io.micronaut.http.MediaType&nbsp;getContentType()</pre>
 <h4>setContentType</h4>
 <pre>public&nbsp;void&nbsp;setContentType(@Nonnull
                            io.micronaut.http.MediaType&nbsp;contentType)</pre>
-<div class="block">The Content-Type used to communicate with the token endpoint.</div>
+<div class="block">The Content-Type used to communicate with the token endpoint. Default value (application/x-www-form-urlencoded).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>contentType</code> - The Content-Type</dd>

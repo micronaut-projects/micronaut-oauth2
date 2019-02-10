@@ -165,7 +165,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#generateAuthenticationRequest--">generateAuthenticationRequest</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#generateAuthenticationRequest-io.micronaut.http.HttpRequest-">generateAuthenticationRequest</a></span>(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -224,16 +224,18 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="generateAuthenticationRequest--">
+<a name="generateAuthenticationRequest-io.micronaut.http.HttpRequest-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>generateAuthenticationRequest</h4>
-<pre>public&nbsp;<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;generateAuthenticationRequest()</pre>
+<pre>public&nbsp;<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;generateAuthenticationRequest(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html#generateAuthenticationRequest--">generateAuthenticationRequest</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestProvider</a></code></dd>
+<dd><code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html#generateAuthenticationRequest-io.micronaut.http.HttpRequest-">generateAuthenticationRequest</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestProvider</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>request</code> - the Original request prior redirect.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An Authentication request against an Open ID identity provider.</dd>
 </dl>

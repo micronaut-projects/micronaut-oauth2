@@ -140,9 +140,10 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Authori
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html#DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-">DefaultAuthorizationResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/token/AuthorizationCodeGrantRequestGenerator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">AuthorizationCodeGrantRequestGenerator</a>&nbsp;authorizationCodeGrantRequestGenerator,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html#DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-io.micronaut.security.oauth2.openid.endpoints.authorization.StateValidator-">DefaultAuthorizationResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/token/AuthorizationCodeGrantRequestGenerator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">AuthorizationCodeGrantRequestGenerator</a>&nbsp;authorizationCodeGrantRequestGenerator,
                                    <a href="../../../../../io/micronaut/security/oauth2/handlers/IdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">IdTokenAccessTokenResponseHandler</a>&nbsp;idTokenAccessTokenResponseHandler,
-                                   io.micronaut.http.client.RxHttpClient&nbsp;tokenClient)</code>
+                                   io.micronaut.http.client.RxHttpClient&nbsp;tokenClient,
+                                   <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateValidator</a>&nbsp;stateValidator)</code>
 <div class="block">Creates a DefaultAuthorizationResponseHandler.</div>
 </td>
 </tr>
@@ -188,7 +189,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Authori
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-">
+<a name="DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-io.micronaut.security.oauth2.openid.endpoints.authorization.StateValidator-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -197,13 +198,16 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Authori
 <pre>public&nbsp;DefaultAuthorizationResponseHandler(<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/token/AuthorizationCodeGrantRequestGenerator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">AuthorizationCodeGrantRequestGenerator</a>&nbsp;authorizationCodeGrantRequestGenerator,
                                            <a href="../../../../../io/micronaut/security/oauth2/handlers/IdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">IdTokenAccessTokenResponseHandler</a>&nbsp;idTokenAccessTokenResponseHandler,
                                            @Named(value="oauth2tokenendpoint")
-                                           io.micronaut.http.client.RxHttpClient&nbsp;tokenClient)</pre>
+                                           io.micronaut.http.client.RxHttpClient&nbsp;tokenClient,
+                                           @Nullable
+                                           <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateValidator</a>&nbsp;stateValidator)</pre>
 <div class="block">Creates a DefaultAuthorizationResponseHandler.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>authorizationCodeGrantRequestGenerator</code> - Authorization Code Grant Request Generator</dd>
 <dd><code>idTokenAccessTokenResponseHandler</code> - ID Token Access Token response handler</dd>
 <dd><code>tokenClient</code> - RxHttpClient pointing to the token endpoint</dd>
+<dd><code>stateValidator</code> - Authorization state parameter validator</dd>
 </dl>
 </li>
 </ul>
