@@ -48,7 +48,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultErrorResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultNotValidIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../io/micronaut/security/oauth2/handlers/ErrorResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?io/micronaut/security/oauth2/handlers/DefaultIdTokenAccessTokenResponseHandler.html" target="_top">Frames</a></li>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>@Requires(beans={<a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator.class</a>,<a href="../../../../../io/micronaut/security/oauth2/handlers/NotValidIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">NotValidIdTokenAccessTokenResponseHandler.class</a>,<a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler.class</a>})
+<pre>@Requires(beans={<a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator.class</a>,<a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler.class</a>})
  @Singleton
 public class <span class="typeNameLabel">DefaultIdTokenAccessTokenResponseHandler</span>
 extends java.lang.Object
@@ -141,8 +141,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/IdToken
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultIdTokenAccessTokenResponseHandler.html#DefaultIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponseValidator-io.micronaut.security.oauth2.handlers.NotValidIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.SuccessfulIdTokenAccessTokenResponseHandler-">DefaultIdTokenAccessTokenResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator</a>&nbsp;idTokenAccessTokenResponseValidator,
-                                        <a href="../../../../../io/micronaut/security/oauth2/handlers/NotValidIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">NotValidIdTokenAccessTokenResponseHandler</a>&nbsp;notValidIdTokenAccessTokenResponseHandler,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultIdTokenAccessTokenResponseHandler.html#DefaultIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponseValidator-io.micronaut.security.oauth2.handlers.SuccessfulIdTokenAccessTokenResponseHandler-">DefaultIdTokenAccessTokenResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator</a>&nbsp;idTokenAccessTokenResponseValidator,
                                         <a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler</a>&nbsp;successfulIdTokenAccessTokenResponseHandler)</code>&nbsp;</td>
 </tr>
 </table>
@@ -187,19 +186,17 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/IdToken
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DefaultIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponseValidator-io.micronaut.security.oauth2.handlers.NotValidIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.SuccessfulIdTokenAccessTokenResponseHandler-">
+<a name="DefaultIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponseValidator-io.micronaut.security.oauth2.handlers.SuccessfulIdTokenAccessTokenResponseHandler-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DefaultIdTokenAccessTokenResponseHandler</h4>
 <pre>public&nbsp;DefaultIdTokenAccessTokenResponseHandler(<a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator</a>&nbsp;idTokenAccessTokenResponseValidator,
-                                                <a href="../../../../../io/micronaut/security/oauth2/handlers/NotValidIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">NotValidIdTokenAccessTokenResponseHandler</a>&nbsp;notValidIdTokenAccessTokenResponseHandler,
                                                 <a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler</a>&nbsp;successfulIdTokenAccessTokenResponseHandler)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>idTokenAccessTokenResponseValidator</code> - ID Token Access token response validator</dd>
-<dd><code>notValidIdTokenAccessTokenResponseHandler</code> - Not Valid - ID Token Access token handler</dd>
 <dd><code>successfulIdTokenAccessTokenResponseHandler</code> - Successful - ID Token Access token handler</dd>
 </dl>
 </li>
@@ -259,7 +256,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/IdToken
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultErrorResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../io/micronaut/security/oauth2/handlers/DefaultNotValidIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../io/micronaut/security/oauth2/handlers/ErrorResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?io/micronaut/security/oauth2/handlers/DefaultIdTokenAccessTokenResponseHandler.html" target="_top">Frames</a></li>

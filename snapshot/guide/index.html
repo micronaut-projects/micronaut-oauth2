@@ -133,9 +133,11 @@
         
         <div class="toc-item" style="margin-left:20px" id="toc-item-id-token-validator"><a href="#id-token-validator"><strong>7.1.2</strong><span>ID Token Validator</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-successful-handler"><a href="#successful-handler"><strong>7.1.3</strong><span>Successful ID Token Handler</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-failure-handler"><a href="#failure-handler"><strong>7.1.3</strong><span>Failure Handler</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-cookie-successful-handler"><a href="#cookie-successful-handler"><strong>7.1.4</strong><span>Cookie Successful ID Token Handler</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-successful-handler"><a href="#successful-handler"><strong>7.1.4</strong><span>Successful ID Token Handler</span></a></div>
+        
+        <div class="toc-item" style="margin-left:20px" id="toc-item-cookie-successful-handler"><a href="#cookie-successful-handler"><strong>7.1.5</strong><span>Cookie Successful ID Token Handler</span></a></div>
         
         <div class="toc-item" style="margin-left:10px" id="toc-item-password-grant-type"><a href="#password-grant-type"><strong>7.2</strong><span>Password Grant Type</span></a></div>
         
@@ -1097,7 +1099,21 @@ and:</p>
 </div>
 
 
-<h2 id="successful-handler">7.1.3 Successful ID Token Handler</h2>
+<h2 id="failure-handler">7.1.3 Failure Handler</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/failure-handler.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>If the validation of the <a href="../api/io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html">IdTokenAccessTokenResponse</a>, an object which encapsulates the response of the token endpoint, fails a <a href="../api/io/micronaut/security/oauth2/handlers/InvalidIdTokenAccessTokenResponseException.html">InvalidIdTokenAccessTokenResponseException</a> is raised.</p>
+</div>
+
+
+<h2 id="successful-handler">7.1.4 Successful ID Token Handler</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/successful-handler.adoc"'>
@@ -1112,7 +1128,7 @@ and:</p>
 </div>
 
 
-<h2 id="cookie-successful-handler">7.1.4 Cookie Successful ID Token Handler</h2>
+<h2 id="cookie-successful-handler">7.1.5 Cookie Successful ID Token Handler</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/cookie-successful-handler.adoc"'>
