@@ -1,4 +1,4 @@
-# Micronaut Oauth 2
+# Micronaut OAuth 2.0
 
 This project includes integration between [Micronaut](http://micronaut.io) and Oauth 2.
 
