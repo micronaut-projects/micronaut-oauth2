@@ -1,5 +1,7 @@
 installation:
   title: Installation
+examples:
+  title: Examples
 oauth2:
   title: OAuth 2.0
 openid:
