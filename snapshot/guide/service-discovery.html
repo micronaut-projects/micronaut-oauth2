@@ -118,10 +118,13 @@ function addJsClass() {
 <p>The easiest way to integrate a Micronaut application with an Open ID Connect server is to use the <code>.well-know/openid-configuration</code> endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
 </div>
 <div class="paragraph">
+<p>Micronaut assumes the URL for the endpoint is the value of property <code>micronaut.security.oauth2.issuer</code> plus the suffix <code>/.well-know/openid-configuration</code>.</p>
+</div>
+<div class="paragraph">
 <p>The endpoint returns a specified set of fields. Micronaut uses the configuration returned to configure itself accordingly.</p>
 </div>
 <div class="paragraph">
-<p>Please, chek with your provider to locate the location of the <code>.well-know/openid-configuration</code>  configuration endpoint. Next, we show examples for common providers:</p>
+<p>Please, check with your provider the value of the OAuth 2.0 <code>issuer</code>. Next, we show examples for common providers:</p>
 </div>
 
 
@@ -142,7 +145,7 @@ function addJsClass() {
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/openid-configuration'</code></pre>
+      issuer: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -172,7 +175,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 
 
 <div class="paragraph">
-<p>To configure the <code>.well-know/openid-configuration</code> endpoint with AWS Cognito you can setup:</p>
+<p>To configure the <code>issuer</code> with AWS Cognito you can setup:</p>
 </div>
 <div class="listingblock">
 <div class="title">src/main/resources/application.yml</div>
@@ -182,7 +185,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}/.well-known/openid-configuration'</code></pre>
+      issuer: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -207,7 +210,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${AUTH0_DOMAINNAME}/.well-known/openid-configuration'</code></pre>
+      issuer: '${AUTH0_DOMAINNAME}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -243,7 +246,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration'</code></pre>
+      issuer: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}'</code></pre>
 </div>
 </div>
 <div class="paragraph">

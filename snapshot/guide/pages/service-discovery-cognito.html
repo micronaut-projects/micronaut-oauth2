@@ -98,7 +98,7 @@ function addJsClass() {
 
 
 <div class="paragraph">
-<p>To configure the <code>.well-know/openid-configuration</code> endpoint with AWS Cognito you can setup:</p>
+<p>To configure the <code>issuer</code> with AWS Cognito you can setup:</p>
 </div>
 <div class="listingblock">
 <div class="title">src/main/resources/application.yml</div>
@@ -108,7 +108,7 @@ function addJsClass() {
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}/.well-known/openid-configuration'</code></pre>
+      issuer: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}'</code></pre>
 </div>
 </div>
 <div class="paragraph">

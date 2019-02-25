@@ -145,7 +145,7 @@ function addJsClass() {
         oauth2:
           client-secret: '${OAUTH_CLIENT_SECRET}'  <i class="conum" data-value="2"></i><b>(2)</b>
           client-id: '${OAUTH_CLIENT_ID}' <i class="conum" data-value="3"></i><b>(3)</b>
-          openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/ openid-configuration' <i class="conum" data-value="4"></i><b>(4)</b>
+          issuer: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}' <i class="conum" data-value="4"></i><b>(4)</b>
         token:
             jwt:
                 enabled: true <i class="conum" data-value="5"></i><b>(5)</b>
@@ -169,7 +169,7 @@ function addJsClass() {
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td><code>well-know openid-configuration</code> endpoint url. Allows micronaut to discover the configuration of the Open ID Configuration server.</td>
+<td><code>issuer</code> url. Allows micronaut to discover the configuration of the Open ID Configuration server.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>

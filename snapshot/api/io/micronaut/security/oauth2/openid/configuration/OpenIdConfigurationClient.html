@@ -99,11 +99,11 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>@Requires(property="micronaut.security.oauth2.openid-configuration")
- @Client(value="${micronaut.security.oauth2.openid-configuration}")
+<pre>@Requires(property="micronaut.security.oauth2.issuer")
+ @Client(value="${micronaut.security.oauth2.issuer}")
 public interface <span class="typeNameLabel">OpenIdConfigurationClient</span></pre>
 <div class="block">Creates a HTTP Declarative client to communicate with an OpenID connect Discovery endpoint.
- The discovery endpoint is declared by the property micronaut.security.oauth2.openid-configuration</div>
+ The discovery endpoint is declared by the property micronaut.security.oauth2.issuer</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.0.0</dd>
@@ -153,7 +153,7 @@ public interface <span class="typeNameLabel">OpenIdConfigurationClient</span></p
 <ul class="blockListLast">
 <li class="blockList">
 <h4>fetchConfiguration</h4>
-<pre>@Get
+<pre>@Get(value="${micronaut.security.oauth2.openid-configuration-path:/.well-known/openid-configuration}")
 <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;fetchConfiguration()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

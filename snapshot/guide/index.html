@@ -296,10 +296,13 @@
 <p>The easiest way to integrate a Micronaut application with an Open ID Connect server is to use the <code>.well-know/openid-configuration</code> endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
 </div>
 <div class="paragraph">
+<p>Micronaut assumes the URL for the endpoint is the value of property <code>micronaut.security.oauth2.issuer</code> plus the suffix <code>/.well-know/openid-configuration</code>.</p>
+</div>
+<div class="paragraph">
 <p>The endpoint returns a specified set of fields. Micronaut uses the configuration returned to configure itself accordingly.</p>
 </div>
 <div class="paragraph">
-<p>Please, chek with your provider to locate the location of the <code>.well-know/openid-configuration</code>  configuration endpoint. Next, we show examples for common providers:</p>
+<p>Please, check with your provider the value of the OAuth 2.0 <code>issuer</code>. Next, we show examples for common providers:</p>
 </div>
 
 
@@ -320,7 +323,7 @@
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/openid-configuration'</code></pre>
+      issuer: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -350,7 +353,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 
 
 <div class="paragraph">
-<p>To configure the <code>.well-know/openid-configuration</code> endpoint with AWS Cognito you can setup:</p>
+<p>To configure the <code>issuer</code> with AWS Cognito you can setup:</p>
 </div>
 <div class="listingblock">
 <div class="title">src/main/resources/application.yml</div>
@@ -360,7 +363,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}/.well-known/openid-configuration'</code></pre>
+      issuer: 'https://cognito-idp.${AWS_REGION}.amazonaws.com/${COGNITO_POOL_ID}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -385,7 +388,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${AUTH0_DOMAINNAME}/.well-known/openid-configuration'</code></pre>
+      issuer: '${AUTH0_DOMAINNAME}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -421,7 +424,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration'</code></pre>
+      issuer: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -871,7 +874,7 @@ export KEYCLOAK_REALM=master</code></pre>
 <div class="sect2">
 <h3 id="_cognito">Cognito</h3>
 <div class="paragraph">
-<p>If the term <code>cognito</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
+<p>If the term <code>cognito</code> is present in the value of <code>micronaut.security.oauth2.issuer</code> the next beans are loaded:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -897,7 +900,7 @@ export KEYCLOAK_REALM=master</code></pre>
 <div class="sect2">
 <h3 id="_okta">Okta</h3>
 <div class="paragraph">
-<p>If the term <code>okta</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
+<p>If the term <code>okta</code> is present in the value of <code>micronaut.security.oauth2.issuer</code> the next beans are loaded:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -913,7 +916,7 @@ export KEYCLOAK_REALM=master</code></pre>
 <div class="sect2">
 <h3 id="_auth0">Auth0</h3>
 <div class="paragraph">
-<p>If the term <code>auth0</code> is present in the value of <code>micronaut.security.oauth2.openid-configuration</code> the next beans are loaded:</p>
+<p>If the term <code>auth0</code> is present in the value of <code>micronaut.security.oauth2.issuer</code> the next beans are loaded:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -961,7 +964,7 @@ export KEYCLOAK_REALM=master</code></pre>
         oauth2:
           client-secret: '${OAUTH_CLIENT_SECRET}'  <i class="conum" data-value="2"></i><b>(2)</b>
           client-id: '${OAUTH_CLIENT_ID}' <i class="conum" data-value="3"></i><b>(3)</b>
-          openid-configuration: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}/.well-known/ openid-configuration' <i class="conum" data-value="4"></i><b>(4)</b>
+          issuer: '${OKTA_DOMAIN}/oauth2/${OKTA_AUTHSERVERID}' <i class="conum" data-value="4"></i><b>(4)</b>
         token:
             jwt:
                 enabled: true <i class="conum" data-value="5"></i><b>(5)</b>
@@ -985,7 +988,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td><code>well-know openid-configuration</code> endpoint url. Allows micronaut to discover the configuration of the Open ID Configuration server.</td>
+<td><code>issuer</code> url. Allows micronaut to discover the configuration of the Open ID Configuration server.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
