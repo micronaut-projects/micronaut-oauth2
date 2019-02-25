@@ -45,17 +45,19 @@
                                 
                                 <div class="toc-item" style="margin-left:0"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#oauth2"><strong>2</strong><span>OAuth 2.0</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#examples"><strong>2</strong><span>Examples</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#openid"><strong>3</strong><span>Open ID Connect</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#oauth2"><strong>3</strong><span>OAuth 2.0</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#service-discovery"><strong>4</strong><span>Service Discovery</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#openid"><strong>4</strong><span>Open ID Connect</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#endpoints"><strong>5</strong><span>Endpoints</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#service-discovery"><strong>5</strong><span>Service Discovery</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#providerSpecificBeans"><strong>6</strong><span>Provider Specific Beans</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#endpoints"><strong>6</strong><span>Endpoints</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#flows"><strong>7</strong><span>Flows</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#providerSpecificBeans"><strong>7</strong><span>Provider Specific Beans</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#flows"><strong>8</strong><span>Flows</span></a></div>
                                 
                             </div>
                         </div>
@@ -89,57 +91,59 @@
         
         <div class="toc-item" style="margin-left:0px" id="toc-item-installation"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-oauth2"><a href="#oauth2"><strong>2</strong><span>OAuth 2.0</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-examples"><a href="#examples"><strong>2</strong><span>Examples</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-openid"><a href="#openid"><strong>3</strong><span>Open ID Connect</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-oauth2"><a href="#oauth2"><strong>3</strong><span>OAuth 2.0</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-service-discovery"><a href="#service-discovery"><strong>4</strong><span>Service Discovery</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-openid"><a href="#openid"><strong>4</strong><span>Open ID Connect</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-okta"><a href="#service-discovery-okta"><strong>4.1</strong><span>Service Discovery with OKTA</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-service-discovery"><a href="#service-discovery"><strong>5</strong><span>Service Discovery</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-cognito"><a href="#service-discovery-cognito"><strong>4.2</strong><span>Service Discovery with AWS Cognito</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-okta"><a href="#service-discovery-okta"><strong>5.1</strong><span>Service Discovery with OKTA</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-auth0"><a href="#service-discovery-auth0"><strong>4.3</strong><span>Service Discovery with Auth0</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-cognito"><a href="#service-discovery-cognito"><strong>5.2</strong><span>Service Discovery with AWS Cognito</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-keycloak"><a href="#service-discovery-keycloak"><strong>4.4</strong><span>Service Discovery with Keycloak</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-auth0"><a href="#service-discovery-auth0"><strong>5.3</strong><span>Service Discovery with Auth0</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-endpoints"><a href="#endpoints"><strong>5</strong><span>Endpoints</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-service-discovery-keycloak"><a href="#service-discovery-keycloak"><strong>5.4</strong><span>Service Discovery with Keycloak</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-authorization"><a href="#authorization"><strong>5.1</strong><span>Authorization Endpoint</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-endpoints"><a href="#endpoints"><strong>6</strong><span>Endpoints</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-state"><a href="#state"><strong>5.1.1</strong><span>State</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-authorization"><a href="#authorization"><strong>6.1</strong><span>Authorization Endpoint</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-idTokenHint"><a href="#idTokenHint"><strong>5.1.2</strong><span>IDToken Hint</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-state"><a href="#state"><strong>6.1.1</strong><span>State</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-loginHint"><a href="#loginHint"><strong>5.1.3</strong><span>Login Hint</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-idTokenHint"><a href="#idTokenHint"><strong>6.1.2</strong><span>IDToken Hint</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-nonce"><a href="#nonce"><strong>5.1.4</strong><span>Nonce</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-loginHint"><a href="#loginHint"><strong>6.1.3</strong><span>Login Hint</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-token"><a href="#token"><strong>5.2</strong><span>Token Endpoint</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-nonce"><a href="#nonce"><strong>6.1.4</strong><span>Nonce</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-endsession"><a href="#endsession"><strong>5.3</strong><span>End Session Endpoint</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-token"><a href="#token"><strong>6.2</strong><span>Token Endpoint</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-logoutController"><a href="#logoutController"><strong>5.3.1</strong><span>Logout Controller</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-endsession"><a href="#endsession"><strong>6.3</strong><span>End Session Endpoint</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-logouturl"><a href="#logouturl"><strong>5.3.2</strong><span>Logout URL</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-logoutController"><a href="#logoutController"><strong>6.3.1</strong><span>Logout Controller</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-providerSpecificBeans"><a href="#providerSpecificBeans"><strong>6</strong><span>Provider Specific Beans</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-logouturl"><a href="#logouturl"><strong>6.3.2</strong><span>Logout URL</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-flows"><a href="#flows"><strong>7</strong><span>Flows</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-providerSpecificBeans"><a href="#providerSpecificBeans"><strong>7</strong><span>Provider Specific Beans</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-authorization-code-grant-type"><a href="#authorization-code-grant-type"><strong>7.1</strong><span>OpenID Connect Authorization code Flow</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-flows"><a href="#flows"><strong>8</strong><span>Flows</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-authorization-code-controller"><a href="#authorization-code-controller"><strong>7.1.1</strong><span>Authorization Code Controller</span></a></div>
+        <div class="toc-item" style="margin-left:10px" id="toc-item-authorization-code-grant-type"><a href="#authorization-code-grant-type"><strong>8.1</strong><span>OpenID Connect Authorization code Flow</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-id-token-validator"><a href="#id-token-validator"><strong>7.1.2</strong><span>ID Token Validator</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-authorization-code-controller"><a href="#authorization-code-controller"><strong>8.1.1</strong><span>Authorization Code Controller</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-failure-handler"><a href="#failure-handler"><strong>7.1.3</strong><span>Failure Handler</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-id-token-validator"><a href="#id-token-validator"><strong>8.1.2</strong><span>ID Token Validator</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-successful-handler"><a href="#successful-handler"><strong>7.1.4</strong><span>Successful ID Token Handler</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-failure-handler"><a href="#failure-handler"><strong>8.1.3</strong><span>Failure Handler</span></a></div>
         
-        <div class="toc-item" style="margin-left:20px" id="toc-item-cookie-successful-handler"><a href="#cookie-successful-handler"><strong>7.1.5</strong><span>Cookie Successful ID Token Handler</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-successful-handler"><a href="#successful-handler"><strong>8.1.4</strong><span>Successful ID Token Handler</span></a></div>
         
-        <div class="toc-item" style="margin-left:10px" id="toc-item-password-grant-type"><a href="#password-grant-type"><strong>7.2</strong><span>Password Grant Type</span></a></div>
+        <div class="toc-item" style="margin-left:20px" id="toc-item-cookie-successful-handler"><a href="#cookie-successful-handler"><strong>8.1.5</strong><span>Cookie Successful ID Token Handler</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-password-grant-type"><a href="#password-grant-type"><strong>8.2</strong><span>Password Grant Type</span></a></div>
         
         </div>
     </div>
@@ -190,7 +194,28 @@
 </div>
 
 
-<h1 id="oauth2">2 OAuth 2.0</h1>
+<h1 id="examples">2 Examples</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/examples.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>We provide several tutorials for the most common providers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://guides.micronaut.io/micronaut-oauth2-okta/guide/index.html">Authorization Code grant type flow with Micronaut and Okta</a>.</p>
+</li>
+</ul>
+</div>
+
+
+<h1 id="oauth2">3 OAuth 2.0</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/oauth2.adoc"'>
@@ -262,7 +287,7 @@
 </div>
 
 
-<h1 id="openid">3 Open ID Connect</h1>
+<h1 id="openid">4 Open ID Connect</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/openid.adoc"'>
@@ -283,7 +308,7 @@
 </div>
 
 
-<h1 id="service-discovery">4 Service Discovery</h1>
+<h1 id="service-discovery">5 Service Discovery</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery.adoc"'>
@@ -306,7 +331,7 @@
 </div>
 
 
-<h2 id="service-discovery-okta">4.1 Service Discovery with OKTA</h2>
+<h2 id="service-discovery-okta">5.1 Service Discovery with OKTA</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-okta.adoc"'>
@@ -343,7 +368,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-cognito">4.2 Service Discovery with AWS Cognito</h2>
+<h2 id="service-discovery-cognito">5.2 Service Discovery with AWS Cognito</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-cognito.adoc"'>
@@ -371,7 +396,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-auth0">4.3 Service Discovery with Auth0</h2>
+<h2 id="service-discovery-auth0">5.3 Service Discovery with Auth0</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-auth0.adoc"'>
@@ -407,7 +432,7 @@ export OKTA_AUTHSERVERID=default</code></pre>
 </div>
 
 
-<h2 id="service-discovery-keycloak">4.4 Service Discovery with Keycloak</h2>
+<h2 id="service-discovery-keycloak">5.4 Service Discovery with Keycloak</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/service-discovery/service-discovery-keycloak.adoc"'>
@@ -438,7 +463,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h1 id="endpoints">5 Endpoints</h1>
+<h1 id="endpoints">6 Endpoints</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints.adoc"'>
@@ -450,7 +475,7 @@ export KEYCLOAK_REALM=master</code></pre>
 
 
 
-<h2 id="authorization">5.1 Authorization Endpoint</h2>
+<h2 id="authorization">6.1 Authorization Endpoint</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization.adoc"'>
@@ -535,7 +560,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="state">5.1.1 State</h2>
+<h2 id="state">6.1.1 State</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/state.adoc"'>
@@ -562,7 +587,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="idTokenHint">5.1.2 IDToken Hint</h2>
+<h2 id="idTokenHint">6.1.2 IDToken Hint</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/idTokenHint.adoc"'>
@@ -586,7 +611,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="loginHint">5.1.3 Login Hint</h2>
+<h2 id="loginHint">6.1.3 Login Hint</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/loginHint.adoc"'>
@@ -610,7 +635,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="nonce">5.1.4 Nonce</h2>
+<h2 id="nonce">6.1.4 Nonce</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/authorization/nonce.adoc"'>
@@ -634,7 +659,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="token">5.2 Token Endpoint</h2>
+<h2 id="token">6.2 Token Endpoint</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/token.adoc"'>
@@ -694,7 +719,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="endsession">5.3 End Session Endpoint</h2>
+<h2 id="endsession">6.3 End Session Endpoint</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/endsession.adoc"'>
@@ -764,7 +789,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="logoutController">5.3.1 Logout Controller</h2>
+<h2 id="logoutController">6.3.1 Logout Controller</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/endsession/logoutController.adoc"'>
@@ -804,7 +829,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="logouturl">5.3.2 Logout URL</h2>
+<h2 id="logouturl">6.3.2 Logout URL</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/endpoints/endsession/logouturl.adoc"'>
@@ -862,7 +887,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h1 id="providerSpecificBeans">6 Provider Specific Beans</h1>
+<h1 id="providerSpecificBeans">7 Provider Specific Beans</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/providerSpecificBeans.adoc"'>
@@ -931,7 +956,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h1 id="flows">7 Flows</h1>
+<h1 id="flows">8 Flows</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows.adoc"'>
@@ -943,7 +968,7 @@ export KEYCLOAK_REALM=master</code></pre>
 
 
 
-<h2 id="authorization-code-grant-type">7.1 OpenID Connect Authorization code Flow</h2>
+<h2 id="authorization-code-grant-type">8.1 OpenID Connect Authorization code Flow</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type.adoc"'>
@@ -1007,7 +1032,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </div>
 
 
-<h2 id="authorization-code-controller">7.1.1 Authorization Code Controller</h2>
+<h2 id="authorization-code-controller">8.1.1 Authorization Code Controller</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/authorization-code-controller.adoc"'>
@@ -1055,7 +1080,7 @@ export KEYCLOAK_REALM=master</code></pre>
 </table>
 
 
-<h2 id="id-token-validator">7.1.2 ID Token Validator</h2>
+<h2 id="id-token-validator">8.1.2 ID Token Validator</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/id-token-validator.adoc"'>
@@ -1102,7 +1127,7 @@ and:</p>
 </div>
 
 
-<h2 id="failure-handler">7.1.3 Failure Handler</h2>
+<h2 id="failure-handler">8.1.3 Failure Handler</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/failure-handler.adoc"'>
@@ -1119,7 +1144,7 @@ and:</p>
 </div>
 
 
-<h2 id="successful-handler">7.1.4 Successful ID Token Handler</h2>
+<h2 id="successful-handler">8.1.4 Successful ID Token Handler</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/successful-handler.adoc"'>
@@ -1134,7 +1159,7 @@ and:</p>
 </div>
 
 
-<h2 id="cookie-successful-handler">7.1.5 Cookie Successful ID Token Handler</h2>
+<h2 id="cookie-successful-handler">8.1.5 Cookie Successful ID Token Handler</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/cookie-successful-handler.adoc"'>
@@ -1206,7 +1231,7 @@ and:</p>
 </table>
 
 
-<h2 id="password-grant-type">7.2 Password Grant Type</h2>
+<h2 id="password-grant-type">8.2 Password Grant Type</h2>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/password-grant-type.adoc"'>

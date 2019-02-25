@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>8.1.4 Successful ID Token Handler 1.0.0.BUILD-SNAPSHOT</title>
+    <title>2 Examples 1.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -25,32 +25,32 @@ function addJsClass() {
         <ul>
             <li>
                 <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
-                    <a href="../../guide/index.html" class="button">Table of contents</a>
+                    <a href="../guide/index.html" class="button">Table of contents</a>
 
                     <div id="nav-summary-childs" style="display:none;">
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/installation.html"><strong>1</strong><span>Installation</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>1</strong><span>Installation</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/examples.html"><strong>2</strong><span>Examples</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/examples.html"><strong>2</strong><span>Examples</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/oauth2.html"><strong>3</strong><span>OAuth 2.0</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/oauth2.html"><strong>3</strong><span>OAuth 2.0</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/openid.html"><strong>4</strong><span>Open ID Connect</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/openid.html"><strong>4</strong><span>Open ID Connect</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/service-discovery.html"><strong>5</strong><span>Service Discovery</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/service-discovery.html"><strong>5</strong><span>Service Discovery</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/endpoints.html"><strong>6</strong><span>Endpoints</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/endpoints.html"><strong>6</strong><span>Endpoints</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/providerSpecificBeans.html"><strong>7</strong><span>Provider Specific Beans</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/providerSpecificBeans.html"><strong>7</strong><span>Provider Specific Beans</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../../guide/flows.html"><strong>8</strong><span>Flows</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/flows.html"><strong>8</strong><span>Flows</span></a>
                         </div>
                         
                     </div>
@@ -71,16 +71,18 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../../guide/providerSpecificBeans.html">&lt;&lt; <strong>7</strong><span>Provider Specific Beans</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
+                    <div class="toc-item next-right"><a href="../guide/oauth2.html"><strong>3</strong><span>OAuth 2.0</span> >></a></div>
+                
 
 
                 <div class="project">
-                    <h1>8.1.4 Successful ID Token Handler</h1>
+                    <h1>2 Examples</h1>
 
                     <p><strong>Version:</strong> 1.0.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -89,24 +91,32 @@ function addJsClass() {
 
                 
 
-<h2 id="successful-handler">8.1.4 Successful ID Token Handler</h2>
+<h1 id="examples">2 Examples</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/flows/authorization-code-grant-type/successful-handler.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-oauth2/edit/master/src/main/docs/guide/examples.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
 <div class="paragraph">
-<p>Once the authentication has been validated, it is to time handle the ID Token. Provide a bean of type:
-<a href="../api/io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html">SuccessfulIdTokenAccessTokenResponseHandler</a></p>
+<p>We provide several tutorials for the most common providers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://guides.micronaut.io/micronaut-oauth2-okta/guide/index.html">Authorization Code grant type flow with Micronaut and Okta</a>.</p>
+</li>
+</ul>
 </div>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../../guide/providerSpecificBeans.html">&lt;&lt; <strong>7</strong><span>Provider Specific Beans</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../guide/oauth2.html"><strong>3</strong><span>OAuth 2.0</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>
@@ -114,7 +124,7 @@ function addJsClass() {
         <td id="col2">
             <div class="local clearfix">
                 <div class="local-title">
-                    <a href="../../guide/index.html" target="mainFrame">Quick Reference</a>
+                    <a href="../guide/index.html" target="mainFrame">Quick Reference</a>
                     <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
                 </div>
                 <div class="menu">
