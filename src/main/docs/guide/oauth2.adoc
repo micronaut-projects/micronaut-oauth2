@@ -6,7 +6,7 @@ image::aws-cognito-appclient.png[]
 
 The previous image shows how to get an client id and client secret with AWS Cognito. Please, note you can obtain similar credentials with other providers.
 
-Once, you get the `client_id` and `client_secret` configure the oauth configuration:
+Once, you get the `client_id` and `client_secret` configure the OAuth 2.0 configuration:
 
 include::{includedir}configurationProperties/io.micronaut.security.oauth2.configuration.OauthConfigurationProperties.adoc[]
 
