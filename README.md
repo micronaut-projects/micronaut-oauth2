@@ -1,6 +1,6 @@
 # Micronaut OAuth 2.0
 
-This project includes integration between [Micronaut](http://micronaut.io) and Oauth 2.
+This project includes integration between [Micronaut](http://micronaut.io) and OAuth 2.0
 
 ## Documentation
 
