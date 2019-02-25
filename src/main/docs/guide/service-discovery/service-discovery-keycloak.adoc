@@ -6,7 +6,7 @@ micronaut:
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration'
+      issuer: '${KEYCLOACK_DOMAIN}/auth/realms/${KEYCLOAK_REALM}'
 ----
 
 You will need to define the environment variable `KEYCLOACK_DOMAIN` and `KEYCLOAK_REALM` for example: 

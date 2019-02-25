@@ -6,7 +6,7 @@ micronaut:
     oauth2:
       client-secret: '${OAUTH_CLIENT_SECRET}'
       client-id: '${OAUTH_CLIENT_ID}'
-      openid-configuration: '${AUTH0_DOMAINNAME}/.well-known/openid-configuration'
+      issuer: '${AUTH0_DOMAINNAME}'
 ----
 
 You will need to define the environment variable `AUTH0_DOMAINNAME`. 
