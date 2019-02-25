@@ -1,7 +1,7 @@
 installation:
   title: Installation
 oauth2:
-  title: Oauth 2
+  title: OAuth 2.0
 openid:
   title: Open ID Connect  
 service-discovery:
