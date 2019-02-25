@@ -1,4 +1,4 @@
-This project eases Oauth 2.0 integration with Micronaut.
+This project eases OAuth 2.0 integration with Micronaut.
 
 dependency:micronaut-oauth2[version="{version}",groupId="io.micronaut.configuration"]
 
