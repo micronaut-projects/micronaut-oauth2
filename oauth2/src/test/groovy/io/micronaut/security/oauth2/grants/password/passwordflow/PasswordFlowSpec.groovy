@@ -46,6 +46,7 @@ class PasswordFlowSpec extends Specification {
         Map<String, Object> conf = [
                 'spec.name': 'passwordFlow',
                 'micronaut.security.enabled': true,
+                'micronaut.security.oauth2.enabled': true,
                 'micronaut.security.oauth2.client-id': 'XXXX',
                 'micronaut.security.oauth2.client-secret': 'YYYY',
                 'micronaut.security.oauth2.issuer': mockHttpServerUrl,

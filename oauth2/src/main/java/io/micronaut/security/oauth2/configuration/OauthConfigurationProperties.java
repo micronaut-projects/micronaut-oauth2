@@ -18,6 +18,7 @@ package io.micronaut.security.oauth2.configuration;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.core.util.StringUtils;
 import io.micronaut.security.config.SecurityConfigurationProperties;
 
 import javax.annotation.Nonnull;
@@ -29,7 +30,7 @@ import javax.annotation.Nullable;
  * @author Sergio del Amo
  * @since 1.0.0
  */
-@Requires(property = OauthConfigurationProperties.PREFIX + ".client-id")
+@Requires(property = OauthConfigurationProperties.PREFIX + ".enabled", value = StringUtils.TRUE)
 @ConfigurationProperties(OauthConfigurationProperties.PREFIX)
 public class OauthConfigurationProperties implements OauthConfiguration {
     public static final String PREFIX = SecurityConfigurationProperties.PREFIX + ".oauth2";

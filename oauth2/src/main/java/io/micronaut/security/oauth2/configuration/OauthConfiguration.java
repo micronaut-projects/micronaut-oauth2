@@ -40,4 +40,9 @@ public interface OauthConfiguration {
      */
     @Nullable
     String getClientSecret();
+
+    /**
+     * @return Whether the component is enabled
+     */
+    default boolean isEnabled() { return false; }
 }
