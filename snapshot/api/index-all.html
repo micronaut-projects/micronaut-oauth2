@@ -90,6 +90,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenArgumentBinder.html#argumentType--">argumentType()</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenArgumentBinder.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenArgumentBinder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/grants/AsMap.html" title="interface in io.micronaut.security.oauth2.grants"><span class="typeNameLink">AsMap</span></a> - Interface in <a href="io/micronaut/security/oauth2/grants/package-summary.html">io.micronaut.security.oauth2.grants</a></dt>
+<dd>
+<div class="block">Indicates a class can be returned as a Map.</div>
+</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/idtoken/validation/AudienceJwtClaimsValidator.html" title="class in io.micronaut.security.oauth2.openid.idtoken.validation"><span class="typeNameLink">AudienceJwtClaimsValidator</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/idtoken/validation/package-summary.html">io.micronaut.security.oauth2.openid.idtoken.validation</a></dt>
 <dd>
 <div class="block">ID Token Audience validator.</div>
@@ -387,6 +391,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html#DEFAULT_DESCRIPTION">DEFAULT_DESCRIPTION</a></span> - Static variable in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">DeniedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html#DEFAULT_ENABLED">DEFAULT_ENABLED</a></span> - Static variable in class io.micronaut.security.oauth2.configuration.<a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html" title="class in io.micronaut.security.oauth2.configuration">OauthConfigurationProperties</a></dt>
+<dd>
+<div class="block">The default enable value.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_ENABLED">DEFAULT_ENABLED</a></span> - Static variable in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfigurationProperties</a></dt>
 <dd>
 <div class="block">The default enable value.</div>
@@ -1799,6 +1807,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html#isEmailVerified--">isEmailVerified()</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAuthenticationAdapter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.configuration.<a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html" title="class in io.micronaut.security.oauth2.configuration">OauthConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.grants.password.<a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html" title="class in io.micronaut.security.oauth2.grants.password">GrantTypePasswordRequestProviderConfigurationProperties</a></dt>
@@ -1859,7 +1869,7 @@
 <dd>
 <div class="block"><code>Factory</code> to create <code>JwksSignature</code> for an OpenID Configuration.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html#JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-">JwksSignatureFactory(OpenIdConfiguration, JwksSignatureFactoryConfiguration)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html" title="class in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactory</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html#JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-io.micronaut.security.token.jwt.signature.jwks.JwkValidator-">JwksSignatureFactory(OpenIdConfiguration, JwksSignatureFactoryConfiguration, JwkValidator)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html" title="class in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration"><span class="typeNameLink">JwksSignatureFactoryConfiguration</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/configuration/package-summary.html">io.micronaut.security.oauth2.openid.configuration</a></dt>
 <dd>
@@ -1901,6 +1911,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html#KEY_GRANT_TYPE">KEY_GRANT_TYPE</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html" title="class in io.micronaut.security.oauth2.grants">AuthorizationCodeGrant</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html#KEY_GRANT_TYPE">KEY_GRANT_TYPE</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html" title="class in io.micronaut.security.oauth2.grants">ClientCredentialsGrant</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/PasswordGrant.html#KEY_GRANT_TYPE">KEY_GRANT_TYPE</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/PasswordGrant.html" title="class in io.micronaut.security.oauth2.grants">PasswordGrant</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/PasswordGrant.html#KEY_PASSWORD">KEY_PASSWORD</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/PasswordGrant.html" title="class in io.micronaut.security.oauth2.grants">PasswordGrant</a></dt>
@@ -1908,6 +1920,8 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html#KEY_REDIRECT_URI">KEY_REDIRECT_URI</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html" title="class in io.micronaut.security.oauth2.grants">AuthorizationCodeGrant</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/PasswordGrant.html#KEY_SCOPE">KEY_SCOPE</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/PasswordGrant.html" title="class in io.micronaut.security.oauth2.grants">PasswordGrant</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html#KEY_SCOPES">KEY_SCOPES</a></span> - Static variable in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html" title="class in io.micronaut.security.oauth2.grants">ClientCredentialsGrant</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html#KEY_STATE">KEY_STATE</a></span> - Static variable in interface io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></dt>
 <dd>&nbsp;</dd>
@@ -2377,6 +2391,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setDisplayValuesSupported-java.util.List-">setDisplayValuesSupported(List&lt;String&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.security.oauth2.configuration.<a href="io/micronaut/security/oauth2/configuration/OauthConfigurationProperties.html" title="class in io.micronaut.security.oauth2.configuration">OauthConfigurationProperties</a></dt>
+<dd>
+<div class="block">Sets whether the <a href="io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration"><code>OauthConfiguration</code></a> is enabled.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfigurationProperties</a></dt>
 <dd>
 <div class="block">Sets whether the <a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html" title="class in io.micronaut.security.oauth2.endpoints"><code>AuthorizationCodeController</code></a> is enabled.</div>
@@ -2682,7 +2700,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointNotNullCondition.html#TokenEndpointNotNullCondition--">TokenEndpointNotNullCondition()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.token.<a href="io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointNotNullCondition.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointNotNullCondition</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AsMap.html#toMap--">toMap()</a></span> - Method in interface io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AsMap.html" title="interface in io.micronaut.security.oauth2.grants">AsMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html#toMap--">toMap()</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html" title="class in io.micronaut.security.oauth2.grants">AuthorizationCodeGrant</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html#toMap--">toMap()</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/ClientCredentialsGrant.html" title="class in io.micronaut.security.oauth2.grants">ClientCredentialsGrant</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/PasswordGrant.html#toMap--">toMap()</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/PasswordGrant.html" title="class in io.micronaut.security.oauth2.grants">PasswordGrant</a></dt>
 <dd>&nbsp;</dd>

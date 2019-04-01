@@ -136,8 +136,9 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html#JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-">JwksSignatureFactory</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
-                    <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfiguration</a>&nbsp;jwksSignatureFactoryConfiguration)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html#JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-io.micronaut.security.token.jwt.signature.jwks.JwkValidator-">JwksSignatureFactory</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
+                    <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfiguration</a>&nbsp;jwksSignatureFactoryConfiguration,
+                    io.micronaut.security.token.jwt.signature.jwks.JwkValidator&nbsp;jwkValidator)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -180,18 +181,20 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-">
+<a name="JwksSignatureFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.JwksSignatureFactoryConfiguration-io.micronaut.security.token.jwt.signature.jwks.JwkValidator-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JwksSignatureFactory</h4>
 <pre>public&nbsp;JwksSignatureFactory(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
-                            <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfiguration</a>&nbsp;jwksSignatureFactoryConfiguration)</pre>
+                            <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfiguration</a>&nbsp;jwksSignatureFactoryConfiguration,
+                            io.micronaut.security.token.jwt.signature.jwks.JwkValidator&nbsp;jwkValidator)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>jwksSignatureFactoryConfiguration</code> - JWKS Signature Factory Configuration</dd>
 <dd><code>openIdConfiguration</code> - Open ID Configuration</dd>
+<dd><code>jwkValidator</code> - JSON Web Key Validator</dd>
 </dl>
 </li>
 </ul>
