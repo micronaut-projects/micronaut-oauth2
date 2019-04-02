@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/EndpointUrl.html" title="interface in io.micronaut.security.oauth2.openid.endpoints">EndpointUrl</a>, <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></dd>
+<dd><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/Endpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints">Endpoint</a>, <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a></dd>
 </dl>
 <hr>
 <br>
@@ -116,7 +116,7 @@ var activeTableTab = "activeTableTab";
  @Singleton
 public class <span class="typeNameLabel">Auth0EndSessionEndpointConfiguration</span>
 extends java.lang.Object
-implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></pre>
+implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a></pre>
 <div class="block">Provides specific configuration to logout from Auth0.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -219,7 +219,7 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
 <dd><code>domainName</code> - AWS Cognito User's pool domain Name</dd>
 <dd><code>auth0Version</code> - Auth0 api version</dd>
 <dd><code>logoutPath</code> - <code>LogoutController</code> path.</dd>
-<dd><code>endSessionEndpointConfigurationProperties</code> - Default <code>ConfigurationProperties</code> implementation of <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionEndpointConfiguration</code></a>.</dd>
+<dd><code>endSessionEndpointConfigurationProperties</code> - Default <code>ConfigurationProperties</code> implementation of <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionEndpoint</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -241,7 +241,7 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoi
 public&nbsp;java.util.List&lt;<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionParameter</a>&gt;&nbsp;getParameters()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getParameters--">getParameters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
+<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html#getParameters--">getParameters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>End-session endpoint parameters.</dd>
 </dl>
@@ -257,7 +257,7 @@ public&nbsp;java.util.List&lt;<a href="../../../../../../io/micronaut/security/o
 public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html#getRedirectUri--">getRedirectUri</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a></code></dd>
+<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html#getRedirectUri--">getRedirectUri</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Redirection URI where the user is sent once the remote authorization server ends the session.</dd>
 </dl>
@@ -273,7 +273,7 @@ public&nbsp;java.lang.String&nbsp;getRedirectUri()</pre>
 public&nbsp;java.lang.String&nbsp;getUrl()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/EndpointUrl.html#getUrl--">getUrl</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/EndpointUrl.html" title="interface in io.micronaut.security.oauth2.openid.endpoints">EndpointUrl</a></code></dd>
+<dd><code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/Endpoint.html#getUrl--">getUrl</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/Endpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints">Endpoint</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Endpoint's url.</dd>
 </dl>

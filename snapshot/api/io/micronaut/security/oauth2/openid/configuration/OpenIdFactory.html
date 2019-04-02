@@ -107,8 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>@Requires(beans={<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpointConfiguration.class</a>})
- @Factory
+<pre>@Factory
 public class <span class="typeNameLabel">OpenIdFactory</span>
 extends java.lang.Object</pre>
 <div class="block">Factory which creates beans of type Creates a HTTP Declarative client to communicate with an OpenID connect Discovery endpoint.
@@ -137,15 +136,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#OpenIdFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfiguration-">OpenIdFactory</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration</a>&nbsp;openIdProviderConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfiguration</a>&nbsp;authorizationEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a>&nbsp;endSessionEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpointConfiguration</a>&nbsp;introspectionEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpointConfiguration</a>&nbsp;registrationEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpointConfiguration</a>&nbsp;revocationEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration</a>&nbsp;tokenEndpointConfiguration,
-             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpointConfiguration</a>&nbsp;userInfoEndpointConfiguration)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#OpenIdFactory--">OpenIdFactory</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -169,11 +160,19 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#openIdProviderMetadata--">openIdProviderMetadata</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#openIdProviderMetadata-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpoint-io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpoint-io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpoint-io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpoint-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpoint-io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpoint-">openIdProviderMetadata</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration</a>&nbsp;openIdProviderConfiguration,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpoint</a>&nbsp;authorizationEndpoint,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpoint</a>&nbsp;introspectionEndpoint,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpoint</a>&nbsp;registrationEndpoint,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpoint</a>&nbsp;revocationEndpoint,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint</a>&nbsp;tokenEndpoint,
+                      <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpoint</a>&nbsp;userInfoEndpoint)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#openIdProviderMetadataSession--">openIdProviderMetadataSession</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdFactory.html#openIdProviderMetadataSession-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpoint-">openIdProviderMetadataSession</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
+                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a>&nbsp;endSessionEndpoint)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -197,34 +196,13 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="OpenIdFactory-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpointConfiguration-">
+<a name="OpenIdFactory--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>OpenIdFactory</h4>
-<pre>public&nbsp;OpenIdFactory(@Nullable
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration</a>&nbsp;openIdProviderConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfiguration</a>&nbsp;authorizationEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a>&nbsp;endSessionEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpointConfiguration</a>&nbsp;introspectionEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpointConfiguration</a>&nbsp;registrationEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpointConfiguration</a>&nbsp;revocationEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration</a>&nbsp;tokenEndpointConfiguration,
-                     <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpointConfiguration</a>&nbsp;userInfoEndpointConfiguration)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>openIdConfiguration</code> - OpenID configuration</dd>
-<dd><code>openIdProviderConfiguration</code> - Open ID Provider configuration</dd>
-<dd><code>authorizationEndpointConfiguration</code> - Authorization endpoint configuration</dd>
-<dd><code>endSessionEndpointConfiguration</code> - End-session endpoint configuration</dd>
-<dd><code>introspectionEndpointConfiguration</code> - Introspection endpoint configuration</dd>
-<dd><code>registrationEndpointConfiguration</code> - Registration endpoint configuration</dd>
-<dd><code>revocationEndpointConfiguration</code> - Revocation endpoint configuration</dd>
-<dd><code>tokenEndpointConfiguration</code> - Token endpoint configuration</dd>
-<dd><code>userInfoEndpointConfiguration</code> - User Info endpoint configuration</dd>
-</dl>
+<pre>public&nbsp;OpenIdFactory()</pre>
 </li>
 </ul>
 </li>
@@ -235,31 +213,53 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="openIdProviderMetadataSession--">
+<a name="openIdProviderMetadataSession-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpoint-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>openIdProviderMetadataSession</h4>
-<pre>@Bean
- @Singleton
-public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession()</pre>
+<pre>@Singleton
+ @Requires(beans=<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint.class</a>)
+public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession(@Nullable
+                                                                                                                         <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
+                                                                                                                         <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a>&nbsp;endSessionEndpoint)</pre>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>openIdConfiguration</code> - OpenID configuration</dd>
+<dd><code>endSessionEndpoint</code> - End-session endpoint configuration</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a bean of type <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration"><code>OpenIdProviderMetadataSession</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="openIdProviderMetadata--">
+<a name="openIdProviderMetadata-io.micronaut.security.oauth2.openid.configuration.OpenIdConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpoint-io.micronaut.security.oauth2.openid.endpoints.introspection.IntrospectionEndpoint-io.micronaut.security.oauth2.openid.endpoints.registration.RegistrationEndpoint-io.micronaut.security.oauth2.openid.endpoints.revocation.RevocationEndpoint-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpoint-io.micronaut.security.oauth2.openid.endpoints.userinfo.UserInfoEndpoint-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>openIdProviderMetadata</h4>
-<pre>@Bean
+<pre>@Requires(beans={<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpoint.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpoint.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpoint.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpoint.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint.class</a>,<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpoint.class</a>})
  @Singleton
-public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata()</pre>
+public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata(@Nullable
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a>&nbsp;openIdConfiguration,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfiguration</a>&nbsp;openIdProviderConfiguration,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpoint</a>&nbsp;authorizationEndpoint,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/introspection/IntrospectionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.introspection">IntrospectionEndpoint</a>&nbsp;introspectionEndpoint,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/registration/RegistrationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.registration">RegistrationEndpoint</a>&nbsp;registrationEndpoint,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation">RevocationEndpoint</a>&nbsp;revocationEndpoint,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint</a>&nbsp;tokenEndpoint,
+                                                                                                                                                                                                                                                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/userinfo/UserInfoEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.userinfo">UserInfoEndpoint</a>&nbsp;userInfoEndpoint)</pre>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>openIdConfiguration</code> - OpenID configuration</dd>
+<dd><code>openIdProviderConfiguration</code> - Open ID Provider configuration</dd>
+<dd><code>authorizationEndpoint</code> - Authorization endpoint configuration</dd>
+<dd><code>introspectionEndpoint</code> - Introspection endpoint configuration</dd>
+<dd><code>registrationEndpoint</code> - Registration endpoint configuration</dd>
+<dd><code>revocationEndpoint</code> - Revocation endpoint configuration</dd>
+<dd><code>tokenEndpoint</code> - Token endpoint configuration</dd>
+<dd><code>userInfoEndpoint</code> - User Info endpoint configuration</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a bean of type <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration"><code>OpenIdProviderMetadata</code></a></dd>
 </dl>
@@ -271,10 +271,9 @@ public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/confi
 <ul class="blockListLast">
 <li class="blockList">
 <h4>openIdEndpoints</h4>
-<pre>@Bean
- @Singleton
+<pre>@Singleton
 public&nbsp;<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/OpenIdEndpoints.html" title="interface in io.micronaut.security.oauth2.openid.endpoints">OpenIdEndpoints</a>&nbsp;openIdEndpoints(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata,
-                                                         <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession)</pre>
+                                                  <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>openIdProviderMetadata</code> - Open ID Provider metadata</dd>

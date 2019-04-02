@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>@Requires(beans={<a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata.class</a>,<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration.class</a>,<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration.class</a>}) @Requires(condition=<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointNotNullCondition.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointNotNullCondition.class</a>) @Requires(condition=<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointGrantTypeAuthorizationCodeCondition.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointGrantTypeAuthorizationCodeCondition.class</a>)
+<pre>@Requires(beans={<a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata.class</a>,<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint.class</a>,<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration.class</a>}) @Requires(condition=<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointNotNullCondition.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointNotNullCondition.class</a>) @Requires(condition=<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointGrantTypeAuthorizationCodeCondition.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointGrantTypeAuthorizationCodeCondition.class</a>)
  @Singleton
 public class <span class="typeNameLabel">DefaultAuthorizationCodeGrantRequestGenerator</span>
 extends java.lang.Object
@@ -141,9 +141,9 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html#DefaultAuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">DefaultAuthorizationCodeGrantRequestGenerator</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration</a>&nbsp;oauthConfiguration,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html#DefaultAuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpoint-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">DefaultAuthorizationCodeGrantRequestGenerator</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration</a>&nbsp;oauthConfiguration,
                                              <a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata,
-                                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration</a>&nbsp;tokenEndpointConfiguration,
+                                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint</a>&nbsp;tokenEndpoint,
                                              <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints">DefaultRedirectUrlProvider</a>&nbsp;defaultRedirectUrlProvider)</code>&nbsp;</td>
 </tr>
 </table>
@@ -195,7 +195,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DefaultAuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpointConfiguration-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">
+<a name="DefaultAuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.token.TokenEndpoint-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -206,14 +206,14 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
                                                      @Nonnull
                                                      <a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata,
                                                      @Nonnull
-                                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpointConfiguration</a>&nbsp;tokenEndpointConfiguration,
+                                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/token/TokenEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.token">TokenEndpoint</a>&nbsp;tokenEndpoint,
                                                      @Nonnull
                                                      <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints">DefaultRedirectUrlProvider</a>&nbsp;defaultRedirectUrlProvider)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>oauthConfiguration</code> - OAuth 2.0 Configuration</dd>
 <dd><code>openIdProviderMetadata</code> - OpenID provider metadata.</dd>
-<dd><code>tokenEndpointConfiguration</code> - Token Endpoint configuration</dd>
+<dd><code>tokenEndpoint</code> - Token Endpoint configuration</dd>
 <dd><code>defaultRedirectUrlProvider</code> - The Default Redirect Url Provider.</dd>
 </dl>
 </li>

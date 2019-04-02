@@ -115,7 +115,7 @@ var activeTableTab = "activeTableTab";
 extends java.lang.Object
 implements <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a></pre>
 <div class="block">Creates an <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration"><code>OpenIdProviderMetadataSession</code></a> by merging together an existing <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration"><code>OpenIdProviderMetadataSession</code></a>, probably from a
- fetched from remote identity provider, with the end-session endpoint configuration (<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionEndpointConfiguration</code></a>.</div>
+ fetched from remote identity provider, with the end-session endpoint configuration (<a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionEndpoint</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.0.0</dd>
@@ -140,8 +140,8 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/config
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSessionAdapter.html#OpenIdProviderMetadataSessionAdapter-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadataSession-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfiguration-">OpenIdProviderMetadataSessionAdapter</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession,
-                                    <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a>&nbsp;endSessionEndpointConfiguration)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSessionAdapter.html#OpenIdProviderMetadataSessionAdapter-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadataSession-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpoint-">OpenIdProviderMetadataSessionAdapter</a></span>(<a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession,
+                                    <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a>&nbsp;endSessionEndpoint)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -192,7 +192,7 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/config
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="OpenIdProviderMetadataSessionAdapter-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadataSession-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpointConfiguration-">
+<a name="OpenIdProviderMetadataSessionAdapter-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadataSession-io.micronaut.security.oauth2.openid.endpoints.endsession.EndSessionEndpoint-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -201,11 +201,11 @@ implements <a href="../../../../../../io/micronaut/security/oauth2/openid/config
 <pre>public&nbsp;OpenIdProviderMetadataSessionAdapter(@Nullable
                                             <a href="../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataSession.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataSession</a>&nbsp;openIdProviderMetadataSession,
                                             @Nonnull
-                                            <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfiguration</a>&nbsp;endSessionEndpointConfiguration)</pre>
+                                            <a href="../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a>&nbsp;endSessionEndpoint)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>openIdProviderMetadataSession</code> - Open Id Provider Metadata Session.</dd>
-<dd><code>endSessionEndpointConfiguration</code> - End-Session Endpoint Configuration</dd>
+<dd><code>endSessionEndpoint</code> - End-Session Endpoint Configuration</dd>
 </dl>
 </li>
 </ul>
