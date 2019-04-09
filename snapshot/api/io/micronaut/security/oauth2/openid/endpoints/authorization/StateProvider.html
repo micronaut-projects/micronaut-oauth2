@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
+var methods = {"i0":6,"i1":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/ResponseType.html" title="enum in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -134,6 +134,10 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html#deserializeState-java.lang.String-">deserializeState</a></span>(java.lang.String&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html#generateState-io.micronaut.http.HttpRequest-">generateState</a></span>(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</code>&nbsp;</td>
 </tr>
@@ -155,7 +159,7 @@ var activeTableTab = "activeTableTab";
 <a name="generateState-io.micronaut.http.HttpRequest-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>generateState</h4>
 <pre>@Nullable
@@ -165,6 +169,22 @@ java.lang.String&nbsp;generateState(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;
 <dd><code>request</code> - the original request prior redirect.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A state parameter. A opaque value used to maintain state between the request and the callback.</dd>
+</dl>
+</li>
+</ul>
+<a name="deserializeState-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>deserializeState</h4>
+<pre>@Nullable
+java.lang.Object&nbsp;deserializeState(java.lang.String&nbsp;state)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>state</code> - Serialized representation of <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>State</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A deserialized <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>State</code></a> object.</dd>
 </dl>
 </li>
 </ul>
@@ -195,7 +215,7 @@ java.lang.String&nbsp;generateState(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/ResponseType.html" title="enum in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

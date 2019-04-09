@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
+var methods = {"i0":6,"i1":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -135,8 +135,12 @@ extends io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Tog
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getLoginSuccessTargetUrl--">getLoginSuccessTargetUrl</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.Boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.util.Optional&lt;java.net.URI&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getDefaultRedirectUri--">getDefaultRedirectUri</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -167,16 +171,29 @@ extends io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Tog
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getLoginSuccessTargetUrl--">
+<a name="getDefaultRedirectUri--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultRedirectUri</h4>
+<pre>java.util.Optional&lt;java.net.URI&gt;&nbsp;getDefaultRedirectUri()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>String to be parsed into a URI which represents where the user is redirected to after a successful login.</dd>
+</dl>
+</li>
+</ul>
+<a name="getAlwaysRedirectDefault--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getLoginSuccessTargetUrl</h4>
-<pre>java.lang.String&nbsp;getLoginSuccessTargetUrl()</pre>
+<h4>getAlwaysRedirectDefault</h4>
+<pre>java.lang.Boolean&nbsp;getAlwaysRedirectDefault()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>String to be parsed into a URI which represents where the user is redirected to after a successful login.</dd>
+<dd>True if the default redirect URI should always be used.</dd>
 </dl>
 </li>
 </ul>

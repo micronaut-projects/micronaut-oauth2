@@ -125,13 +125,19 @@ function addJsClass() {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.endpoints.authcode.controller-path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">if the callback endpoint is /authcode/cb controller path will be /authcode.
- Default value ({@value #DEFAULT_CONTROLLERPATH}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The authorization controller path. Default value ({@value #DEFAULT_CONTROLLERPATH}).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.endpoints.authcode.action-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.endpoints.authcode.callback-path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">if the callback endpoint is /authcode/cb controller action path will be /cb . Default value ({@value #DEFAULT_ACTIONPATH}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the path used by OAuth providers to callback the application. The value is appended
+ to the controller path value. Default value ({@value #DEFAULT_CALLBACK}).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.endpoints.authcode.login-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the path used to trigger a redirect to login with OAuth. The value is appended to
+ the controller path value. Default value ({@value #DEFAULT_LOGIN}).</p></td>
 </tr>
 </tbody>
 </table>

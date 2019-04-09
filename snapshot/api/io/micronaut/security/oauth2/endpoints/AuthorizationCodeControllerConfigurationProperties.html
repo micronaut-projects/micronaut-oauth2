@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -142,8 +142,8 @@ implements <a href="../../../../../io/micronaut/security/oauth2/endpoints/Author
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_ACTIONPATH">DEFAULT_ACTIONPATH</a></span></code>
-<div class="block">The default code path.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_CALLBACK">DEFAULT_CALLBACK</a></span></code>
+<div class="block">The default callback path.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -159,6 +159,12 @@ implements <a href="../../../../../io/micronaut/security/oauth2/endpoints/Author
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_LOGIN">DEFAULT_LOGIN</a></span></code>
+<div class="block">The default login path.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#PREFIX">PREFIX</a></span></code>&nbsp;</td>
 </tr>
@@ -196,36 +202,48 @@ implements <a href="../../../../../io/micronaut/security/oauth2/endpoints/Author
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#getActionPath--">getActionPath</a></span>()</code>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb .</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#getCallbackPath--">getCallbackPath</a></span>()</code>
+<div class="block">The path to respond to callbacks.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#getControllerPath--">getControllerPath</a></span>()</code>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode .</div>
+<div class="block">The base path the authorization controller responds to.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#getLoginPath--">getLoginPath</a></span>()</code>
+<div class="block">The path to listen for login requests.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#isEnabled--">isEnabled</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setActionPath-java.lang.String-">setActionPath</a></span>(java.lang.String&nbsp;actionPath)</code>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb .</div>
-</td>
-</tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setControllerPath-java.lang.String-">setControllerPath</a></span>(java.lang.String&nbsp;controllerPath)</code>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setCallbackPath-java.lang.String-">setCallbackPath</a></span>(java.lang.String&nbsp;callbackPath)</code>
+<div class="block">Sets the path used by OAuth providers to callback the application.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setControllerPath-java.lang.String-">setControllerPath</a></span>(java.lang.String&nbsp;controllerPath)</code>
+<div class="block">The authorization controller path.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setEnabled-boolean-">setEnabled</a></span>(boolean&nbsp;enabled)</code>
 <div class="block">Sets whether the <a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html" title="class in io.micronaut.security.oauth2.endpoints"><code>AuthorizationCodeController</code></a> is enabled.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#setLoginPath-java.lang.String-">setLoginPath</a></span>(java.lang.String&nbsp;loginPath)</code>
+<div class="block">Sets the path used to trigger a redirect to login with OAuth.</div>
 </td>
 </tr>
 </table>
@@ -291,17 +309,31 @@ implements <a href="../../../../../io/micronaut/security/oauth2/endpoints/Author
 </dl>
 </li>
 </ul>
-<a name="DEFAULT_ACTIONPATH">
+<a name="DEFAULT_CALLBACK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_CALLBACK</h4>
+<pre>public static final&nbsp;java.lang.String DEFAULT_CALLBACK</pre>
+<div class="block">The default callback path.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.endpoints.AuthorizationCodeControllerConfigurationProperties.DEFAULT_CALLBACK">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="DEFAULT_LOGIN">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>DEFAULT_ACTIONPATH</h4>
-<pre>public static final&nbsp;java.lang.String DEFAULT_ACTIONPATH</pre>
-<div class="block">The default code path.</div>
+<h4>DEFAULT_LOGIN</h4>
+<pre>public static final&nbsp;java.lang.String DEFAULT_LOGIN</pre>
+<div class="block">The default login path.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.endpoints.AuthorizationCodeControllerConfigurationProperties.DEFAULT_ACTIONPATH">Constant Field Values</a></dd>
+<dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.endpoints.AuthorizationCodeControllerConfigurationProperties.DEFAULT_LOGIN">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -368,30 +400,48 @@ implements <a href="../../../../../io/micronaut/security/oauth2/endpoints/Author
 <pre>@Nonnull
 public&nbsp;java.lang.String&nbsp;getControllerPath()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getControllerPath--">AuthorizationCodeControllerConfiguration</a></code></span></div>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode .</div>
+<div class="block">The base path the authorization controller responds to.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getControllerPath--">getControllerPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html" title="interface in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfiguration</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Controller path.</dd>
+<dd>The controller path</dd>
 </dl>
 </li>
 </ul>
-<a name="getActionPath--">
+<a name="getCallbackPath--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getActionPath</h4>
+<h4>getCallbackPath</h4>
 <pre>@Nonnull
-public&nbsp;java.lang.String&nbsp;getActionPath()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getActionPath--">AuthorizationCodeControllerConfiguration</a></code></span></div>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb .</div>
+public&nbsp;java.lang.String&nbsp;getCallbackPath()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getCallbackPath--">AuthorizationCodeControllerConfiguration</a></code></span></div>
+<div class="block">The path to respond to callbacks. Appended to the controller path.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getActionPath--">getActionPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html" title="interface in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfiguration</a></code></dd>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getCallbackPath--">getCallbackPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html" title="interface in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfiguration</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>The controller's action path</dd>
+<dd>The controller's callback path</dd>
+</dl>
+</li>
+</ul>
+<a name="getLoginPath--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoginPath</h4>
+<pre>@Nonnull
+public&nbsp;java.lang.String&nbsp;getLoginPath()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getLoginPath--">AuthorizationCodeControllerConfiguration</a></code></span></div>
+<div class="block">The path to listen for login requests. Appended to the controller path.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getLoginPath--">getLoginPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html" title="interface in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfiguration</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The controller's login path</dd>
 </dl>
 </li>
 </ul>
@@ -403,26 +453,42 @@ public&nbsp;java.lang.String&nbsp;getActionPath()</pre>
 <h4>setControllerPath</h4>
 <pre>public&nbsp;void&nbsp;setControllerPath(@Nonnull
                               java.lang.String&nbsp;controllerPath)</pre>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode.
- Default value (<a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_CONTROLLERPATH">"/authcode"</a>).</div>
+<div class="block">The authorization controller path. Default value (<a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_CONTROLLERPATH">"/authcode"</a>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>controllerPath</code> - Controller's path</dd>
 </dl>
 </li>
 </ul>
-<a name="setActionPath-java.lang.String-">
+<a name="setCallbackPath-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCallbackPath</h4>
+<pre>public&nbsp;void&nbsp;setCallbackPath(@Nonnull
+                            java.lang.String&nbsp;callbackPath)</pre>
+<div class="block">Sets the path used by OAuth providers to callback the application. The value is appended
+ to the controller path value. Default value (<a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_CALLBACK">"/cb"</a>).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callbackPath</code> - Controller callback path.</dd>
+</dl>
+</li>
+</ul>
+<a name="setLoginPath-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setActionPath</h4>
-<pre>public&nbsp;void&nbsp;setActionPath(@Nonnull
-                          java.lang.String&nbsp;actionPath)</pre>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb . Default value (<a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_ACTIONPATH">"/cb"</a>).</div>
+<h4>setLoginPath</h4>
+<pre>public&nbsp;void&nbsp;setLoginPath(@Nonnull
+                         java.lang.String&nbsp;loginPath)</pre>
+<div class="block">Sets the path used to trigger a redirect to login with OAuth. The value is appended to
+ the controller path value. Default value (<a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_LOGIN">"/login"</a>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>actionPath</code> - Controller action path.</dd>
+<dd><code>loginPath</code> - Controller login path.</dd>
 </dl>
 </li>
 </ul>

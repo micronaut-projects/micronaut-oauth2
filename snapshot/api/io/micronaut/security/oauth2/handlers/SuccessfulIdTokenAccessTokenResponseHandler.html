@@ -131,7 +131,8 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>io.micronaut.http.HttpResponse</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></span>(io.micronaut.http.HttpRequest&nbsp;request,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></span>(io.micronaut.http.HttpRequest&nbsp;request,
+      <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
       <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
       io.micronaut.security.authentication.Authentication&nbsp;authentication)</code>&nbsp;</td>
 </tr>
@@ -150,18 +151,20 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">
+<a name="handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>handle</h4>
 <pre>io.micronaut.http.HttpResponse&nbsp;handle(io.micronaut.http.HttpRequest&nbsp;request,
+                                      <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
                                       <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
                                       io.micronaut.security.authentication.Authentication&nbsp;authentication)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>request</code> - The HTTP request</dd>
+<dd><code>authenticationResponse</code> - Authentication response</dd>
 <dd><code>idTokenAccessTokenResponse</code> - An ID Token Access Token response.</dd>
 <dd><code>authentication</code> - Authentication</dd>
 <dt><span class="returnLabel">Returns:</span></dt>

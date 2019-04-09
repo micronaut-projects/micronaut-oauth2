@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,7 +141,8 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-">CookieSuccessfulIdTokenAccessTokenResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a>&nbsp;configuration)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-">CookieSuccessfulIdTokenAccessTokenResponseHandler</a></span>(<a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a>&nbsp;configuration,
+                                                 <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a>&nbsp;stateProvider)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -159,12 +160,20 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>protected java.net.URI</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#getRedirectUri-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">getRedirectUri</a></span>(io.micronaut.http.HttpRequest&nbsp;request,
+              <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
+              <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
+              io.micronaut.security.authentication.Authentication&nbsp;authentication)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>io.micronaut.http.HttpResponse</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></span>(io.micronaut.http.HttpRequest&nbsp;request,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></span>(io.micronaut.http.HttpRequest&nbsp;request,
+      <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
       <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
       io.micronaut.security.authentication.Authentication&nbsp;authentication)</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#secondsToExpirationTime-io.micronaut.security.authentication.Authentication-">secondsToExpirationTime</a></span>(io.micronaut.security.authentication.Authentication&nbsp;authentication)</code>&nbsp;</td>
 </tr>
@@ -190,16 +199,18 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-">
+<a name="CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CookieSuccessfulIdTokenAccessTokenResponseHandler</h4>
-<pre>public&nbsp;CookieSuccessfulIdTokenAccessTokenResponseHandler(<a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a>&nbsp;configuration)</pre>
+<pre>public&nbsp;CookieSuccessfulIdTokenAccessTokenResponseHandler(<a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a>&nbsp;configuration,
+                                                         <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a>&nbsp;stateProvider)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>configuration</code> - Cookie Successful IdToken-AccessToken Handler</dd>
+<dd><code>stateProvider</code> - State Provider</dd>
 </dl>
 </li>
 </ul>
@@ -211,20 +222,22 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">
+<a name="handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>handle</h4>
 <pre>public&nbsp;io.micronaut.http.HttpResponse&nbsp;handle(io.micronaut.http.HttpRequest&nbsp;request,
+                                             <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
                                              <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
                                              io.micronaut.security.authentication.Authentication&nbsp;authentication)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler</a></code></dd>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>request</code> - The HTTP request</dd>
+<dd><code>authenticationResponse</code> - Authentication response</dd>
 <dd><code>idTokenAccessTokenResponse</code> - An ID Token Access Token response.</dd>
 <dd><code>authentication</code> - Authentication</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -235,7 +248,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <a name="secondsToExpirationTime-io.micronaut.security.authentication.Authentication-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>secondsToExpirationTime</h4>
 <pre>protected&nbsp;long&nbsp;secondsToExpirationTime(io.micronaut.security.authentication.Authentication&nbsp;authentication)</pre>
@@ -244,6 +257,27 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/Success
 <dd><code>authentication</code> - Authentication</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Number of seconds to JWT expiration time.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRedirectUri-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getRedirectUri</h4>
+<pre>protected&nbsp;java.net.URI&nbsp;getRedirectUri(io.micronaut.http.HttpRequest&nbsp;request,
+                                      <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a>&nbsp;authenticationResponse,
+                                      <a href="../../../../../io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponse.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponse</a>&nbsp;idTokenAccessTokenResponse,
+                                      io.micronaut.security.authentication.Authentication&nbsp;authentication)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>request</code> - The HTTP request</dd>
+<dd><code>authenticationResponse</code> - The Authentication Response</dd>
+<dd><code>idTokenAccessTokenResponse</code> - The IdTokenAccessTokenResponse</dd>
+<dd><code>authentication</code> - Authentication</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The URI to redirect to.</dd>
 </dl>
 </li>
 </ul>

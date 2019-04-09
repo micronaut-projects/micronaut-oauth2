@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6};
+var methods = {"i0":6,"i1":6,"i2":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -136,14 +136,20 @@ extends io.micronaut.core.util.Toggleable</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getActionPath--">getActionPath</a></span>()</code>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb .</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getCallbackPath--">getCallbackPath</a></span>()</code>
+<div class="block">The path to respond to callbacks.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getControllerPath--">getControllerPath</a></span>()</code>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode .</div>
+<div class="block">The base path the authorization controller responds to.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfiguration.html#getLoginPath--">getLoginPath</a></span>()</code>
+<div class="block">The path to listen for login requests.</div>
 </td>
 </tr>
 </table>
@@ -176,25 +182,40 @@ extends io.micronaut.core.util.Toggleable</pre>
 <h4>getControllerPath</h4>
 <pre>@Nonnull
 java.lang.String&nbsp;getControllerPath()</pre>
-<div class="block">if the callback endpoint is /authcode/cb controller path will be /authcode .</div>
+<div class="block">The base path the authorization controller responds to.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Controller path.</dd>
+<dd>The controller path</dd>
 </dl>
 </li>
 </ul>
-<a name="getActionPath--">
+<a name="getCallbackPath--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCallbackPath</h4>
+<pre>@Nonnull
+java.lang.String&nbsp;getCallbackPath()</pre>
+<div class="block">The path to respond to callbacks. Appended to the controller path.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The controller's callback path</dd>
+</dl>
+</li>
+</ul>
+<a name="getLoginPath--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getActionPath</h4>
+<h4>getLoginPath</h4>
 <pre>@Nonnull
-java.lang.String&nbsp;getActionPath()</pre>
-<div class="block">if the callback endpoint is /authcode/cb controller action path will be /cb .</div>
+java.lang.String&nbsp;getLoginPath()</pre>
+<div class="block">The path to listen for login requests. Appended to the controller path.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>The controller's action path</dd>
+<dd>The controller's login path</dd>
 </dl>
 </li>
 </ul>

@@ -133,9 +133,14 @@ function addJsClass() {
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the path of the cookie. Default value ({@value #DEFAULT_COOKIEPATH}).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.login-success-target-url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the login success target URL. Default value ({@value #DEFAULT_LOGINSUCCESSTARGETURL}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.default-redirect-uri</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.net.URI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the login success target URL. Default behavior is to redirect back to the original URI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.always-redirect-default</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the default redirect URI should always be used. Default value ({@value #DEFAULT_ALWAYS_REDIRECT}).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.security.oauth2.openid.idtoken.cookie.cookie-http-only</code></p></td>
