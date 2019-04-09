@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
+var methods = {"i0":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,9 +141,9 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#DefaultAuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequestProvider-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">DefaultAuthorizationRedirectUrlProvider</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestProvider</a>&nbsp;authenticationRequestProvider,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#DefaultAuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequestProvider-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlBuilder-">DefaultAuthorizationRedirectUrlProvider</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestProvider</a>&nbsp;authenticationRequestProvider,
                                        <a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata,
-                                       <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints">DefaultRedirectUrlProvider</a>&nbsp;defaultRedirectUrlProvider)</code>&nbsp;</td>
+                                       <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlBuilder</a>&nbsp;authorizationRedirectUrlBuilder)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -161,85 +161,6 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>protected java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#expandedUri-java.lang.String-java.util.Map-">expandedUri</a></span>(java.lang.String&nbsp;baseUrl,
-           java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;queryParams)</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected java.util.Map&lt;java.lang.String,java.lang.Object&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#instantiateParameters-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-">instantiateParameters</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateAcrValues-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateAcrValues</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateClientId-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateClientId</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateDisplay-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateDisplay</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-               java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateIdTokenHint-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateIdTokenHint</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                   java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateLoginHint-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateLoginHint</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateMaxAge-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateMaxAge</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-              java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateNonce-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateNonce</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populatePrompt-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populatePrompt</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-              java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateRedirectUri-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateRedirectUri</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                   java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateResponseMode-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateResponseMode</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                    java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateResponseType-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateResponseType</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                    java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateScope-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateScope</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateState-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateState</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#populateUiLocales-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateUiLocales</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</code>&nbsp;</td>
-</tr>
-<tr id="i16" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthorizationRedirectUrlProvider.html#resolveAuthorizationRedirectUrl-io.micronaut.http.HttpRequest-">resolveAuthorizationRedirectUrl</a></span>(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</code>&nbsp;</td>
 </tr>
@@ -265,7 +186,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DefaultAuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequestProvider-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.DefaultRedirectUrlProvider-">
+<a name="DefaultAuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequestProvider-io.micronaut.security.oauth2.openid.configuration.OpenIdProviderMetadata-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlBuilder-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -273,12 +194,12 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <h4>DefaultAuthorizationRedirectUrlProvider</h4>
 <pre>public&nbsp;DefaultAuthorizationRedirectUrlProvider(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestProvider</a>&nbsp;authenticationRequestProvider,
                                                <a href="../../../../../../../io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadata.html" title="interface in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadata</a>&nbsp;openIdProviderMetadata,
-                                               <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints">DefaultRedirectUrlProvider</a>&nbsp;defaultRedirectUrlProvider)</pre>
+                                               <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlBuilder</a>&nbsp;authorizationRedirectUrlBuilder)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>authenticationRequestProvider</code> - Authentication Request provider</dd>
 <dd><code>openIdProviderMetadata</code> - OpenID provider metadata.</dd>
-<dd><code>defaultRedirectUrlProvider</code> - Default Redirect Url Provider</dd>
+<dd><code>authorizationRedirectUrlBuilder</code> - Authorization Redirect url builder</dd>
 </dl>
 </li>
 </ul>
@@ -293,7 +214,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <a name="resolveAuthorizationRedirectUrl-io.micronaut.http.HttpRequest-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>resolveAuthorizationRedirectUrl</h4>
 <pre>public&nbsp;java.lang.String&nbsp;resolveAuthorizationRedirectUrl(io.micronaut.http.HttpRequest&lt;?&gt;&nbsp;request)</pre>
@@ -304,278 +225,6 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <dd><code>request</code> - the Original request prior redirect.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A URL to redirect the user to the OpenID Provider authorization endpoint.</dd>
-</dl>
-</li>
-</ul>
-<a name="expandedUri-java.lang.String-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>expandedUri</h4>
-<pre>protected&nbsp;java.lang.String&nbsp;expandedUri(@Nonnull
-                                       java.lang.String&nbsp;baseUrl,
-                                       @Nonnull
-                                       java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;queryParams)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>baseUrl</code> - Base Url</dd>
-<dd><code>queryParams</code> - Query Parameters</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The Expanded URI</dd>
-</dl>
-</li>
-</ul>
-<a name="instantiateParameters-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>instantiateParameters</h4>
-<pre>protected&nbsp;java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;instantiateParameters(<a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>A parameter map which contains the URL variables used to construct the authorization redirect url.</dd>
-</dl>
-</li>
-</ul>
-<a name="populateScope-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateScope</h4>
-<pre>protected&nbsp;void&nbsp;populateScope(@Nonnull
-                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                             @Nonnull
-                             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateResponseType-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateResponseType</h4>
-<pre>protected&nbsp;void&nbsp;populateResponseType(@Nonnull
-                                    <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                    @Nonnull
-                                    java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateClientId-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateClientId</h4>
-<pre>protected&nbsp;void&nbsp;populateClientId(@Nonnull
-                                <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                @Nonnull
-                                java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateRedirectUri-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateRedirectUri</h4>
-<pre>protected&nbsp;void&nbsp;populateRedirectUri(@Nonnull
-                                   <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                   @Nonnull
-                                   java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateState-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateState</h4>
-<pre>protected&nbsp;void&nbsp;populateState(@Nonnull
-                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                             @Nonnull
-                             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateResponseMode-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateResponseMode</h4>
-<pre>protected&nbsp;void&nbsp;populateResponseMode(@Nonnull
-                                    <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                    @Nonnull
-                                    java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateNonce-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateNonce</h4>
-<pre>protected&nbsp;void&nbsp;populateNonce(@Nonnull
-                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                             @Nonnull
-                             java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateDisplay-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateDisplay</h4>
-<pre>protected&nbsp;void&nbsp;populateDisplay(@Nonnull
-                               <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                               @Nonnull
-                               java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populatePrompt-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populatePrompt</h4>
-<pre>protected&nbsp;void&nbsp;populatePrompt(@Nonnull
-                              <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                              @Nonnull
-                              java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateMaxAge-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateMaxAge</h4>
-<pre>protected&nbsp;void&nbsp;populateMaxAge(@Nonnull
-                              <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                              @Nonnull
-                              java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateUiLocales-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateUiLocales</h4>
-<pre>protected&nbsp;void&nbsp;populateUiLocales(@Nonnull
-                                 <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                 @Nonnull
-                                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateIdTokenHint-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateIdTokenHint</h4>
-<pre>protected&nbsp;void&nbsp;populateIdTokenHint(@Nonnull
-                                   <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                   @Nonnull
-                                   java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateLoginHint-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>populateLoginHint</h4>
-<pre>protected&nbsp;void&nbsp;populateLoginHint(@Nonnull
-                                 <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                 @Nonnull
-                                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
-</dl>
-</li>
-</ul>
-<a name="populateAcrValues-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>populateAcrValues</h4>
-<pre>protected&nbsp;void&nbsp;populateAcrValues(@Nonnull
-                                 <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequest</a>&nbsp;authenticationRequest,
-                                 @Nonnull
-                                 java.util.Map&lt;java.lang.String,java.lang.Object&gt;&nbsp;parameters)</pre>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>authenticationRequest</code> - Authentication Request</dd>
-<dd><code>parameters</code> - Authentication Request Parameters</dd>
 </dl>
 </li>
 </ul>

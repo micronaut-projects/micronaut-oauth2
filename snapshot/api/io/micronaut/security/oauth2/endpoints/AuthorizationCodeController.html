@@ -137,8 +137,9 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html#AuthorizationCodeController-io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlProvider-">AuthorizationCodeController</a></span>(<a href="../../../../../io/micronaut/security/oauth2/handlers/AuthorizationResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">AuthorizationResponseHandler</a>&nbsp;authorizationResponseHandler,
-                           <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlProvider</a>&nbsp;redirectUrlProvider)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html#AuthorizationCodeController-io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.responses.AuthenticationResponseFactory-">AuthorizationCodeController</a></span>(<a href="../../../../../io/micronaut/security/oauth2/handlers/AuthorizationResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">AuthorizationResponseHandler</a>&nbsp;authorizationResponseHandler,
+                           <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlProvider</a>&nbsp;redirectUrlProvider,
+                           <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseFactory</a>&nbsp;authenticationResponseFactory)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -195,18 +196,20 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="AuthorizationCodeController-io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlProvider-">
+<a name="AuthorizationCodeController-io.micronaut.security.oauth2.handlers.AuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationRedirectUrlProvider-io.micronaut.security.oauth2.responses.AuthenticationResponseFactory-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>AuthorizationCodeController</h4>
 <pre>public&nbsp;AuthorizationCodeController(<a href="../../../../../io/micronaut/security/oauth2/handlers/AuthorizationResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">AuthorizationResponseHandler</a>&nbsp;authorizationResponseHandler,
-                                   <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlProvider</a>&nbsp;redirectUrlProvider)</pre>
+                                   <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlProvider</a>&nbsp;redirectUrlProvider,
+                                   <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseFactory</a>&nbsp;authenticationResponseFactory)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>authorizationResponseHandler</code> - Authorization Response Handler.</dd>
 <dd><code>redirectUrlProvider</code> - Authorization Redirect url provider</dd>
+<dd><code>authenticationResponseFactory</code> - Factory to create <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a> objects.</dd>
 </dl>
 </li>
 </ul>
