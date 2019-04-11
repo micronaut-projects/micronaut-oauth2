@@ -1,6 +1,6 @@
 ### Cognito
 
-If the term `cognito` is present in the value of `micronaut.security.oauth2.issuer` the next beans are loaded:
+If the term `cognito` is present in the value of `micronaut.security.oauth2.openid.issuer` the next beans are loaded:
 
  - api:io.micronaut.security.oauth2.openid.providers.AwsCognitoAuthMethodProvider[]
 
@@ -12,7 +12,7 @@ If you want to disable that bean you can set `micronaut.security.oauth2..end-ses
 
 ### Okta
 
-If the term `okta` is present in the value of `micronaut.security.oauth2.issuer` the next beans are loaded:
+If the term `okta` is present in the value of `micronaut.security.oauth2.openid.issuer` the next beans are loaded:
 
 - api:io.micronaut.security.oauth2.openid.providers.OktaEndSessionEndpointConfiguration[]
 
@@ -21,7 +21,7 @@ If you want to disable that bean you can set `micronaut.security.oauth2.end-sess
 
 ### Auth0
 
-If the term `auth0` is present in the value of `micronaut.security.oauth2.issuer` the next beans are loaded:
+If the term `auth0` is present in the value of `micronaut.security.oauth2.openid.issuer` the next beans are loaded:
 
 - api:io.micronaut.security.oauth2.openid.providers.Auth0EndSessionEndpointConfiguration[]
 
