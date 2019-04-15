@@ -10,7 +10,10 @@ buildscript {
         classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
         classpath 'io.github.groovylang.groovydoc:groovydoc-gradle-plugin:1.0.1'
         classpath "io.micronaut.docs:micronaut-docs-asciidoc-extensions:$micronautDocsVersion"
-        classpath "io.micronaut.docs:micronaut-docs-gradle-plugins:$micronautDocsVersion"
+        classpath "io.micronaut.docs:micronaut-docs-gradle-plugins:$micronautDocsVersion", {
+            exclude module:'shadow'
+            exclude module:'plugin-shadow'
+        }
     }
 }
 
@@ -62,7 +65,7 @@ subprojects { Project subproject ->
 
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
-    apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-core/01e2b1ef1255b584e9e5c1965d334e1190e2ade5/gradle/publishing.gradle"
+    apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-core/fea2831f22432a70e77e3dec8e8e38722a51296f/gradle/publishing.gradle"
 
 
     jar {
