@@ -7,6 +7,10 @@ io.micronaut.security.oauth2.openid
 io.micronaut.security.oauth2.openid.configuration
 io.micronaut.security.oauth2.openid.endpoints
 io.micronaut.security.oauth2.openid.endpoints.authorization
+io.micronaut.security.oauth2.openid.endpoints.authorization.state
+io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation
+io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence
+io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session
 io.micronaut.security.oauth2.openid.endpoints.endsession
 io.micronaut.security.oauth2.openid.endpoints.introspection
 io.micronaut.security.oauth2.openid.endpoints.registration

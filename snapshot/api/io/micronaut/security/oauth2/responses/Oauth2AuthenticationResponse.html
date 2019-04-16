@@ -98,7 +98,12 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">io.micronaut.security.oauth2.responses.AbstractAuthenticationResponse</a></li>
+<li>
+<ul class="inheritance">
 <li>io.micronaut.security.oauth2.responses.Oauth2AuthenticationResponse</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -112,8 +117,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">Oauth2AuthenticationResponse</span>
-extends java.lang.Object
-implements <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></pre>
+extends <a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></pre>
 <div class="block">OAuth 2.0 authorization response.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -154,7 +158,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#Oauth2AuthenticationResponse--">Oauth2AuthenticationResponse</a></span>()</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#Oauth2AuthenticationResponse-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">Oauth2AuthenticationResponse</a></span>(<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a>&nbsp;stateSerDes)</code>
 <div class="block">Construct authorization response object.</div>
 </td>
 </tr>
@@ -179,7 +183,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#getState--">getState</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#getStateValue--">getStateValue</a></span>()</code>
 <div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
 </td>
 </tr>
@@ -191,9 +195,19 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#setState-java.lang.String-">setState</a></span>(java.lang.String&nbsp;state)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#setState-java.lang.String-">setState</a></span>(java.lang.String&nbsp;state)</code>
+<div class="block">After the state has been retrieved, further calls to this method will
+ not be reflected in the execution of <a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--"><code>AbstractAuthenticationResponse.getState()</code></a>.</div>
+</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.io.micronaut.security.oauth2.responses.AbstractAuthenticationResponse">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;io.micronaut.security.oauth2.responses.<a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></h3>
+<code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--">getState</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -215,14 +229,18 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Oauth2AuthenticationResponse--">
+<a name="Oauth2AuthenticationResponse-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Oauth2AuthenticationResponse</h4>
-<pre>public&nbsp;Oauth2AuthenticationResponse()</pre>
+<pre>public&nbsp;Oauth2AuthenticationResponse(<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a>&nbsp;stateSerDes)</pre>
 <div class="block">Construct authorization response object.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>stateSerDes</code> - The state serdes</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -233,18 +251,18 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getState--">
+<a name="getStateValue--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getState</h4>
+<h4>getStateValue</h4>
 <pre>@Nullable
-public&nbsp;java.lang.String&nbsp;getState()</pre>
+public&nbsp;java.lang.String&nbsp;getStateValue()</pre>
 <div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request. The client will be using this to associate this response with the initial request.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getState--">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></code></dd>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getStateValue--">getStateValue</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>state parameter.</dd>
 </dl>
@@ -258,6 +276,8 @@ public&nbsp;java.lang.String&nbsp;getState()</pre>
 <h4>setState</h4>
 <pre>public&nbsp;void&nbsp;setState(@Nullable
                      java.lang.String&nbsp;state)</pre>
+<div class="block">After the state has been retrieved, further calls to this method will
+ not be reflected in the execution of <a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--"><code>AbstractAuthenticationResponse.getState()</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>state</code> - Set state.</dd>
@@ -273,8 +293,6 @@ public&nbsp;java.lang.String&nbsp;getState()</pre>
 <pre>@Nonnull
 public&nbsp;java.lang.String&nbsp;getCode()</pre>
 <dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getCode--">getCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An authorization code which the client will later exchange for an access token.</dd>
 </dl>

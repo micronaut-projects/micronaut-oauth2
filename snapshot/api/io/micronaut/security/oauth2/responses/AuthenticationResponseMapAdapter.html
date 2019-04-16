@@ -98,7 +98,12 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">io.micronaut.security.oauth2.responses.AbstractAuthenticationResponse</a></li>
+<li>
+<ul class="inheritance">
 <li>io.micronaut.security.oauth2.responses.AuthenticationResponseMapAdapter</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -112,8 +117,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">AuthenticationResponseMapAdapter</span>
-extends java.lang.Object
-implements <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></pre>
+extends <a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></pre>
 <div class="block">Adapts from a Map to <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -154,7 +158,8 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#AuthenticationResponseMapAdapter-java.util.Map-">AuthenticationResponseMapAdapter</a></span>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;formFields)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#AuthenticationResponseMapAdapter-java.util.Map-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">AuthenticationResponseMapAdapter</a></span>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;formFields,
+                                <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a>&nbsp;stateSerDes)</code>
 <div class="block">Constructs an adapter from a Map to <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 </td>
 </tr>
@@ -179,11 +184,16 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#getState--">getState</a></span>()</code>
-<div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#getStateValue--">getStateValue</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.io.micronaut.security.oauth2.responses.AbstractAuthenticationResponse">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;io.micronaut.security.oauth2.responses.<a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></h3>
+<code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--">getState</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -205,17 +215,19 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="AuthenticationResponseMapAdapter-java.util.Map-">
+<a name="AuthenticationResponseMapAdapter-java.util.Map-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>AuthenticationResponseMapAdapter</h4>
-<pre>public&nbsp;AuthenticationResponseMapAdapter(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;formFields)</pre>
+<pre>public&nbsp;AuthenticationResponseMapAdapter(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;formFields,
+                                        <a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a>&nbsp;stateSerDes)</pre>
 <div class="block">Constructs an adapter from a Map to <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>formFields</code> - A Map encapsulating the form url encoded payload.</dd>
+<dd><code>stateSerDes</code> - The state serdes</dd>
 </dl>
 </li>
 </ul>
@@ -227,21 +239,19 @@ implements <a href="../../../../../io/micronaut/security/oauth2/responses/Authen
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getState--">
+<a name="getStateValue--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getState</h4>
+<h4>getStateValue</h4>
 <pre>@Nullable
-public&nbsp;java.lang.String&nbsp;getState()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getState--">AuthenticationResponse</a></code></span></div>
-<div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request. The client will be using this to associate this response with the initial request.</div>
+public&nbsp;java.lang.String&nbsp;getStateValue()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getState--">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></code></dd>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getStateValue--">getStateValue</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>state parameter.</dd>
+<dd>The state string value</dd>
 </dl>
 </li>
 </ul>
@@ -254,8 +264,6 @@ public&nbsp;java.lang.String&nbsp;getState()</pre>
 <pre>@Nonnull
 public&nbsp;java.lang.String&nbsp;getCode()</pre>
 <dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getCode--">getCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An authorization code which the client will later exchange for an access token.</dd>
 </dl>

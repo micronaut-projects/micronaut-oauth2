@@ -42,7 +42,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/package-summary.html">Next&nbsp;Package</a></li>
+<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">Next&nbsp;Package</a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html" target="_top">Frames</a></li>
@@ -132,24 +132,6 @@
 <div class="block">Generates a nonce.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">State</a></td>
-<td class="colLast">
-<div class="block">Allows to restore the previous state of the application, other use of state parameter is to mitigate CSRF attacks.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a></td>
-<td class="colLast">
-<div class="block">Generates a state parameter.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateValidator</a></td>
-<td class="colLast">
-<div class="block">Validates a state parameter.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -165,7 +147,7 @@
 <td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></td>
 <td class="colLast">
 <div class="block">Provides an <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthenticationRequest</code></a> by combining <a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration"><code>OauthConfiguration</code></a>,
- <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>StateProvider</code></a>, <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>NonceProvider</code></a>, <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthorizationEndpoint</code></a>.</div>
+ <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><code>StateFactory</code></a>, <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>NonceProvider</code></a>, <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthorizationEndpoint</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -204,19 +186,6 @@
 <div class="block">Default implementation of <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthorizationRedirectUrlProvider</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultState</a></td>
-<td class="colLast">
-<div class="block">Default implementation of <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>State</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></td>
-<td class="colLast">
-<div class="block">A default state provider that stores the original
- request URI to redirect back to after authentication.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -244,23 +213,6 @@
 <td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/ResponseType.html" title="enum in io.micronaut.security.oauth2.openid.endpoints.authorization">ResponseType</a></td>
 <td class="colLast">
 <div class="block">Authentication Flows response types.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Exception Summary table, listing exceptions, and an explanation">
-<caption><span>Exception Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Exception</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/InvalidStateException.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">InvalidStateException</a></td>
-<td class="colLast">
-<div class="block">Exception thrown if Auth request state parameter validation fails.</div>
 </td>
 </tr>
 </tbody>
@@ -300,7 +252,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/endsession/package-summary.html">Next&nbsp;Package</a></li>
+<li><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">Next&nbsp;Package</a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html" target="_top">Frames</a></li>

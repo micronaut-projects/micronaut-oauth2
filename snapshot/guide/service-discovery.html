@@ -121,7 +121,7 @@ function addJsClass() {
 <p>The easiest way to integrate a Micronaut application with an Open ID Connect server is to use the <code>.well-know/openid-configuration</code> endpoint, an endpoint which applications use to retrieve the configuration information for the OIDC server.</p>
 </div>
 <div class="paragraph">
-<p>Micronaut assumes the URL for the endpoint is the value of property <code>micronaut.security.oauth2.issuer</code> plus the suffix <code>/.well-know/openid-configuration</code>.</p>
+<p>Micronaut assumes the URL for the endpoint is the value of property <code>micronaut.security.oauth2.openid.issuer</code> plus the suffix <code>/.well-know/openid-configuration</code>.</p>
 </div>
 <div class="paragraph">
 <p>The endpoint returns a specified set of fields. Micronaut uses the configuration returned to configure itself accordingly.</p>

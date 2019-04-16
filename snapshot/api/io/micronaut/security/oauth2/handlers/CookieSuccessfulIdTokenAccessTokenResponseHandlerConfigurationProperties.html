@@ -141,33 +141,21 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_ALWAYS_REDIRECT">DEFAULT_ALWAYS_REDIRECT</a></span></code>
-<div class="block">The default value to always redirect to the default uri.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_COOKIEPATH">DEFAULT_COOKIEPATH</a></span></code>
 <div class="block">Default Cookie Path.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_ENABLED">DEFAULT_ENABLED</a></span></code>
 <div class="block">The default enable value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_HTTPONLY">DEFAULT_HTTPONLY</a></span></code>
 <div class="block">The default http only value.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_LOGINSUCCESSTARGETURL">DEFAULT_LOGINSUCCESSTARGETURL</a></span></code>
-<div class="block">The default login success target URL.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -213,28 +201,28 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.Boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookieDomain--">getCookieDomain</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.time.temporal.TemporalAmount&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookieMaxAge--">getCookieMaxAge</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookieName--">getCookieName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getCookiePath--">getCookiePath</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.net.URI&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getDefaultRedirectUri--">getDefaultRedirectUri</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getRedirectionStrategy--">getRedirectionStrategy</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.Boolean&gt;</code></td>
@@ -250,56 +238,56 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setAlwaysRedirectDefault-java.lang.Boolean-">setAlwaysRedirectDefault</a></span>(java.lang.Boolean&nbsp;alwaysRedirectDefault)</code>
-<div class="block">Sets whether the default redirect URI should always be used.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookieDomain-java.lang.String-">setCookieDomain</a></span>(java.lang.String&nbsp;cookieDomain)</code>
 <div class="block">Sets the domain name of this Cookie.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookieHttpOnly-boolean-">setCookieHttpOnly</a></span>(boolean&nbsp;cookieHttpOnly)</code>
 <div class="block">Whether the Cookie can only be accessed via HTTP.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookieMaxAge-java.time.temporal.TemporalAmount-">setCookieMaxAge</a></span>(java.time.temporal.TemporalAmount&nbsp;cookieMaxAge)</code>
 <div class="block">Sets the maximum age of the cookie.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookieName-java.lang.String-">setCookieName</a></span>(java.lang.String&nbsp;cookieName)</code>
 <div class="block">Cookie Name.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookiePath-java.lang.String-">setCookiePath</a></span>(java.lang.String&nbsp;cookiePath)</code>
 <div class="block">Sets the path of the cookie.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setCookieSecure-boolean-">setCookieSecure</a></span>(boolean&nbsp;cookieSecure)</code>
 <div class="block">Sets whether the cookie is secured.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setDefaultRedirectUri-java.net.URI-">setDefaultRedirectUri</a></span>(java.net.URI&nbsp;defaultRedirectUri)</code>
 <div class="block">Sets the login success target URL.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setEnabled-boolean-">setEnabled</a></span>(boolean&nbsp;enabled)</code>
 <div class="block">Enables <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers"><code>CookieSuccessfulIdTokenAccessTokenResponseHandler</code></a>.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setRedirectionStrategy-io.micronaut.security.oauth2.handlers.RedirectionStrategy-">setRedirectionStrategy</a></span>(<a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a>&nbsp;redirectionStrategy)</code>
+<div class="block">Sets the redirection strategy.</div>
 </td>
 </tr>
 </table>
@@ -351,20 +339,6 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 </dl>
 </li>
 </ul>
-<a name="DEFAULT_LOGINSUCCESSTARGETURL">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DEFAULT_LOGINSUCCESSTARGETURL</h4>
-<pre>public static final&nbsp;java.lang.String DEFAULT_LOGINSUCCESSTARGETURL</pre>
-<div class="block">The default login success target URL.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.DEFAULT_LOGINSUCCESSTARGETURL">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
 <a name="DEFAULT_SECURE">
 <!--   -->
 </a>
@@ -396,7 +370,7 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 <a name="DEFAULT_COOKIEPATH">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>DEFAULT_COOKIEPATH</h4>
 <pre>public static final&nbsp;java.lang.String DEFAULT_COOKIEPATH</pre>
@@ -404,20 +378,6 @@ implements <a href="../../../../../io/micronaut/security/oauth2/handlers/CookieS
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.DEFAULT_COOKIEPATH">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DEFAULT_ALWAYS_REDIRECT">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>DEFAULT_ALWAYS_REDIRECT</h4>
-<pre>public static final&nbsp;boolean DEFAULT_ALWAYS_REDIRECT</pre>
-<div class="block">The default value to always redirect to the default uri.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../constant-values.html#io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.DEFAULT_ALWAYS_REDIRECT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -678,32 +638,32 @@ public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getCookiePath()</pre
 </dl>
 </li>
 </ul>
-<a name="getAlwaysRedirectDefault--">
+<a name="getRedirectionStrategy--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAlwaysRedirectDefault</h4>
-<pre>public&nbsp;java.lang.Boolean&nbsp;getAlwaysRedirectDefault()</pre>
+<h4>getRedirectionStrategy</h4>
+<pre>public&nbsp;<a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a>&nbsp;getRedirectionStrategy()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
+<dd><code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getRedirectionStrategy--">getRedirectionStrategy</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>True if the default redirect URI should always be used.</dd>
+<dd>The redirection strategy.</dd>
 </dl>
 </li>
 </ul>
-<a name="setAlwaysRedirectDefault-java.lang.Boolean-">
+<a name="setRedirectionStrategy-io.micronaut.security.oauth2.handlers.RedirectionStrategy-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setAlwaysRedirectDefault</h4>
-<pre>public&nbsp;void&nbsp;setAlwaysRedirectDefault(java.lang.Boolean&nbsp;alwaysRedirectDefault)</pre>
-<div class="block">Sets whether the default redirect URI should always be used. Default value (<a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_ALWAYS_REDIRECT">false</a>).</div>
+<h4>setRedirectionStrategy</h4>
+<pre>public&nbsp;void&nbsp;setRedirectionStrategy(<a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a>&nbsp;redirectionStrategy)</pre>
+<div class="block">Sets the redirection strategy. Default value (original).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>alwaysRedirectDefault</code> - The always redirect setting</dd>
+<dd><code>redirectionStrategy</code> - The redirection strategy</dd>
 </dl>
 </li>
 </ul>

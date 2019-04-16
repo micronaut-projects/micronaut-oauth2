@@ -72,6 +72,12 @@
 </a>
 <h2 class="title">A</h2>
 <dl>
+<dt><a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses"><span class="typeNameLink">AbstractAuthenticationResponse</span></a> - Class in <a href="io/micronaut/security/oauth2/responses/package-summary.html">io.micronaut.security.oauth2.responses</a></dt>
+<dd>
+<div class="block">Base class to extend from that handles state retrieval and caching.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#AbstractAuthenticationResponse-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">AbstractAuthenticationResponse(StateSerDes)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/responses/AccessTokenResponse.html" title="class in io.micronaut.security.oauth2.responses"><span class="typeNameLink">AccessTokenResponse</span></a> - Class in <a href="io/micronaut/security/oauth2/responses/package-summary.html">io.micronaut.security.oauth2.responses</a></dt>
 <dd>
 <div class="block">Represent the answer of an authorization server in response to a valid and authorized access token request.</div>
@@ -108,7 +114,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/providers/Auth0OpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers"><span class="typeNameLink">Auth0OpenidConfigurationCondition</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/providers/package-summary.html">io.micronaut.security.oauth2.openid.providers</a></dt>
 <dd>
-<div class="block">Condition which evaluates to true if micronaut.security.oauth2.issuer contains auth0.</div>
+<div class="block">Condition which evaluates to true if micronaut.security.oauth2.openid.issuer contains auth0.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/providers/Auth0OpenidConfigurationCondition.html#Auth0OpenidConfigurationCondition--">Auth0OpenidConfigurationCondition()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.providers.<a href="io/micronaut/security/oauth2/openid/providers/Auth0OpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">Auth0OpenidConfigurationCondition</a></dt>
 <dd>&nbsp;</dd>
@@ -139,9 +145,9 @@
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">AuthenticationRequestAdapter</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
 <dd>
 <div class="block">Provides an <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequest.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthenticationRequest</code></a> by combining <a href="io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration"><code>OauthConfiguration</code></a>,
- <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>StateProvider</code></a>, <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>NonceProvider</code></a>, <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthorizationEndpoint</code></a>.</div>
+ <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><code>StateFactory</code></a>, <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>NonceProvider</code></a>, <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthorizationEndpoint</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html#AuthenticationRequestAdapter-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">AuthenticationRequestAdapter(HttpRequest&lt;?&gt;, OauthConfiguration, AuthorizationEndpointRequestConfiguration, StateProvider, NonceProvider, LoginHintProvider, IdTokenHintProvider)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html#AuthenticationRequestAdapter-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">AuthenticationRequestAdapter(HttpRequest&lt;?&gt;, OauthConfiguration, AuthorizationEndpointRequestConfiguration, StateFactory, NonceProvider, LoginHintProvider, IdTokenHintProvider)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">AuthenticationRequestProvider</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
 <dd>
@@ -155,13 +161,13 @@
 <dd>
 <div class="block">AuthenticationResponse Factory which ease creation of <a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a> objects given a <code>Map</code> or a <code>HttpParameters</code>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html#AuthenticationResponseFactory--">AuthenticationResponseFactory()</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseFactory</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html#AuthenticationResponseFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">AuthenticationResponseFactory(StateSerDes)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseFactory.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses"><span class="typeNameLink">AuthenticationResponseHttpParamsAdapter</span></a> - Class in <a href="io/micronaut/security/oauth2/responses/package-summary.html">io.micronaut.security.oauth2.responses</a></dt>
 <dd>
 <div class="block">Adapts from <code>HttpParameters</code> to <a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html#AuthenticationResponseHttpParamsAdapter-io.micronaut.http.HttpParameters-">AuthenticationResponseHttpParamsAdapter(HttpParameters)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html#AuthenticationResponseHttpParamsAdapter-io.micronaut.http.HttpParameters-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">AuthenticationResponseHttpParamsAdapter(HttpParameters, StateSerDes)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a></dt>
 <dd>
 <div class="block">Constructs an adapter from <code>HttpParameters</code> to <a href="io/micronaut/security/oauth2/responses/ErrorResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>ErrorResponse</code></a>.</div>
 </dd>
@@ -169,7 +175,7 @@
 <dd>
 <div class="block">Adapts from a Map to <a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#AuthenticationResponseMapAdapter-java.util.Map-">AuthenticationResponseMapAdapter(Map&lt;String, String&gt;)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#AuthenticationResponseMapAdapter-java.util.Map-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">AuthenticationResponseMapAdapter(Map&lt;String, String&gt;, StateSerDes)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a></dt>
 <dd>
 <div class="block">Constructs an adapter from a Map to <a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses"><code>AuthenticationResponse</code></a>.</div>
 </dd>
@@ -265,7 +271,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/providers/AwsCognitoOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers"><span class="typeNameLink">AwsCognitoOpenidConfigurationCondition</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/providers/package-summary.html">io.micronaut.security.oauth2.openid.providers</a></dt>
 <dd>
-<div class="block">Condition which evaluates to true if micronaut.security.oauth2.issuer contains cognito.</div>
+<div class="block">Condition which evaluates to true if micronaut.security.oauth2.openid.issuer contains cognito.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/providers/AwsCognitoOpenidConfigurationCondition.html#AwsCognitoOpenidConfigurationCondition--">AwsCognitoOpenidConfigurationCondition()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.providers.<a href="io/micronaut/security/oauth2/openid/providers/AwsCognitoOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">AwsCognitoOpenidConfigurationCondition</a></dt>
 <dd>&nbsp;</dd>
@@ -277,10 +283,10 @@
 <dl>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenArgumentBinder.html#bind-io.micronaut.core.convert.ArgumentConversionContext-io.micronaut.http.HttpRequest-">bind(ArgumentConversionContext&lt;IdToken&gt;, HttpRequest&lt;?&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenArgumentBinder.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenArgumentBinder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html#buildState-io.micronaut.http.HttpRequest-boolean-">buildState(HttpRequest&lt;?&gt;, boolean)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></dt>
-<dd>
-<div class="block">Creates the state object to be sent with the authorization redirect.</div>
-</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultStateFactory.html#buildState-io.micronaut.http.HttpRequest-">buildState(HttpRequest&lt;?&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultStateFactory.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultStateFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html#buildState-io.micronaut.http.HttpRequest-">buildState(HttpRequest&lt;?&gt;)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateFactory</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:C">
 <!--   -->
@@ -367,7 +373,7 @@
 <dd>
 <div class="block">Default implementation of <a href="io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers"><code>SuccessfulIdTokenAccessTokenResponseHandler</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-">CookieSuccessfulIdTokenAccessTokenResponseHandler(CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration, StateProvider)</a></span> - Constructor for class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandler</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html#CookieSuccessfulIdTokenAccessTokenResponseHandler-io.micronaut.security.oauth2.handlers.CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration-">CookieSuccessfulIdTokenAccessTokenResponseHandler(CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration)</a></span> - Constructor for class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</span></a> - Interface in <a href="io/micronaut/security/oauth2/handlers/package-summary.html">io.micronaut.security.oauth2.handlers</a></dt>
 <dd>
@@ -389,10 +395,6 @@
 </a>
 <h2 class="title">D</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_ALWAYS_REDIRECT">DEFAULT_ALWAYS_REDIRECT</a></span> - Static variable in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
-<dd>
-<div class="block">The default value to always redirect to the default uri.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html#DEFAULT_CALLBACK">DEFAULT_CALLBACK</a></span> - Static variable in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">AuthorizationCodeControllerConfigurationProperties</a></dt>
 <dd>
 <div class="block">The default callback path.</div>
@@ -455,10 +457,6 @@
 <dd>
 <div class="block">The default login path.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#DEFAULT_LOGINSUCCESSTARGETURL">DEFAULT_LOGINSUCCESSTARGETURL</a></span> - Static variable in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
-<dd>
-<div class="block">The default login success target URL.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html#DEFAULT_PATH">DEFAULT_PATH</a></span> - Static variable in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">DeniedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html#DEFAULT_RESPONSEMODE">DEFAULT_RESPONSEMODE</a></span> - Static variable in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfigurationProperties</a></dt>
@@ -487,7 +485,7 @@
 <dd>
 <div class="block">Default implementation of <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>AuthenticationRequestProvider</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">DefaultAuthenticationRequestProvider(OauthConfiguration, AuthorizationEndpointRequestConfiguration, StateProvider, NonceProvider, LoginHintProvider, IdTokenHintProvider)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultAuthenticationRequestProvider</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">DefaultAuthenticationRequestProvider(OauthConfiguration, AuthorizationEndpointRequestConfiguration, StateFactory, NonceProvider, LoginHintProvider, IdTokenHintProvider)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultAuthenticationRequestProvider</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token"><span class="typeNameLink">DefaultAuthorizationCodeGrantRequestGenerator</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/token/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.token</a></dt>
 <dd>
@@ -505,7 +503,7 @@
 <dd>
 <div class="block">Default implementation of <a href="io/micronaut/security/oauth2/handlers/AuthorizationResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers"><code>AuthorizationResponseHandler</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html#DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-io.micronaut.security.oauth2.openid.endpoints.authorization.StateValidator-">DefaultAuthorizationResponseHandler(AuthorizationCodeGrantRequestGenerator, IdTokenAccessTokenResponseHandler, RxHttpClient, StateValidator)</a></span> - Constructor for class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers">DefaultAuthorizationResponseHandler</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html#DefaultAuthorizationResponseHandler-io.micronaut.security.oauth2.openid.endpoints.token.AuthorizationCodeGrantRequestGenerator-io.micronaut.security.oauth2.handlers.IdTokenAccessTokenResponseHandler-io.micronaut.http.client.RxHttpClient-io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.StateValidator-">DefaultAuthorizationResponseHandler(AuthorizationCodeGrantRequestGenerator, IdTokenAccessTokenResponseHandler, RxHttpClient, StateValidator)</a></span> - Constructor for class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/DefaultAuthorizationResponseHandler.html" title="class in io.micronaut.security.oauth2.handlers">DefaultAuthorizationResponseHandler</a></dt>
 <dd>
 <div class="block">Creates a DefaultAuthorizationResponseHandler.</div>
 </dd>
@@ -545,18 +543,30 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html#DefaultRedirectUrlProvider-io.micronaut.runtime.server.EmbeddedServer-java.lang.String-java.lang.String-">DefaultRedirectUrlProvider(EmbeddedServer, String, String)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.<a href="io/micronaut/security/oauth2/openid/endpoints/DefaultRedirectUrlProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints">DefaultRedirectUrlProvider</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">DefaultState</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">DefaultState</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
 <dd>
-<div class="block">Default implementation of <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><code>State</code></a>.</div>
+<div class="block">Default state implementation.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html#DefaultState--">DefaultState()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultState</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#DefaultState--">DefaultState()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">DefaultStateProvider</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultStateFactory.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">DefaultStateFactory</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
 <dd>
 <div class="block">A default state provider that stores the original
  request URI to redirect back to after authentication.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html#DefaultStateProvider-com.fasterxml.jackson.databind.ObjectMapper-">DefaultStateProvider(ObjectMapper)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultStateFactory.html#DefaultStateFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.StatePersistence-">DefaultStateFactory(StateSerDes, StatePersistence)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultStateFactory.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultStateFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation"><span class="typeNameLink">DefaultStateValidationConfiguration</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</a></dt>
+<dd>
+<div class="block">Configuration properties implementation of state validation configuraiton.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#DefaultStateValidationConfiguration--">DefaultStateValidationConfiguration()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation"><span class="typeNameLink">DefaultStateValidator</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</a></dt>
+<dd>
+<div class="block">State validator implementation.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidator.html#DefaultStateValidator-io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.StatePersistence-">DefaultStateValidator(StatePersistence)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/endpoints/DeniedController.html" title="class in io.micronaut.security.oauth2.endpoints"><span class="typeNameLink">DeniedController</span></a> - Class in <a href="io/micronaut/security/oauth2/endpoints/package-summary.html">io.micronaut.security.oauth2.endpoints</a></dt>
 <dd>
@@ -576,10 +586,12 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html#DeniedControllerConfigurationProperties--">DeniedControllerConfigurationProperties()</a></span> - Constructor for class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">DeniedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html#deserializeState-java.lang.String-">deserializeState(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html#deserialize-java.lang.String-">deserialize(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">JacksonStateSerDes</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html#deserializeState-java.lang.String-">deserializeState(String)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a></dt>
-<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html#deserialize-java.lang.String-">deserialize(String)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a></dt>
+<dd>
+<div class="block">De-serializes the state string into a <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><code>State</code></a> object.</div>
+</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/Display.html" title="enum in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">Display</span></a> - Enum in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
 <dd>
 <div class="block">OpenID connect Display parameter.</div>
@@ -637,6 +649,8 @@
 <div class="block"><code>ConfigurationProperties</code> implementation of <a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionViewModelProcessorConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession"><code>EndSessionViewModelProcessorConfiguration</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html#EndsessionViewModelProcessorConfigurationProperties--">EndsessionViewModelProcessorConfigurationProperties()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndsessionViewModelProcessorConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/responses/ErrorCode.html" title="enum in io.micronaut.security.oauth2.responses"><span class="typeNameLink">ErrorCode</span></a> - Enum in <a href="io/micronaut/security/oauth2/responses/package-summary.html">io.micronaut.security.oauth2.responses</a></dt>
 <dd>
@@ -702,10 +716,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html#generateRequest-java.lang.String-">generateRequest(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.token.<a href="io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">DefaultAuthorizationCodeGrantRequestGenerator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html#generateState-io.micronaut.http.HttpRequest-">generateState(HttpRequest&lt;?&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html#generateState-io.micronaut.http.HttpRequest-">generateState(HttpRequest&lt;?&gt;)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AccessTokenResponse.html#getAccessToken--">getAccessToken()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AccessTokenResponse.html" title="class in io.micronaut.security.oauth2.responses">AccessTokenResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html#getAcrValues--">getAcrValues()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></dt>
@@ -727,10 +737,6 @@
 <div class="block">address.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html#getAdress--">getAdress()</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAuthenticationAdapter</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault()</a></span> - Method in interface io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault()</a></span> - Method in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/JwtBearerAssertionGrant.html#getAssertion--">getAssertion()</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/JwtBearerAssertionGrant.html" title="class in io.micronaut.security.oauth2.grants">JwtBearerAssertionGrant</a></dt>
 <dd>&nbsp;</dd>
@@ -873,6 +879,8 @@
 <div class="block">code_challenge_methods_supported.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataAdapter.html#getCodeChallengeMethodsSupported--">getCodeChallengeMethodsSupported()</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataAdapter.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html#getConfigurationPath--">getConfigurationPath()</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfiguration.html#getContentType--">getContentType()</a></span> - Method in interface io.micronaut.security.oauth2.grants.password.<a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfiguration.html" title="interface in io.micronaut.security.oauth2.grants.password">GrantTypePasswordRequestProviderConfiguration</a></dt>
 <dd>&nbsp;</dd>
@@ -1178,6 +1186,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html#getNonce--">getNonce()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#getNonce--">getNonce()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html#getNonce--">getNonce()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">State</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdToken.html#getNonce--">getNonce()</a></span> - Method in interface io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdToken.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdToken</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html#getNonce--">getNonce()</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAuthenticationAdapter.html" title="class in io.micronaut.security.oauth2.openid.idtoken">IdTokenAuthenticationAdapter</a></dt>
@@ -1199,9 +1211,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataAdapter.html#getOpTosUri--">getOpTosUri()</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderMetadataAdapter.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderMetadataAdapter</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html#getOriginalUri--">getOriginalUri()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultState</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionSecurityFilterOrderProvider.html#getOrder--">getOrder()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionSecurityFilterOrderProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session">SessionSecurityFilterOrderProvider</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/State.html#getOriginalUri--">getOriginalUri()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">State</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#getOriginalUri--">getOriginalUri()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html#getOriginalUri--">getOriginalUri()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">State</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html#getParameters--">getParameters()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpoint</a></dt>
 <dd>&nbsp;</dd>
@@ -1218,6 +1232,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfiguration.html#getPath--">getPath()</a></span> - Method in interface io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfiguration.html" title="interface in io.micronaut.security.oauth2.endpoints">DeniedControllerConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html#getPath--">getPath()</a></span> - Method in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/DeniedControllerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.endpoints">DeniedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#getPersistence--">getPersistence()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidationConfiguration.html#getPersistence--">getPersistence()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidationConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">StateValidationConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdToken.html#getPhoneNumber--">getPhoneNumber()</a></span> - Method in interface io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdToken.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdToken</a></dt>
 <dd>&nbsp;</dd>
@@ -1246,6 +1264,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointRequestConfiguration.html#getPrompt--">getPrompt()</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointRequestConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointRequestConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/Prompt.html#getPrompt--">getPrompt()</a></span> - Method in enum io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/Prompt.html" title="enum in io.micronaut.security.oauth2.openid.endpoints.authorization">Prompt</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getRedirectionStrategy--">getRedirectionStrategy()</a></span> - Method in interface io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html" title="interface in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#getRedirectionStrategy--">getRedirectionStrategy()</a></span> - Method in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html#getRedirectUri--">getRedirectUri()</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html" title="class in io.micronaut.security.oauth2.grants">AuthorizationCodeGrant</a></dt>
 <dd>&nbsp;</dd>
@@ -1478,14 +1500,12 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthenticationRequestAdapter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthenticationRequestAdapter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getState--">getState()</a></span> - Method in interface io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponse.html" title="interface in io.micronaut.security.oauth2.responses">AuthenticationResponse</a></dt>
 <dd>
 <div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/ErrorResponse.html#getState--">getState()</a></span> - Method in interface io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/ErrorResponse.html" title="interface in io.micronaut.security.oauth2.responses">ErrorResponse</a></dt>
 <dd>
 <div class="block">Although the state is required if the Authorization Request included the state parameter.</div>
@@ -1494,13 +1514,19 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/ErrorResponseMapAdapter.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/ErrorResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">ErrorResponseMapAdapter</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dt>
-<dd>
-<div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2ErrorResponse.html#getState--">getState()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2ErrorResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2ErrorResponse</a></dt>
 <dd>
 <div class="block">Althought the state is required if the Authorization Request included the state parameter.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getStateValue--">getStateValue()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html#getStateValue--">getStateValue()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html#getStateValue--">getStateValue()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#getStateValue--">getStateValue()</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dt>
+<dd>
+<div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/Address.html#getStreetAddress--">getStreetAddress()</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/Address.html" title="class in io.micronaut.security.oauth2.openid.idtoken">Address</a></dt>
 <dd>&nbsp;</dd>
@@ -1706,6 +1732,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html#handle-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.responses.AuthenticationResponse-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-io.micronaut.security.authentication.Authentication-">handle(HttpRequest, AuthenticationResponse, IdTokenAccessTokenResponse, Authentication)</a></span> - Method in interface io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/SuccessfulIdTokenAccessTokenResponseHandler.html" title="interface in io.micronaut.security.oauth2.handlers">SuccessfulIdTokenAccessTokenResponseHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#hashCode--">hashCode()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:I">
 <!--   -->
@@ -1780,11 +1808,11 @@
 <dd>
 <div class="block">Constructor.</div>
 </dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/InvalidStateException.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">InvalidStateException</span></a> - Exception in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/InvalidStateException.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">InvalidStateException</span></a> - Exception in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
 <dd>
 <div class="block">Exception thrown if Auth request state parameter validation fails.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/InvalidStateException.html#InvalidStateException-java.lang.String-">InvalidStateException(String)</a></span> - Constructor for exception io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/InvalidStateException.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">InvalidStateException</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/InvalidStateException.html#InvalidStateException-java.lang.String-">InvalidStateException(String)</a></span> - Constructor for exception io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/InvalidStateException.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">InvalidStateException</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/configuration/package-summary.html">io.micronaut.security.oauth2.configuration</a> - package io.micronaut.security.oauth2.configuration</dt>
 <dd>
@@ -1819,6 +1847,20 @@
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a> - package io.micronaut.security.oauth2.openid.endpoints.authorization</dt>
 <dd>
 <div class="block">Authorization Endpoint related classes.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a> - package io.micronaut.security.oauth2.openid.endpoints.authorization.state</dt>
+<dd>
+<div class="block">Classes related to OAuth2 state management.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</a> - package io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</dt>
+<dd>
+<div class="block">Classes related to state validation.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence</a> - package io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence</dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session</a> - package io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session</dt>
+<dd>
+<div class="block">Classes related to state persistence in a session.</div>
 </dd>
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.endsession</a> - package io.micronaut.security.oauth2.openid.endpoints.endsession</dt>
 <dd>
@@ -1880,6 +1922,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndsessionViewModelProcessorConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/ErrorResponseDetector.html#isErrorResponse-java.lang.Object-">isErrorResponse(Object)</a></span> - Static method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/ErrorResponseDetector.html" title="class in io.micronaut.security.oauth2.responses">ErrorResponseDetector</a></dt>
@@ -1910,6 +1954,12 @@
 </a>
 <h2 class="title">J</h2>
 <dl>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">JacksonStateSerDes</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
+<dd>
+<div class="block">Jackson based implementation for state serdes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html#JacksonStateSerDes-com.fasterxml.jackson.databind.ObjectMapper-">JacksonStateSerDes(ObjectMapper)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">JacksonStateSerDes</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/ErrorResponse.html#JSON_KEY_ERROR">JSON_KEY_ERROR</a></span> - Static variable in interface io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/ErrorResponse.html" title="interface in io.micronaut.security.oauth2.responses">ErrorResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/ErrorResponse.html#JSON_KEY_ERROR_DESCRIPTION">JSON_KEY_ERROR_DESCRIPTION</a></span> - Static variable in interface io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/ErrorResponse.html" title="interface in io.micronaut.security.oauth2.responses">ErrorResponse</a></dt>
@@ -2038,7 +2088,7 @@
 <dd>
 <div class="block">OAuth 2.0 authorization response.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#Oauth2AuthenticationResponse--">Oauth2AuthenticationResponse()</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#Oauth2AuthenticationResponse-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateSerDes-">Oauth2AuthenticationResponse(StateSerDes)</a></span> - Constructor for class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dt>
 <dd>
 <div class="block">Construct authorization response object.</div>
 </dd>
@@ -2076,7 +2126,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/providers/OktaOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers"><span class="typeNameLink">OktaOpenidConfigurationCondition</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/providers/package-summary.html">io.micronaut.security.oauth2.openid.providers</a></dt>
 <dd>
-<div class="block">Condition which evaluates to true if micronaut.security.oauth2.issuer contains okta.</div>
+<div class="block">Condition which evaluates to true if micronaut.security.oauth2.openid.issuer contains okta.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/providers/OktaOpenidConfigurationCondition.html#OktaOpenidConfigurationCondition--">OktaOpenidConfigurationCondition()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.providers.<a href="io/micronaut/security/oauth2/openid/providers/OktaOpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">OktaOpenidConfigurationCondition</a></dt>
 <dd>&nbsp;</dd>
@@ -2094,7 +2144,7 @@
 </dd>
 <dt><a href="io/micronaut/security/oauth2/openid/providers/OpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers"><span class="typeNameLink">OpenidConfigurationCondition</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/providers/package-summary.html">io.micronaut.security.oauth2.openid.providers</a></dt>
 <dd>
-<div class="block">Abstract Condition to check if micronaut.security.oauth2.issuer contains a search sequence.</div>
+<div class="block">Abstract Condition to check if micronaut.security.oauth2.openid.issuer contains a search sequence.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/providers/OpenidConfigurationCondition.html#OpenidConfigurationCondition--">OpenidConfigurationCondition()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.providers.<a href="io/micronaut/security/oauth2/openid/providers/OpenidConfigurationCondition.html" title="class in io.micronaut.security.oauth2.openid.providers">OpenidConfigurationCondition</a></dt>
 <dd>&nbsp;</dd>
@@ -2208,6 +2258,12 @@
 <dd>
 <div class="block">Instantiate Password Grant.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html#persistState-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">persistState(HttpRequest&lt;?&gt;, State)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session">SessionStatePersistence</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/StatePersistence.html#persistState-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">persistState(HttpRequest&lt;?&gt;, State)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/StatePersistence.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence">StatePersistence</a></dt>
+<dd>
+<div class="block">Persists the state for later retrieval to allow validation.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html#populateAcrValues-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateAcrValues(AuthenticationRequest, Map&lt;String, Object&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html#populateClientId-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthenticationRequest-java.util.Map-">populateClientId(AuthenticationRequest, Map&lt;String, Object&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationRedirectUrlBuilder.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationRedirectUrlBuilder</a></dt>
@@ -2256,6 +2312,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndsessionViewModelProcessorConfigurationProperties</a></dt>
@@ -2286,6 +2344,10 @@
 <dl>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html#redirect-io.micronaut.http.HttpRequest-">redirect(HttpRequest)</a></span> - Method in class io.micronaut.security.oauth2.endpoints.<a href="io/micronaut/security/oauth2/endpoints/AuthorizationCodeController.html" title="class in io.micronaut.security.oauth2.endpoints">AuthorizationCodeController</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers"><span class="typeNameLink">RedirectionStrategy</span></a> - Enum in <a href="io/micronaut/security/oauth2/handlers/package-summary.html">io.micronaut.security.oauth2.handlers</a></dt>
+<dd>
+<div class="block">Strategies for redirecting after authentication.</div>
+</dd>
 <dt><a href="io/micronaut/security/oauth2/grants/RefreshTokenGrant.html" title="class in io.micronaut.security.oauth2.grants"><span class="typeNameLink">RefreshTokenGrant</span></a> - Class in <a href="io/micronaut/security/oauth2/grants/package-summary.html">io.micronaut.security.oauth2.grants</a></dt>
 <dd>
 <div class="block">Refresh Token Grant.</div>
@@ -2324,6 +2386,12 @@
 <dd>
 <div class="block">Authentication Flows response types.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html#retrieveState-io.micronaut.http.HttpRequest-">retrieveState(HttpRequest&lt;?&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session">SessionStatePersistence</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/StatePersistence.html#retrieveState-io.micronaut.http.HttpRequest-">retrieveState(HttpRequest&lt;?&gt;)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/StatePersistence.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence">StatePersistence</a></dt>
+<dd>
+<div class="block">Retrieves and removes the state from persistence.</div>
+</dd>
 <dt><a href="io/micronaut/security/oauth2/openid/endpoints/revocation/RevocationEndpoint.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.revocation"><span class="typeNameLink">RevocationEndpoint</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/revocation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.revocation</a></dt>
 <dd>
 <div class="block">OAuth 2.0 Introspection endpoint configuration.</div>
@@ -2352,10 +2420,24 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html#secureRequest-io.micronaut.http.MutableHttpRequest-">secureRequest(MutableHttpRequest)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.token.<a href="io/micronaut/security/oauth2/openid/endpoints/token/DefaultAuthorizationCodeGrantRequestGenerator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.token">DefaultAuthorizationCodeGrantRequestGenerator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html#serializeState-java.lang.Object-">serializeState(Object)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultStateProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultStateProvider</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html#serialize-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">serialize(State)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/JacksonStateSerDes.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">JacksonStateSerDes</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html#serialize-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">serialize(State)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateSerDes</a></dt>
 <dd>
 <div class="block">Serializes the state into a string for sending with the authorization redirect.</div>
 </dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionSecurityFilterOrderProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session"><span class="typeNameLink">SessionSecurityFilterOrderProvider</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session</a></dt>
+<dd>
+<div class="block">Sets the security filter to execute after the session filter.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionSecurityFilterOrderProvider.html#SessionSecurityFilterOrderProvider--">SessionSecurityFilterOrderProvider()</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionSecurityFilterOrderProvider.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session">SessionSecurityFilterOrderProvider</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session"><span class="typeNameLink">SessionStatePersistence</span></a> - Class in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session</a></dt>
+<dd>
+<div class="block">Persists the state in the session.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html#SessionStatePersistence-io.micronaut.session.SessionStore-">SessionStatePersistence(SessionStore&lt;Session&gt;)</a></span> - Constructor for class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/session/SessionStatePersistence.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence.session">SessionStatePersistence</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/AccessTokenResponse.html#setAccessToken-java.lang.String-">setAccessToken(String)</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/AccessTokenResponse.html" title="class in io.micronaut.security.oauth2.responses">AccessTokenResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html#setAcrValues-java.util.List-">setAcrValues(List&lt;String&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfigurationProperties</a></dt>
@@ -2364,10 +2446,6 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setAcrValuesSupported-java.util.List-">setAcrValuesSupported(List&lt;String&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setAlwaysRedirectDefault-java.lang.Boolean-">setAlwaysRedirectDefault(Boolean)</a></span> - Method in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
-<dd>
-<div class="block">Sets whether the default redirect URI should always be used.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/JwtBearerAssertionGrant.html#setAssertion-java.lang.String-">setAssertion(String)</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/JwtBearerAssertionGrant.html" title="class in io.micronaut.security.oauth2.grants">JwtBearerAssertionGrant</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/SamlBearerAssertionGrant.html#setAssertion-java.lang.String-">setAssertion(String)</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/SamlBearerAssertionGrant.html" title="class in io.micronaut.security.oauth2.grants">SamlBearerAssertionGrant</a></dt>
@@ -2416,6 +2494,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setCodeChallengeMethodsSupported-java.util.List-">setCodeChallengeMethodsSupported(List&lt;String&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html#setConfigurationPath-java.lang.String-">setConfigurationPath(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdProviderConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdProviderConfigurationProperties</a></dt>
+<dd>
+<div class="block">The configuration path to discover openid configuration.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html#setContentType-io.micronaut.http.MediaType-">setContentType(MediaType)</a></span> - Method in class io.micronaut.security.oauth2.grants.password.<a href="io/micronaut/security/oauth2/grants/password/GrantTypePasswordRequestProviderConfigurationProperties.html" title="class in io.micronaut.security.oauth2.grants.password">GrantTypePasswordRequestProviderConfigurationProperties</a></dt>
 <dd>
 <div class="block">The Content-Type used to communicate with the token endpoint.</div>
@@ -2489,6 +2571,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactoryConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.configuration">JwksSignatureFactoryConfigurationProperties</a></dt>
 <dd>
 <div class="block">Enables <a href="io/micronaut/security/oauth2/openid/configuration/JwksSignatureFactory.html" title="class in io.micronaut.security.oauth2.openid.configuration"><code>JwksSignatureFactory</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>
+<div class="block">Sets whether state validation is enabled.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndsessionViewModelProcessorConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndsessionViewModelProcessorConfigurationProperties</a></dt>
 <dd>
@@ -2564,11 +2650,13 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html#setName-java.lang.String-">setName(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionParameter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#setNonce-java.lang.String-">setNonce(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setOpPolicyUri-java.lang.String-">setOpPolicyUri(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setOpTosUri-java.lang.String-">setOpTosUri(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html#setOriginalUri-java.net.URI-">setOriginalUri(URI)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">DefaultState</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html#setOriginalUri-java.net.URI-">setOriginalUri(URI)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/DefaultState.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state">DefaultState</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html#setParameters-java.util.List-">setParameters(List&lt;EndSessionParameter&gt;)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionEndpointConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
@@ -2578,6 +2666,10 @@
 <dd>
 <div class="block">The default route uri of the <a href="io/micronaut/security/oauth2/endpoints/DeniedController.html" title="class in io.micronaut.security.oauth2.endpoints"><code>DeniedController</code></a>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html#setPersistence-java.lang.String-">setPersistence(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidationConfiguration.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidationConfiguration</a></dt>
+<dd>
+<div class="block">Sets the mechanism to persist the state for later retrieval for validation.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/Address.html#setPostalCode-java.lang.String-">setPostalCode(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/Address.html" title="class in io.micronaut.security.oauth2.openid.idtoken">Address</a></dt>
 <dd>
 <div class="block">Address's postal code.</div>
@@ -2585,6 +2677,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html#setPrompt-io.micronaut.security.oauth2.openid.endpoints.authorization.Prompt-">setPrompt(Prompt)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointConfigurationProperties.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointConfigurationProperties</a></dt>
 <dd>
 <div class="block">Space delimited, case sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for reauthentication and consent.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html#setRedirectionStrategy-io.micronaut.security.oauth2.handlers.RedirectionStrategy-">setRedirectionStrategy(RedirectionStrategy)</a></span> - Method in class io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties.html" title="class in io.micronaut.security.oauth2.handlers">CookieSuccessfulIdTokenAccessTokenResponseHandlerConfigurationProperties</a></dt>
+<dd>
+<div class="block">Sets the redirection strategy.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html#setRedirectUri-java.lang.String-">setRedirectUri(String)</a></span> - Method in class io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/AuthorizationCodeGrant.html" title="class in io.micronaut.security.oauth2.grants">AuthorizationCodeGrant</a></dt>
 <dd>&nbsp;</dd>
@@ -2663,7 +2759,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html#setServiceDocumentation-java.lang.String-">setServiceDocumentation(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.configuration.<a href="io/micronaut/security/oauth2/openid/configuration/OpenIdConfiguration.html" title="class in io.micronaut.security.oauth2.openid.configuration">OpenIdConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html#setState-java.lang.String-">setState(String)</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">After the state has been retrieved, further calls to this method will
+ not be reflected in the execution of <a href="io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html#getState--"><code>AbstractAuthenticationResponse.getState()</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/responses/Oauth2ErrorResponse.html#setState-java.lang.String-">setState(String)</a></span> - Method in class io.micronaut.security.oauth2.responses.<a href="io/micronaut/security/oauth2/responses/Oauth2ErrorResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2ErrorResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/Address.html#setStreetAddress-java.lang.String-">setStreetAddress(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/Address.html" title="class in io.micronaut.security.oauth2.openid.idtoken">Address</a></dt>
@@ -2722,15 +2821,27 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html#setValue-java.lang.String-">setValue(String)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.endsession.<a href="io/micronaut/security/oauth2/openid/endpoints/endsession/EndSessionParameter.html" title="class in io.micronaut.security.oauth2.openid.endpoints.endsession">EndSessionParameter</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">State</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">State</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
 <dd>
-<div class="block">Allows to restore the previous state of the application, other use of state parameter is to mitigate CSRF attacks.</div>
+<div class="block">Represents the state sent in the authorization request and returned in the authorization response.</div>
 </dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">StateProvider</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">StateFactory</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
 <dd>
 <div class="block">Generates a state parameter.</div>
 </dd>
-<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization"><span class="typeNameLink">StateValidator</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization</a></dt>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/StatePersistence.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence"><span class="typeNameLink">StatePersistence</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/persistence/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.persistence</a></dt>
+<dd>
+<div class="block">Persists the state for later retrieval necessary for validation.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateSerDes.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state"><span class="typeNameLink">StateSerDes</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state</a></dt>
+<dd>
+<div class="block">Responsible for serialization and de-serialization of the state.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidationConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation"><span class="typeNameLink">StateValidationConfiguration</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</a></dt>
+<dd>
+<div class="block">Configuration options for state validation.</div>
+</dd>
+<dt><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation"><span class="typeNameLink">StateValidator</span></a> - Interface in <a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/package-summary.html">io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation</a></dt>
 <dd>
 <div class="block">Validates a state parameter.</div>
 </dd>
@@ -2817,8 +2928,12 @@
 </a>
 <h2 class="title">V</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html#validate-io.micronaut.http.HttpRequest-java.lang.String-">validate(HttpRequest&lt;?&gt;, String)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateValidator</a></dt>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidator.html#validate-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">validate(HttpRequest&lt;?&gt;, State)</a></span> - Method in class io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/DefaultStateValidator.html" title="class in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">DefaultStateValidator</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidator.html#validate-io.micronaut.http.HttpRequest-io.micronaut.security.oauth2.openid.endpoints.authorization.state.State-">validate(HttpRequest&lt;?&gt;, State)</a></span> - Method in interface io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation.<a href="io/micronaut/security/oauth2/openid/endpoints/authorization/state/validation/StateValidator.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state.validation">StateValidator</a></dt>
+<dd>
+<div class="block">Validates the provided state.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/DefaultIdTokenAccessTokenResponseValidator.html#validate-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-">validate(IdTokenAccessTokenResponse)</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/DefaultIdTokenAccessTokenResponseValidator.html" title="class in io.micronaut.security.oauth2.openid.idtoken">DefaultIdTokenAccessTokenResponseValidator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html#validate-io.micronaut.security.oauth2.openid.idtoken.IdTokenAccessTokenResponse-">validate(IdTokenAccessTokenResponse)</a></span> - Method in interface io.micronaut.security.oauth2.openid.idtoken.<a href="io/micronaut/security/oauth2/openid/idtoken/IdTokenAccessTokenResponseValidator.html" title="interface in io.micronaut.security.oauth2.openid.idtoken">IdTokenAccessTokenResponseValidator</a></dt>
@@ -2828,6 +2943,10 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/openid/idtoken/validation/IssuerJwtClaimsValidator.html#validate-io.micronaut.security.token.jwt.generator.claims.JwtClaims-">validate(JwtClaims)</a></span> - Method in class io.micronaut.security.oauth2.openid.idtoken.validation.<a href="io/micronaut/security/oauth2/openid/idtoken/validation/IssuerJwtClaimsValidator.html" title="class in io.micronaut.security.oauth2.openid.idtoken.validation">IssuerJwtClaimsValidator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/GrantType.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/GrantType.html" title="enum in io.micronaut.security.oauth2.grants">GrantType</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/RedirectionStrategy.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2864,6 +2983,11 @@
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/grants/GrantType.html#values--">values()</a></span> - Static method in enum io.micronaut.security.oauth2.grants.<a href="io/micronaut/security/oauth2/grants/GrantType.html" title="enum in io.micronaut.security.oauth2.grants">GrantType</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/security/oauth2/handlers/RedirectionStrategy.html#values--">values()</a></span> - Static method in enum io.micronaut.security.oauth2.handlers.<a href="io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>

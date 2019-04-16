@@ -135,12 +135,12 @@ extends io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Tog
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.Boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getAlwaysRedirectDefault--">getAlwaysRedirectDefault</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.net.URI&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getDefaultRedirectUri--">getDefaultRedirectUri</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/handlers/CookieSuccessfulIdTokenAccessTokenResponseHandlerConfiguration.html#getRedirectionStrategy--">getRedirectionStrategy</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -184,16 +184,17 @@ extends io.micronaut.http.cookie.CookieConfiguration, io.micronaut.core.util.Tog
 </dl>
 </li>
 </ul>
-<a name="getAlwaysRedirectDefault--">
+<a name="getRedirectionStrategy--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getAlwaysRedirectDefault</h4>
-<pre>java.lang.Boolean&nbsp;getAlwaysRedirectDefault()</pre>
+<h4>getRedirectionStrategy</h4>
+<pre>@Nonnull
+<a href="../../../../../io/micronaut/security/oauth2/handlers/RedirectionStrategy.html" title="enum in io.micronaut.security.oauth2.handlers">RedirectionStrategy</a>&nbsp;getRedirectionStrategy()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>True if the default redirect URI should always be used.</dd>
+<dd>The redirection strategy.</dd>
 </dl>
 </li>
 </ul>

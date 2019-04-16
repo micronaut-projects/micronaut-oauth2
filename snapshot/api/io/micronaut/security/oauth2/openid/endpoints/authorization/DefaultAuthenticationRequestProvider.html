@@ -141,9 +141,9 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">DefaultAuthenticationRequestProvider</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration</a>&nbsp;oauthConfiguration,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/DefaultAuthenticationRequestProvider.html#DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">DefaultAuthenticationRequestProvider</a></span>(<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration</a>&nbsp;oauthConfiguration,
                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointRequestConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointRequestConfiguration</a>&nbsp;authorizationEndpointRequestConfiguration,
-                                    <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a>&nbsp;stateProvider,
+                                    <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateFactory</a>&nbsp;stateFactory,
                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">NonceProvider</a>&nbsp;nonceProvider,
                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/LoginHintProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">LoginHintProvider</a>&nbsp;loginHintProvider,
                                     <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/IdTokenHintProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">IdTokenHintProvider</a>&nbsp;idTokenHintProvider)</code>&nbsp;</td>
@@ -189,7 +189,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.StateProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">
+<a name="DefaultAuthenticationRequestProvider-io.micronaut.security.oauth2.configuration.OauthConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.AuthorizationEndpointRequestConfiguration-io.micronaut.security.oauth2.openid.endpoints.authorization.state.StateFactory-io.micronaut.security.oauth2.openid.endpoints.authorization.NonceProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.LoginHintProvider-io.micronaut.security.oauth2.openid.endpoints.authorization.IdTokenHintProvider-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -198,7 +198,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <pre>public&nbsp;DefaultAuthenticationRequestProvider(<a href="../../../../../../../io/micronaut/security/oauth2/configuration/OauthConfiguration.html" title="interface in io.micronaut.security.oauth2.configuration">OauthConfiguration</a>&nbsp;oauthConfiguration,
                                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/AuthorizationEndpointRequestConfiguration.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">AuthorizationEndpointRequestConfiguration</a>&nbsp;authorizationEndpointRequestConfiguration,
                                             @Nullable
-                                            <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/StateProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">StateProvider</a>&nbsp;stateProvider,
+                                            <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/StateFactory.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">StateFactory</a>&nbsp;stateFactory,
                                             @Nullable
                                             <a href="../../../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/NonceProvider.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization">NonceProvider</a>&nbsp;nonceProvider,
                                             @Nullable
@@ -209,7 +209,7 @@ implements <a href="../../../../../../../io/micronaut/security/oauth2/openid/end
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>oauthConfiguration</code> - OAuth 2.0 Configuration</dd>
 <dd><code>authorizationEndpointRequestConfiguration</code> - Authorization Endpoint Request Configuration</dd>
-<dd><code>stateProvider</code> - Authorization state provider</dd>
+<dd><code>stateFactory</code> - Authorization state provider</dd>
 <dd><code>nonceProvider</code> - Authorization nonce provider</dd>
 <dd><code>loginHintProvider</code> - Login Hint Provider</dd>
 <dd><code>idTokenHintProvider</code> - Id Token Hint Provider</dd>

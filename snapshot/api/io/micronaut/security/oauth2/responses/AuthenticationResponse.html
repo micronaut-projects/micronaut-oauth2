@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a>, <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a>, <a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dd>
+<dd><a href="../../../../../io/micronaut/security/oauth2/responses/AbstractAuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">AbstractAuthenticationResponse</a>, <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseHttpParamsAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseHttpParamsAdapter</a>, <a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponseMapAdapter.html" title="class in io.micronaut.security.oauth2.responses">AuthenticationResponseMapAdapter</a>, <a href="../../../../../io/micronaut/security/oauth2/responses/Oauth2AuthenticationResponse.html" title="class in io.micronaut.security.oauth2.responses">Oauth2AuthenticationResponse</a></dd>
 </dl>
 <hr>
 <br>
@@ -159,7 +159,7 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getCode--">getCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colFirst"><code><a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">State</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/micronaut/security/oauth2/responses/AuthenticationResponse.html#getState--">getState</a></span>()</code>
 <div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request.</div>
 </td>
@@ -220,7 +220,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getState</h4>
 <pre>@Nullable
-java.lang.String&nbsp;getState()</pre>
+<a href="../../../../../io/micronaut/security/oauth2/openid/endpoints/authorization/state/State.html" title="interface in io.micronaut.security.oauth2.openid.endpoints.authorization.state">State</a>&nbsp;getState()</pre>
 <div class="block">If the initial request contained a state parameter, the response must also include the exact value from the request. The client will be using this to associate this response with the initial request.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
